@@ -252,7 +252,7 @@ Do not ask HU again about these unless new evidence demonstrates a real contradi
 - Distributor-driven storefront/POS arrangements are possible.
 - Zoho stock authority and desired stock sync on change plus hourly reconciliation/fallback; low-stock alerts in Zoho and storefront after verification.
 - Product dimensions are entered during product creation; map them consistently to relevant systems.
-- GST logic and default HSN follow the previously documented rule; retrieve the HSN from source rather than invent it.
+- EffyKlean products use one common, previously documented HSN code; retrieve and apply it consistently with the established GST treatment. Do not let Shopify taxonomy determine GST.
 - Combo pricing is calculated on the storefront; Zoho receives individual SKU lines, not a combo SKU.
 - Additional Admin capabilities are opportunities for business growth, not conflicts merely because they are absent from the current Django implementation.
 
@@ -261,7 +261,7 @@ Do not ask HU again about these unless new evidence demonstrates a real contradi
 These items require evidence or implementation planning, not another business-intent questionnaire:
 
 1. Verify Zoho change-triggered sync, hourly reconciliation, retry/idempotency, stale-data visibility and alert thresholds.
-2. Retrieve the previously documented HSN code and confirm the source of product GST classification.
+2. Retrieve the exact, previously documented common HSN code used for EffyKlean products; do not ask HU to repeat the business decision.
 3. Inspect existing Zoho/Shiprocket mapping and dimension fields; avoid duplicate data ownership.
 4. Verify Razorpay domain/account approval and capture configuration before live use.
 5. Verify actual Zoho/Shiprocket/provider connectivity; comparison currently records simulated/mocked outcomes.
