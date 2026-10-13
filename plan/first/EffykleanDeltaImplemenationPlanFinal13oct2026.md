@@ -12,6 +12,7 @@ This plan consolidates these records:
 2. [Phase-Wise Implementation Plan Draft (13 Oct 2026)](../../EFFYKLEAN_PHASE_WISE_IMPLEMENTATION_PLAN_DRAFT_2026-10-13.md) — pending implementation tasks reported by the local coding agent.
 3. [Conflict Reconciliation Analysis (12 Oct 2026)](../../CONFLICT_RECONCILIATION_ANALYSIS_2026-10-12.md) — the detailed business-intent-first reconciliation and functional resolutions.
 4. [HU+DI Decisions and Resume Checkpoint (13 Oct 2026)](../../HU_DI_DECISIONS_AND_RESUME_CHECKPOINT_2026-10-13.md) — later decisions, including payment-provider direction and implementation priority.
+5. [Master Functionality Comparison and Evidence Consolidation (12 Oct 2026, 18:00)](EffyKlean_Master_Functionality_Comparison_Evidence_Consolidation12102026-1800Hr.md) — 597-row cross-cutting and capability evidence register. It informs evidence, implementation state, and validation gaps; it does not replace HU's YES/NO decisions.
 
 **Precedence rules for this plan**
 - HU's explicit instruction is to implement every pending task from the agent response; each such task is marked **YES**. Phases establish sequence and priority, not whether the business wants the capability.
@@ -22,24 +23,34 @@ This plan consolidates these records:
 - If new evidence reveals a true contradiction that cannot be reconciled by applying the agreed functional rules, **STOP → REPORT → HU+DI DECIDE**. Continue independent safe work.
 - Do not treat this review draft as permission to deploy, cut over live payments, perform live provider writes, or make unauthorised commits.
 
-## 2. Decision count and row-by-row reconciliation
+## 2. Source inventory, master-evidence reconciliation, and decision-count status
 
-The source comparison contains **494 unique source rows**. The previously reported “115” was not a verified list; it came from subtracting an incomplete mechanical extraction from 494. Rechecking the source against the decision ledger and the recovered 12-Oct question-batch decisions identifies **122 rows that were not individually represented in the ledger's explicit ID/range entries**. Those are not all unanswered: many are covered by recorded category answers or by the agreed functional conflict resolutions.
+### 2.1 Keep the two kinds of records separate
 
-### Final implementation disposition for this review
+The [Master Functionality Comparison and Evidence Consolidation (12 Oct 2026, 18:00)](EffyKlean_Master_Functionality_Comparison_Evidence_Consolidation12102026-1800Hr.md) is an **evidence and implementation-state register**, not a substitute for HU's YES/NO decisions.
 
-- **YES: 443**
-- **NO: 50**
-- **Evidence-only placeholder: 1** — ORD-145, an unobserved menu, not a defined capability.
-- **Source rows accounted for: 494; no rows left without a disposition.**
+Its accounting is:
+- **597 master rows total:** 103 cross-cutting/platform rows (MF-*) plus 494 Shopify Admin capability rows (MA-*).
+- The 494 MA-* rows map one-to-one to the 494 capability IDs in Comparison 1. The 12 Orders batch-1 decision-log rows are folded into ORD-001–ORD-012; they are not 12 extra capability rows.
+- The master's dispositions (NO ACTION, VALIDATE, BLOCKED-DEC, REJECT/OOS, IMPLEMENT, FIX) describe what the evidence suggests needs to happen next. They are **not** HU's YES/NO answers. In particular, NO ACTION does not mean business decision NO, and BLOCKED-DEC does not automatically mean Hu has not decided.
+- The master reports 365 MA rows with no validation in that session (V0), 75 carried from an earlier browser walk (V0B), 8 simulation-only (V0S), 36 static checks (V1) and 10 HU+DI batch-1 acceptance rows (V2H). It also says Shopify was not re-observed and no provider row had sandbox/production proof. These are evidence maturity notes, not feature-decision counts.
 
-YES/NO here means the **final implementation disposition after applying the recorded answers and functional resolutions**, not a claim that every original answer was separately transcribed in the ledger. Where the original row-level answer was recoverable, it is preserved. Where the conflict record establishes a functional adaptation, that adaptation is stated below. In particular, vendor filter/vendor (PRD-005 and PRD-042) are NO from Hu's recovered original answers; no separate combo collections (COL-007), refund/return buttons and return-only workflows are NO under the agreed business rules.
+### 2.2 Correct the earlier “115” and the provisional YES/NO totals
 
-The only row not counted as a YES/NO capability is ORD-145. Its menu was not observed; the correct action is read-only inspection and not inventing a feature.
+The earlier “115 remaining rows” came from an invalid subtraction and was not a list of 115 known unanswered decisions. The follow-up audit found 122 rows that were not individually represented in the ledger's explicit ID/range transcription. We then assigned working dispositions to those rows using the ledger, conflict analysis and functional rules.
 
-### Audit of the 122 rows missing from the ledger's explicit ID/range transcription
+**Important correction before review:** the previously displayed **443 YES / 50 NO / 1 evidence-only** split must be treated as a *working disposition tally*, not a fully source-verified final count. Some of the 122 rows were adapted using category-level reasoning, and the master's implementation/evidence labels cannot validate a HU YES/NO answer. I will not present that arithmetic as an audited final answer count until each working disposition is traced to either (a) an explicit recovered HU answer, or (b) a clearly cited functional rule that necessarily determines the disposition. This prevents us from replacing one unverified count with another.
 
-These rows have now been individually dispositioned below. “YES by reconciliation” means the capability is retained in EffyKlean-adapted form; it does not mean Shopify's literal workflow is copied. “NO” means the literal capability is excluded, while a separate compatible business need may still be implemented.
+Current accounting:
+- **494 source capability rows** are in scope for the decision audit.
+- **122 rows** needed a row-level reconciliation beyond the ledger's explicit ID/range transcription; their working dispositions are recorded in the audit table below.
+- **ORD-145** remains an evidence-only placeholder: its menu contents were not observed and no feature should be invented.
+- The authoritative original answers remain the decision ledger and recoverable HU+DI conversation records; the conflict analysis supplies functional interpretation; the master supplies implementation evidence/state.
+- Before final approval, the audit must label each of the 122 rows as **explicit answer recovered**, **determined by an agreed functional rule**, or **decision evidence not yet recovered**. A row in the last group must not be silently converted to YES or NO.
+
+### 2.3 Audit of the 122 rows missing from the ledger's explicit ID/range transcription
+
+The table below is a working reconciliation aid, not a claim that the master itself supplied the user's decision. “YES by reconciliation” means retain the useful capability in an EffyKlean-compatible form only where that interpretation is supported by the agreed business rule; “NO” means exclude the literal capability; “EVIDENCE ONLY” means inspect without inventing functionality. Where the rationale is merely a broad category assumption rather than a recovered decision or necessary rule, it must be verified against the source conversation before the final YES/NO total is approved.
 
 | Source ID | Capability | Final decision | Reconciliation / implementation constraint |
 |---|---|---|---|
@@ -168,7 +179,7 @@ These rows have now been individually dispositioned below. “YES by reconciliat
 
 ### Important resolution changes to otherwise YES-listed items
 
-The following recorded YES intentions are constrained by the later functional resolutions and are **final NO for the literal feature**:
+The following recorded YES intentions are constrained by later functional resolutions and are **NO for the literal feature**:
 - **ORD-074:** issuing store credit on cancellation/refund — excluded; gift cards remain a separate accepted capability.
 - **ORD-075:** return labels/return shipping — excluded because returns are not in the baseline.
 - **ORD-076:** inspection of returned packages before restock — excluded because returns are not in the baseline.
@@ -253,6 +264,21 @@ These are the functional resolutions to use while planning and implementing. The
 - Do not implement wishlist, reviews/recommendations, server-side cart, or related-product links from this plan; the agent explicitly labelled them out of scope without a decision.
 - Preserve explicit NOs in the ledger. In particular: COD, customer cancellation/editing after placement, refund/return/store-credit execution, inventory authority in Django, Shopify Flow-specific builder/history, Shopify AI assistant/Sidekick, command palette, setup-guide promotions, multi-store switcher, Shopify Network Intelligence, Razorpay Magic Checkout, and other specifically recorded NO rows.
 - Where a feature was previously labelled REJECT/DEFER only as a recommendation but Hu later answered YES, preserve that later YES intent and implement an EffyKlean-appropriate version subject to the rules above.
+
+### 3.11 Reconciliation against the master evidence register
+
+The master register's 7.7 conflict list is useful evidence, but its “conflict flagged” status is not automatically a live business conflict after applying later HU+DI resolutions. The implementation plan adopts these reconciliations:
+
+- **MA-ORD-010 and MA-ORD-011 (sales-channel and delivery-method columns): DEFER, not NO.** The master correctly records the 10-Oct HU+DI decision overriding the comparison's earlier REJECT recommendation. Keep these out of the first release unless they become necessary to a frozen acceptance criterion; do not mark them permanently rejected.
+- **MA-ORD-067 and MA-ORD-068 (line-item / price edits): NO for post-placement line-item, quantity, price or discount edits.** The existence of the route orders/<ref>/edit is implementation evidence, not proof that these capabilities are authorised. Inspect the route read-only to determine whether it only supports allowed correction of delivery/contact details. Do not expand it into order commercial edits.
+- **MF-026 / MA-PRD-067 (related-product links): NO for this plan.** The prior agent explicitly identified related-product links as out of scope without a decision; the existence of rendered code does not authorise new work. Preserve existing code only if removing it is not separately required; do not add/extend this capability.
+- **MF-054 (GST calculation): the master correctly flags a SPEC-vs-arithmetic concern.** Apply the frozen SPEC and the agreed tax-inclusive pricing, HSN and intra-/inter-state rules; do not silently alter the tax base based on customary arithmetic. The agent must expose the exact formula, affected code/tests and a worked example as evidence. If the frozen SPEC's tax-base wording genuinely conflicts with the agreed business rule, stop that change and report the exact discrepancy for HU+DI decision; do not guess.
+- **MF-070 (dispatch/tracking):** the accepted business rule is no dispatch before verified payment. Admin may record fulfilment/tracking; tracking may be blank for pickup, and a carrier status may be shown only when verified. Reconcile the dispatch code to these cases and the frozen ACs; do not require a fabricated tracking reference for pickup. If a frozen AC unambiguously requires tracking for every dispatch, report that exact contradiction before changing it.
+- **MF-106 / MF-064 / MA-DRF-* (assisted/draft orders): YES in EffyKlean's business form.** Frozen SPEC §27.3 and §12.11 require admin-assisted orders and bank-transfer/UPI verification. Implement controlled distributor/Bulk enquiry, quote, approval and order creation; Shopify-style draft-order mechanics and custom non-catalogue lines are not automatically required.
+- **MA-ANA-019 (customer-visible Bulk savings): YES.** Preserve transparent Bulk savings/customer-facing commercial information consistent with the agreed negotiated Bulk pricing model. Do not infer distributor quantity slabs or a separate Household/Bulk combo collection from this.
+- **ORD-145 / MA-ORD-145:** evidence-only. The menu was not opened in the master evidence run. Read-only inspection is allowed; implementation of unknown actions is not.
+- **Master statuses generally:** NO ACTION, VALIDATE, BLOCKED-DEC, REJECT/OOS, IMPLEMENT and FIX are work/evidence dispositions, not the HU capability vote. Validate implementation state before coding to avoid duplicating existing work, but do not use a master disposition to reverse an explicit HU YES/NO.
+
 
 ## 4. Prioritised implementation plan — phase by phase
 
@@ -446,11 +472,11 @@ The final NO implementation IDs after applying the recovered answers and conflic
 - Preserve all uncommitted work. Never use `git add -A`; do not reset, clean, stash or overwrite work to make the tree look clean.
 - No commit/push, live provider writes, production cutover or deployment without the appropriate authorisation.
 - Complete phases in priority order. Continue independent safe work while a specific dependency is blocked.
-- A phase is complete only when its exit evidence is recorded and validated by the local agent. The plan is complete when all YES tasks have been implemented/tested, all explicitly NO capabilities remain excluded, the 494-row decision count has been reconciled without guessed answers, and release-gate evidence is complete.
+- A phase is complete only when its exit evidence is recorded and validated by the local agent. The plan is complete when all YES tasks have been implemented/tested, all explicitly NO capabilities remain excluded, every one of the 494 capability rows has a traceable decision basis without guessed answers, and release-gate evidence is complete.
 
 ## 9. HU review items
 
 1. Confirm that this is the single consolidated review document to use for phase-wise planning, with the capability ledger and conflict analysis retained as source records rather than competing implementation roadmaps.
-2. Review the reconciled disposition: **443 YES, 50 NO, and 1 evidence-only placeholder (ORD-145)** across the 494 source rows. The 122-row audit is included in Section 2.
+2. Review the 122-row reconciliation audit and the corrected count-status note. Do not treat 443 YES / 50 NO / 1 evidence-only as final until the row-level decision evidence has been traced as described in Section 2.
 3. Confirm the proposed priority order: baseline/evidence → Admin/integration foundations → local E2E → Zoho sandbox → mappings/shipping → storefront/customer experience → communications → infrastructure/release → remaining YES capabilities/beautification.
 4. Confirm that the refund-handling agent task is treated as **YES to implement and enforce the agreed no-refunds/no-returns policy**, not as authorisation to build a refund execution workflow.
