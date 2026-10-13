@@ -22,23 +22,21 @@ This plan consolidates these records:
 - If new evidence reveals a true contradiction that cannot be reconciled by applying the agreed functional rules, **STOP → REPORT → HU+DI DECIDE**. Continue independent safe work.
 - Do not treat this review draft as permission to deploy, cut over live payments, perform live provider writes, or make unauthorised commits.
 
-## 2. Decision count — what can and cannot be counted reliably
+## 2. Decision count — audit required; previous figures withdrawn
 
-The current Decision Ledger says the source comparison contains **494 capability rows**, but also explicitly warns that its own recovered decisions are incomplete/ambiguous for some rows. Therefore, a definitive YES/NO count across all 494 rows **cannot be responsibly claimed from the current ledger alone**.
+**Do not treat the previously stated counts of 350 YES, 29 NO, 379 enumerated IDs, or 115 remaining rows as verified.** Those figures were derived from a mechanical extraction and subtraction, not from a row-by-row reconciliation of the 494-entry source comparison. The “115” is not an identified list of capabilities.
 
-A mechanical audit of the unique capability IDs explicitly named in the ledger yields the following provisional count after applying the ledger's explicit NO exceptions where a range accidentally overlaps them:
+The source comparison states that it contains 494 feature entries. The decision ledger records explicit decisions for many IDs, refers to some decisions recovered from discussion without transcribing every row, contains overlapping/corrected ranges, and explicitly marks ORD-145 as not assessed. Therefore, the current records are insufficient to state a reliable final YES/NO count for all 494 entries.
 
-- **YES: 350 explicitly enumerated capability IDs**
-- **NO: 29 explicitly enumerated capability IDs**
-- **Total explicitly enumerated IDs: 379**
-- **Not safely classifiable from the current ledger: 115 of the 494 source rows**, because the ledger summarises some categories as previously answered, leaves gaps, and identifies ambiguities that require the original source/conversation evidence.
+**Correct status for this review draft:**
+- Final YES count across all 494 entries: **not yet verified**.
+- Final NO count across all 494 entries: **not yet verified**.
+- Number and identity of individually unclassified entries: **not yet established**.
+- “115” must not be used as a backlog count or interpreted as 115 missing decisions.
 
-These are counts of explicitly enumerated **capability IDs**, not counts of completed code tasks. They are **not a final count for all 494 source rows**. The original ledger itself notes the malformed Orders range and other ambiguities. In particular, interpret the explicitly stated exceptions as controlling: ORD-019, ORD-103, ORD-105, ORD-112 and ORD-116 are NO despite being accidentally included in adjacent ranges; PRD-060 is NO. Do not count any ID twice.
+**Required audit:** compare every source ID in `COMPARISON_1_SHOPIFY_ADMIN_VS_DJANGO_ADMIN_2026-10-12.md` against the original HU answers and the conflict resolutions. Produce a row-by-row reconciliation containing the source ID, capability, original answer evidence, final resolved YES/NO, resolution note where applicable, and implementation interpretation. Count unique IDs only once; preserve source gaps; do not infer a user's answer from the comparison's older recommendation column. Any item whose answer cannot be evidenced must be explicitly listed by ID as “evidence not recovered” rather than silently assigned YES or NO.
 
-The agent-reported pending implementation tasks are a separate implementation backlog; the user explicitly directed that **every pending task in that response be YES**. This does not convert capability NOs into YES or override the functional rules below. The four items the agent labelled “out of scope without a decision” remain excluded and are not included in the YES task inventory: wishlist, reviews/recommendations, server-side cart, and related-product links.
-
-**Required follow-up for a true 494-row final count:** reconcile the 115 unclassified rows against the full comparison and original recorded answers, then update the count. Do not guess or infer a missing YES/NO answer from a Shopify recommendation.
-
+The agent-reported pending implementation tasks are a separate implementation backlog; Hu explicitly directed that every pending task in that response be YES. That instruction does not automatically turn every one of the 494 Shopify comparison rows into YES, and it does not override explicitly recorded capability NOs or the agreed functional constraints.
 ## 3. Functional decisions and conflict resolutions agreed by HU+DI
 
 These are the functional resolutions to use while planning and implementing. They preserve desired capabilities wherever they can coexist with EffyKlean's established business model.
@@ -310,6 +308,6 @@ The ledger's explicit NO list must remain excluded, subject only to a later expl
 ## 9. HU review items
 
 1. Confirm that this is the single consolidated review document to use for phase-wise planning, with the capability ledger and conflict analysis retained as source records rather than competing implementation roadmaps.
-2. Review the provisional capability count: **350 YES and 29 NO among 379 explicitly enumerated IDs; 115 of the 494 source rows still need evidence-based classification** before a genuinely final all-row count can be stated.
+2. Review the capability-count audit requirement. The previously reported 350/29/379/115 figures are withdrawn as unverified; a row-by-row evidence reconciliation is required before a final count can be stated.
 3. Confirm the proposed priority order: baseline/evidence → Admin/integration foundations → local E2E → Zoho sandbox → mappings/shipping → storefront/customer experience → communications → infrastructure/release → remaining YES capabilities/beautification.
 4. Confirm that the refund-handling agent task is treated as **YES to implement and enforce the agreed no-refunds/no-returns policy**, not as authorisation to build a refund execution workflow.
