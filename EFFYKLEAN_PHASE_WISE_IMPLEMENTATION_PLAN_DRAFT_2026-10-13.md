@@ -102,6 +102,7 @@ Every task listed in this section is **YES — IMPLEMENT**. Any missing provider
 - **D-07 — YES:** Implement invoice generation/delivery behaviour.
 - **D-09 — YES:** Complete the specified customer-facing order/payment experience.
 - **B-13 — YES:** Complete the associated customer-facing payment/order capability.
+- **Refund handling — YES:** Implement the refund-handling task identified by the agent; determine and implement the manual or automated workflow as part of this task. If this conflicts with an older recorded no-refunds rule, STOP → REPORT → HU+DI DECIDE before changing the business behaviour; do not silently omit the task.
 - **N1–N11 — YES:** Implement the transactional email requirements, including provider integration, sender-domain configuration and approved message wording.
 - **H-05 — YES:** Implement the Contact Form capability, including privacy wording, retention and email-provider requirements.
 - **H-06 — YES:** Implement the Subscribe capability, including privacy wording, retention and email-provider requirements.
