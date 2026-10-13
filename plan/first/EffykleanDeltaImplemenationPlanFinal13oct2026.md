@@ -439,9 +439,9 @@ All of the following are **YES**. Their phase is shown above; this checklist ens
 | J-01 to J-07 infrastructure requirements (exact mapping from register) | YES | 7 |
 | Four agent-listed “out of scope without a decision” items: wishlist, reviews/recommendations, server-side cart, related-product links | NO / excluded from this plan | Excluded |
 
-## 6. Final NO implementation decisions and explicit exclusions
+## 6. Current NO implementation decisions and explicit exclusions (working register)
 
-The final NO implementation IDs after applying the recovered answers and conflict resolutions are listed below. These are final implementation dispositions, not merely the source comparison's older REJECT/DEFER recommendations.
+The current working NO implementation IDs after applying recovered answers and functional resolutions are listed below. This is a working exclusion register, not a claim that the full 494-row YES/NO tally has passed the evidence audit described in Section 2. These dispositions are not merely the source comparison's older REJECT/DEFER recommendations.
 
 - **Orders (23):** ORD-019, ORD-064, ORD-067, ORD-069, ORD-070, ORD-071, ORD-073, ORD-074, ORD-075, ORD-076, ORD-086, ORD-087, ORD-092, ORD-103, ORD-105, ORD-112, ORD-116, ORD-121, ORD-136, ORD-138, ORD-139, ORD-140, ORD-144.
 - **Draft orders (1):** DRF-008.
@@ -452,7 +452,7 @@ The final NO implementation IDs after applying the recovered answers and conflic
 - **Staff/security (6):** USR-006 (granular custom per-area permission builder), USR-012 (collaborator accounts), USR-022 (staff access-request tab), USR-023 (POS app-only users), USR-030 (Shopify-style custom role builder), USR-031 (Shopify-style role permission catalogue).
 - **System shell (4):** SYS-004 (command palette/keyboard shortcuts), SYS-009 (setup-guide promotions), SYS-010 (Shopify AI assistant/Sidekick), SYS-013 (multi-store switcher).
 
-**Count:** 50 NO implementation decisions. ORD-145 is not included because its menu was not observed and it is an evidence-only placeholder, not a settled capability decision. Do not infer a decision from the source comparison's older recommendation column.
+**Working list count:** 50 NO implementation IDs currently listed here. This is not yet the final audited NO total across all 494 source rows. ORD-145 is not included because its menu was not observed and it is an evidence-only placeholder, not a settled capability decision. Do not infer a decision from the source comparison's older recommendation column.
 
 ## 7. Dependencies, release gates and safeguards
 
