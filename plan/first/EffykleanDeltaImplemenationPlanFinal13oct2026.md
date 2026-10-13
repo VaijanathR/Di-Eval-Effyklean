@@ -278,12 +278,12 @@ All of the following are **YES**. Their phase is shown above; this checklist ens
 
 The ledger's explicit NO list must remain excluded, subject only to a later explicit HU decision. It includes:
 
-- **Orders:** ORD-019, ORD-064, ORD-067, ORD-069, ORD-070, ORD-071, ORD-073, ORD-086, ORD-087, ORD-092, ORD-103, ORD-105, ORD-112, ORD-116, ORD-121, ORD-136, ORD-138, ORD-139, ORD-145 (ORD-145 is described as not assessed elsewhere in the ledger; inspect read-only if necessary rather than treating it as a settled business NO).
+- **Orders:** ORD-019, ORD-064, ORD-067, ORD-069, ORD-070, ORD-071, ORD-073, ORD-086, ORD-087, ORD-092, ORD-103, ORD-105, ORD-112, ORD-116, ORD-121, ORD-136, ORD-138, ORD-139.
 - **Draft orders:** DRF-008.
 - **Products:** PRD-060 (video/3D product media; separate old-site/how-to media migration tasks E-08/DC-22/DC-25/D-08 remain YES and are not this product-media feature).
 - **Settings:** SET-008 (COD), SET-050 (transfer/move store to organisation/external owner), SET-058 (Shopify Network Intelligence), SET-070 (COD customisation), SET-071 (Razorpay Magic Checkout).
 - **System shell:** SYS-004 (command palette/keyboard shortcuts), SYS-009 (setup guide/promotions), SYS-010 (Shopify AI assistant/Sidekick), SYS-013 (multi-store switcher).
-- Other explicit NOs and platform-specific exclusions documented in the ledger remain in force. The ledger's full NO rows should be checked against the source catalogue when producing the audited 494-row count.
+- **ORD-145 is not a settled NO:** the ledger says its fulfilment-card menu was not observed and the capability is not assessed. Inspect read-only only if it may reveal a unique capability. Other explicit NOs and platform-specific exclusions documented in the ledger remain in force. The ledger's full NO rows should be checked against the source catalogue when producing the audited 494-row count.
 
 **Counting note:** The provisional 29 explicit NO count above is an ID count after resolving accidental range overlap, not a count of every potential feature recommendation in the comparison. Do not interpret the source comparison's older REJECT/DEFER recommendation column as a user's NO response.
 
