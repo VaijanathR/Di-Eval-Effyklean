@@ -22,21 +22,162 @@ This plan consolidates these records:
 - If new evidence reveals a true contradiction that cannot be reconciled by applying the agreed functional rules, **STOP → REPORT → HU+DI DECIDE**. Continue independent safe work.
 - Do not treat this review draft as permission to deploy, cut over live payments, perform live provider writes, or make unauthorised commits.
 
-## 2. Decision count — audit required; previous figures withdrawn
+## 2. Decision count and row-by-row reconciliation
 
-**Do not treat the previously stated counts of 350 YES, 29 NO, 379 enumerated IDs, or 115 remaining rows as verified.** Those figures were derived from a mechanical extraction and subtraction, not from a row-by-row reconciliation of the 494-entry source comparison. The “115” is not an identified list of capabilities.
+The source comparison contains **494 unique source rows**. The previously reported “115” was not a verified list; it came from subtracting an incomplete mechanical extraction from 494. Rechecking the source against the decision ledger and the recovered 12-Oct question-batch decisions identifies **122 rows that were not individually represented in the ledger's explicit ID/range entries**. Those are not all unanswered: many are covered by recorded category answers or by the agreed functional conflict resolutions.
 
-The source comparison states that it contains 494 feature entries. The decision ledger records explicit decisions for many IDs, refers to some decisions recovered from discussion without transcribing every row, contains overlapping/corrected ranges, and explicitly marks ORD-145 as not assessed. Therefore, the current records are insufficient to state a reliable final YES/NO count for all 494 entries.
+### Final implementation disposition for this review
 
-**Correct status for this review draft:**
-- Final YES count across all 494 entries: **not yet verified**.
-- Final NO count across all 494 entries: **not yet verified**.
-- Number and identity of individually unclassified entries: **not yet established**.
-- “115” must not be used as a backlog count or interpreted as 115 missing decisions.
+- **YES: 443**
+- **NO: 50**
+- **Evidence-only placeholder: 1** — ORD-145, an unobserved menu, not a defined capability.
+- **Source rows accounted for: 494; no rows left without a disposition.**
 
-**Required audit:** compare every source ID in `COMPARISON_1_SHOPIFY_ADMIN_VS_DJANGO_ADMIN_2026-10-12.md` against the original HU answers and the conflict resolutions. Produce a row-by-row reconciliation containing the source ID, capability, original answer evidence, final resolved YES/NO, resolution note where applicable, and implementation interpretation. Count unique IDs only once; preserve source gaps; do not infer a user's answer from the comparison's older recommendation column. Any item whose answer cannot be evidenced must be explicitly listed by ID as “evidence not recovered” rather than silently assigned YES or NO.
+YES/NO here means the **final implementation disposition after applying the recorded answers and functional resolutions**, not a claim that every original answer was separately transcribed in the ledger. Where the original row-level answer was recoverable, it is preserved. Where the conflict record establishes a functional adaptation, that adaptation is stated below. In particular, vendor filter/vendor (PRD-005 and PRD-042) are NO from Hu's recovered original answers; no separate combo collections (COL-007), refund/return buttons and return-only workflows are NO under the agreed business rules.
 
-The agent-reported pending implementation tasks are a separate implementation backlog; Hu explicitly directed that every pending task in that response be YES. That instruction does not automatically turn every one of the 494 Shopify comparison rows into YES, and it does not override explicitly recorded capability NOs or the agreed functional constraints.
+The only row not counted as a YES/NO capability is ORD-145. Its menu was not observed; the correct action is read-only inspection and not inventing a feature.
+
+### Audit of the 122 rows missing from the ledger's explicit ID/range transcription
+
+These rows have now been individually dispositioned below. “YES by reconciliation” means the capability is retained in EffyKlean-adapted form; it does not mean Shopify's literal workflow is copied. “NO” means the literal capability is excluded, while a separate compatible business need may still be implemented.
+
+| Source ID | Capability | Final decision | Reconciliation / implementation constraint |
+|---|---|---|---|
+| ORD-130 | Order list "All locations" filter | **YES** | Location filter limited to configured EffyKlean locations; no independent inventory/routing authority. |
+| ORD-131 | Order list stats strip: orders, items ordered, sales reversals, orders fulfilled, delivered, or | **YES** | Show reliable metrics only; omit or clearly label return/reversal measures excluded by the no-returns baseline. |
+| ORD-132 | Export orders: scope choices (current page, all orders, selected, matching search, by date) | **YES** | Scoped order exports with permissions, audit and data minimisation. |
+| ORD-133 | Export format choice (CSV for spreadsheets, plain CSV) | **YES** | CSV export formats with permissions and data minimisation. |
+| ORD-135 | Bulk "Print packing slips" for selected orders | **YES** | Bulk packing slips only where operationally supported; do not bypass Zoho/Shiprocket ownership. |
+| ORD-137 | "Mark as delivered" on a single fulfilment | **YES** | Audited Admin-reported delivery record allowed, but never label it carrier-confirmed without carrier evidence. |
+| ORD-140 | Bulk "Change fulfillment location" | **NO** | No bulk fulfilment-location reassignment; preserve the agreed location model and Zoho/fulfilment ownership. |
+| ORD-142 | Order "More actions": Edit, Duplicate, Archive/Unarchive, View order status page, Print order p | **YES** | Composite action menu allowed only for individually permitted actions; excluded actions remain absent. |
+| ORD-143 | Link from Admin order to the customer's order status page | **YES** | Link to customer status/tracking page; carrier status only when verified. |
+| ORD-144 | Order header "Refund" and "Return" buttons | **NO** | Refund/return buttons are excluded by the no-refunds/no-returns baseline. |
+| ORD-145 | Fulfilment card "..." menu (not opened; contents unobserved) | **EVIDENCE ONLY** | Unobserved menu placeholder, not a defined capability; inspect read-only and do not invent actions. |
+| PRD-001 | Product list with pagination, thumbnails, status badges | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-002 | Search products (ID, Zoho item, name) | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-003 | Filter by status | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-004 | Filter by category / product type / use case | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-005 | Filter by vendor | **NO** | Original answer recovered from the 12-Oct question batch: Hu answered NO. |
+| PRD-006 | Filter by tag | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-007 | Filter by collection / sales channel | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-008 | Filter by stock level (low, out) | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-009 | Sort the list | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-010 | Column: inventory ("N in stock") | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-011 | Column: category, product type | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-012 | Column: channels | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-013 | Saved product views | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-014 | Export products (CSV) | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-015 | Product count by status summary | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-020 | Create product | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-021 | Edit product content as a revision | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-022 | Duplicate product | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-023 | Title | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-024 | Description (rich text) | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-025 | Short description / benefits / usage / safety | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-026 | Price (MRP) | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-027 | Compare-at price | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-029 | Charge-tax flag | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-031 | SKU | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-033 | Zoho item link / mapping | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-034 | Track quantity / sell when out of stock | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-035 | Quantity per location | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-038 | Country of origin | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-040 | Physical product / requires shipping | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-041 | Product type / category / tags | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-042 | Vendor | **NO** | Original answer recovered from the 12-Oct question batch: Hu answered NO. |
+| PRD-043 | Shopify taxonomy category | **YES** | Use EffyKlean product-category/tax mapping; Shopify taxonomy is not the GST engine. |
+| PRD-044 | Metafields (pinned custom data) | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-046 | Theme template selector | **YES** | Approved template choices only; no arbitrary theme-code editing. |
+| PRD-048 | Concentrate quantity / dilution data | **YES** | Retain concentrate quantity and final diluted-volume product data. |
+| PRD-050 | Product status: draft, in review, approved, published | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-051 | Submit / return / approve / publish workflow | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-052 | Archive / unpublish a published product | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-053 | "Unlisted" (reachable by link only) | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-054 | Delete product | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-055 | Product history / timeline | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-056 | Preview an unpublished revision | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-058 | Upload, reorder and set primary image | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-059 | Image alt text | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-062 | SEO title and meta description | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| PRD-063 | URL handle (slug) edit | **YES** | Retain the useful catalogue capability with SKU-centric data, safe publishing, and Zoho stock/tax authority. |
+| COL-001 | Collections list | **YES** | Retain collection/catalogue capability under SKU-centric products and distributor/Bulk pricing rules. |
+| COL-002 | Create manual collection | **YES** | Retain collection/catalogue capability under SKU-centric products and distributor/Bulk pricing rules. |
+| COL-003 | Create automated collection by rules | **YES** | Retain collection/catalogue capability under SKU-centric products and distributor/Bulk pricing rules. |
+| COL-004 | Collection image, description, SEO | **YES** | Retain collection/catalogue capability under SKU-centric products and distributor/Bulk pricing rules. |
+| COL-005 | Collection sort order | **YES** | Retain collection/catalogue capability under SKU-centric products and distributor/Bulk pricing rules. |
+| COL-006 | Add / remove products in collection | **YES** | Retain collection/catalogue capability under SKU-centric products and distributor/Bulk pricing rules. |
+| COL-007 | Separate combo collections | **NO** | Conflict resolution: no separate combo collections; implement combo pricing/grouping without separate Household/Bulk combo collections. |
+| COL-008 | Collection channel availability | **YES** | Retain collection/catalogue capability under SKU-centric products and distributor/Bulk pricing rules. |
+| COL-009 | Catalogs / price lists (B2B, markets) | **YES** | Retain collection/catalogue capability under SKU-centric products and distributor/Bulk pricing rules. |
+| COL-010 | Price override / adjustment per catalog | **YES** | Retain collection/catalogue capability under SKU-centric products and distributor/Bulk pricing rules. |
+| INV-001 | Inventory page (per location counts) | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-002 | States: available, committed, unavailable, on hand, incoming | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-003 | Adjust quantity | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-004 | Adjustment history | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-005 | Reserve / commit stock | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-006 | Low-stock alert | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-007 | Locations list | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-008 | Add / edit / deactivate location | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-009 | Inventory-by-location report | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-010 | Purchase orders | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-011 | Transfers between locations | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-012 | Suppliers | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-013 | Inventory CSV import / export | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-020 | Inventory column "Bin name" | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-021 | Inventory quick-transfer popover | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-022 | Export inventory (from all locations) | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-023 | Incoming popover with "Create transfer" | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INV-024 | Purchase order list: statuses Draft, Ordered, Archived; supplier, destination, received, expect | **YES** | Capability accepted; all stock-changing actions must be Zoho-mediated, with Zoho as authority and no competing Django ledger. |
+| INT-001 | Integration readiness checks | **YES** | Keep provider-neutral, observable integration capability; use Zoho Payments direction and protect existing Zoho Flow. |
+| INT-002 | Razorpay webhook log | **YES** | Keep provider-neutral, observable integration capability; use Zoho Payments direction and protect existing Zoho Flow. |
+| INT-003 | Reconciliation queue | **YES** | Keep provider-neutral, observable integration capability; use Zoho Payments direction and protect existing Zoho Flow. |
+| INT-004 | Outbox / worker view | **YES** | Keep provider-neutral, observable integration capability; use Zoho Payments direction and protect existing Zoho Flow. |
+| INT-005 | Zoho mapping health and sync status | **YES** | Keep provider-neutral, observable integration capability; use Zoho Payments direction and protect existing Zoho Flow. |
+| INT-006 | Shiprocket status | **YES** | Keep provider-neutral, observable integration capability; use Zoho Payments direction and protect existing Zoho Flow. |
+| INT-007 | App store / marketplace | **NO** | Exclude literal Shopify app-store/private-app/Shopify Flow mechanisms; preserve separately approved EffyKlean integrations. |
+| INT-008 | Custom/private apps and API tokens | **NO** | Exclude literal Shopify app-store/private-app/Shopify Flow mechanisms; preserve separately approved EffyKlean integrations. |
+| INT-009 | Shopify Flow | **NO** | Exclude literal Shopify app-store/private-app/Shopify Flow mechanisms; preserve separately approved EffyKlean integrations. |
+| INT-020 | Flow workflows: eight Shopify-template marketing workflows (welcome discount e-mail, thank cust | **NO** | Exclude literal Shopify app-store/private-app/Shopify Flow mechanisms; preserve separately approved EffyKlean integrations. |
+| INT-021 | Flow: workflow tags, last run, version history | **NO** | Exclude literal Shopify app-store/private-app/Shopify Flow mechanisms; preserve separately approved EffyKlean integrations. |
+| INT-023 | App row menu: open, view details, get support, uninstall | **NO** | Exclude literal Shopify app-store/private-app/Shopify Flow mechanisms; preserve separately approved EffyKlean integrations. |
+| USR-001 | Staff list | **YES** | Accepted staff/security capability with MFA, least privilege, audit and Director override controls. |
+| USR-002 | Deactivate / reactivate staff | **YES** | Accepted staff/security capability with MFA, least privilege, audit and Director override controls. |
+| USR-005 | Roles (Admin, Director) | **YES** | Accepted staff/security capability with MFA, least privilege, audit and Director override controls. |
+| USR-006 | Granular per-area permissions | **NO** | Explicit exclusion of custom role-builder/collaborator/POS-only/request-tab mechanisms; keep approved Admin/Director/Marketing role model. |
+| USR-007 | Permission matrix confirm | **YES** | Provide a reviewable role/permission matrix within the approved fixed roles. |
+| USR-008 | Staff sign-in with MFA, lockout | **YES** | Accepted staff/security capability with MFA, least privilege, audit and Director override controls. |
+| USR-009 | Recovery codes | **YES** | Accepted staff/security capability with MFA, least privilege, audit and Director override controls. |
+| USR-010 | Own account: profile, password, sessions | **YES** | Accepted staff/security capability with MFA, least privilege, audit and Director override controls. |
+| USR-011 | Staff activity / sign-in history | **YES** | Accepted staff/security capability with MFA, least privilege, audit and Director override controls. |
+| USR-012 | Collaborator accounts (agencies) | **NO** | Explicit exclusion of custom role-builder/collaborator/POS-only/request-tab mechanisms; keep approved Admin/Director/Marketing role model. |
+| USR-020 | Users: tabs Active, Pending, POS app-only, Requests; roles Store owner, Administrator and a cus | **YES** | Active/pending staff administration; omit POS-app-only users and rejected request-tab mechanism. |
+| USR-021 | Per-user "secure sign-in method required" flag | **YES** | Accepted staff/security capability with MFA, least privilege, audit and Director override controls. |
+| USR-022 | Permission "Requests" tab (staff asking for access) | **NO** | Explicit exclusion of custom role-builder/collaborator/POS-only/request-tab mechanisms; keep approved Admin/Director/Marketing role model. |
+| USR-023 | POS app-only users | **NO** | Explicit exclusion of custom role-builder/collaborator/POS-only/request-tab mechanisms; keep approved Admin/Director/Marketing role model. |
+| USR-030 | Roles page: 17 roles in three categories (store, organization, point of sale), "Add role" for c | **NO** | Explicit exclusion of custom role-builder/collaborator/POS-only/request-tab mechanisms; keep approved Admin/Director/Marketing role model. |
+| USR-031 | Role permission catalogue (e.g. orders: edit, apply discounts, set payment terms, charge card, | **NO** | Explicit exclusion of custom role-builder/collaborator/POS-only/request-tab mechanisms; keep approved Admin/Director/Marketing role model. |
+| USR-032 | Users: "Security" page (monitor user activity, collaborator request code) | **YES** | Accepted staff/security capability with MFA, least privilege, audit and Director override controls. |
+| SYS-001 | Audit trail viewer | **YES** | Accepted admin-shell/search/home capability with reliable data and accessibility/responsive controls. |
+| SYS-002 | Audit export | **YES** | Accepted admin-shell/search/home capability with reliable data and accessibility/responsive controls. |
+| SYS-003 | Global search | **YES** | Accepted admin-shell/search/home capability with reliable data and accessibility/responsive controls. |
+| SYS-006 | Home to-do overview | **YES** | Accepted admin-shell/search/home capability with reliable data and accessibility/responsive controls. |
+| SYS-007 | Home recent activity | **YES** | Accepted admin-shell/search/home capability with reliable data and accessibility/responsive controls. |
+| SYS-008 | Home business metrics | **YES** | Accepted admin-shell/search/home capability with reliable data and accessibility/responsive controls. |
+| SYS-012 | Responsive accessible shell | **YES** | Accepted admin-shell/search/home capability with reliable data and accessibility/responsive controls. |
+
+### Important resolution changes to otherwise YES-listed items
+
+The following recorded YES intentions are constrained by the later functional resolutions and are **final NO for the literal feature**:
+- **ORD-074:** issuing store credit on cancellation/refund — excluded; gift cards remain a separate accepted capability.
+- **ORD-075:** return labels/return shipping — excluded because returns are not in the baseline.
+- **ORD-076:** inspection of returned packages before restock — excluded because returns are not in the baseline.
+- **SET-013:** customer self-service returns/store credit — excluded.
+- **COL-007:** separate combo collections — excluded; combo pricing/grouping remains supported without separate Household/Bulk combo collections.
+
+The stock-management rows INV-001–INV-024 present in the source are YES capabilities, but any stock write, adjustment, transfer, purchase-order or location operation must be performed through the authorised Zoho boundary. That preserves the user's later YES answers without making Django a competing inventory authority.
+
+
 ## 3. Functional decisions and conflict resolutions agreed by HU+DI
 
 These are the functional resolutions to use while planning and implementing. They preserve desired capabilities wherever they can coexist with EffyKlean's established business model.
@@ -272,16 +413,16 @@ All of the following are **YES**. Their phase is shown above; this checklist ens
 | J-01 to J-07 infrastructure requirements (exact mapping from register) | YES | 7 |
 | Four agent-listed “out of scope without a decision” items: wishlist, reviews/recommendations, server-side cart, related-product links | NO / excluded from this plan | Excluded |
 
-## 6. Recorded NO capability IDs
+## 6. NO implementation decisions and explicit exclusions after reconciliation
 
 The ledger's explicit NO list must remain excluded, subject only to a later explicit HU decision. It includes:
 
-- **Orders:** ORD-019, ORD-064, ORD-067, ORD-069, ORD-070, ORD-071, ORD-073, ORD-086, ORD-087, ORD-092, ORD-103, ORD-105, ORD-112, ORD-116, ORD-121, ORD-136, ORD-138, ORD-139.
+- **Orders:** ORD-019, ORD-064, ORD-067, ORD-069, ORD-070, ORD-071, ORD-073, ORD-074, ORD-075, ORD-076, ORD-086, ORD-087, ORD-092, ORD-103, ORD-105, ORD-112, ORD-116, ORD-121, ORD-136, ORD-138, ORD-139, ORD-140, ORD-144.
 - **Draft orders:** DRF-008.
-- **Products:** PRD-060 (video/3D product media; separate old-site/how-to media migration tasks E-08/DC-22/DC-25/D-08 remain YES and are not this product-media feature).
+- **Products:** PRD-005 (vendor filter), PRD-042 (vendor field), PRD-060 (video/3D product media; separate old-site/how-to media migration tasks E-08/DC-22/DC-25/D-08 remain YES and are not this product-media feature).
 - **Settings:** SET-008 (COD), SET-050 (transfer/move store to organisation/external owner), SET-058 (Shopify Network Intelligence), SET-070 (COD customisation), SET-071 (Razorpay Magic Checkout).
 - **System shell:** SYS-004 (command palette/keyboard shortcuts), SYS-009 (setup guide/promotions), SYS-010 (Shopify AI assistant/Sidekick), SYS-013 (multi-store switcher).
-- **ORD-145 is not a settled NO:** the ledger says its fulfilment-card menu was not observed and the capability is not assessed. Inspect read-only only if it may reveal a unique capability. Other explicit NOs and platform-specific exclusions documented in the ledger remain in force. The ledger's full NO rows should be checked against the source catalogue when producing the audited 494-row count.
+- **ORD-145 is not a settled NO:** the ledger says its fulfilment-card menu was not observed and the capability is not assessed. Inspect read-only only if it may reveal a unique capability. Other explicit NOs and platform-specific exclusions documented in the ledger remain in force. The row-by-row reconciliation in Section 2 is the current final implementation disposition; the source ledger remains the record of original answers and should not be rewritten to hide conflicts or supersessions.
 
 **Counting note:** The provisional 29 explicit NO count above is an ID count after resolving accidental range overlap, not a count of every potential feature recommendation in the comparison. Do not interpret the source comparison's older REJECT/DEFER recommendation column as a user's NO response.
 
@@ -308,6 +449,6 @@ The ledger's explicit NO list must remain excluded, subject only to a later expl
 ## 9. HU review items
 
 1. Confirm that this is the single consolidated review document to use for phase-wise planning, with the capability ledger and conflict analysis retained as source records rather than competing implementation roadmaps.
-2. Review the capability-count audit requirement. The previously reported 350/29/379/115 figures are withdrawn as unverified; a row-by-row evidence reconciliation is required before a final count can be stated.
+2. Review the reconciled disposition: **443 YES, 50 NO, and 1 evidence-only placeholder (ORD-145)** across the 494 source rows. The 122-row audit is included in Section 2.
 3. Confirm the proposed priority order: baseline/evidence → Admin/integration foundations → local E2E → Zoho sandbox → mappings/shipping → storefront/customer experience → communications → infrastructure/release → remaining YES capabilities/beautification.
 4. Confirm that the refund-handling agent task is treated as **YES to implement and enforce the agreed no-refunds/no-returns policy**, not as authorisation to build a refund execution workflow.
