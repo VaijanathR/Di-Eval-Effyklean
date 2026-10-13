@@ -413,18 +413,20 @@ All of the following are **YES**. Their phase is shown above; this checklist ens
 | J-01 to J-07 infrastructure requirements (exact mapping from register) | YES | 7 |
 | Four agent-listed “out of scope without a decision” items: wishlist, reviews/recommendations, server-side cart, related-product links | NO / excluded from this plan | Excluded |
 
-## 6. NO implementation decisions and explicit exclusions after reconciliation
+## 6. Final NO implementation decisions and explicit exclusions
 
-The ledger's explicit NO list must remain excluded, subject only to a later explicit HU decision. It includes:
+The final NO implementation IDs after applying the recovered answers and conflict resolutions are listed below. These are final implementation dispositions, not merely the source comparison's older REJECT/DEFER recommendations.
 
-- **Orders:** ORD-019, ORD-064, ORD-067, ORD-069, ORD-070, ORD-071, ORD-073, ORD-074, ORD-075, ORD-076, ORD-086, ORD-087, ORD-092, ORD-103, ORD-105, ORD-112, ORD-116, ORD-121, ORD-136, ORD-138, ORD-139, ORD-140, ORD-144.
-- **Draft orders:** DRF-008.
-- **Products:** PRD-005 (vendor filter), PRD-042 (vendor field), PRD-060 (video/3D product media; separate old-site/how-to media migration tasks E-08/DC-22/DC-25/D-08 remain YES and are not this product-media feature).
-- **Settings:** SET-008 (COD), SET-050 (transfer/move store to organisation/external owner), SET-058 (Shopify Network Intelligence), SET-070 (COD customisation), SET-071 (Razorpay Magic Checkout).
-- **System shell:** SYS-004 (command palette/keyboard shortcuts), SYS-009 (setup guide/promotions), SYS-010 (Shopify AI assistant/Sidekick), SYS-013 (multi-store switcher).
-- **ORD-145 is not a settled NO:** the ledger says its fulfilment-card menu was not observed and the capability is not assessed. Inspect read-only only if it may reveal a unique capability. Other explicit NOs and platform-specific exclusions documented in the ledger remain in force. The row-by-row reconciliation in Section 2 is the current final implementation disposition; the source ledger remains the record of original answers and should not be rewritten to hide conflicts or supersessions.
+- **Orders (23):** ORD-019, ORD-064, ORD-067, ORD-069, ORD-070, ORD-071, ORD-073, ORD-074, ORD-075, ORD-076, ORD-086, ORD-087, ORD-092, ORD-103, ORD-105, ORD-112, ORD-116, ORD-121, ORD-136, ORD-138, ORD-139, ORD-140, ORD-144.
+- **Draft orders (1):** DRF-008.
+- **Products (3):** PRD-005 (vendor filter), PRD-042 (vendor field), PRD-060 (video/3D product media). Separate old-site/how-to video migration tasks E-08/DC-22/DC-25/D-08 remain YES; they are not this product-media feature.
+- **Collections (1):** COL-007 (separate combo collections). Combo pricing/grouping remains supported without separate Household/Bulk combo collections.
+- **Settings (6):** SET-008 (COD), SET-013 (customer self-service returns/store credit), SET-050 (transfer/move store to organisation/external owner), SET-058 (Shopify Network Intelligence), SET-070 (COD customisation), SET-071 (Razorpay Magic Checkout).
+- **Integrations (6):** INT-007 (Shopify app store/marketplace), INT-008 (Shopify custom/private apps and API tokens), INT-009 (Shopify Flow), INT-020 (Shopify-template marketing workflows), INT-021 (Shopify Flow tags/run/version history), INT-023 (Shopify app row menu). These NOs do not prohibit separate, approved EffyKlean integration and automation capabilities.
+- **Staff/security (6):** USR-006 (granular custom per-area permission builder), USR-012 (collaborator accounts), USR-022 (staff access-request tab), USR-023 (POS app-only users), USR-030 (Shopify-style custom role builder), USR-031 (Shopify-style role permission catalogue).
+- **System shell (4):** SYS-004 (command palette/keyboard shortcuts), SYS-009 (setup-guide promotions), SYS-010 (Shopify AI assistant/Sidekick), SYS-013 (multi-store switcher).
 
-**Counting note:** The provisional 29 explicit NO count above is an ID count after resolving accidental range overlap, not a count of every potential feature recommendation in the comparison. Do not interpret the source comparison's older REJECT/DEFER recommendation column as a user's NO response.
+**Count:** 50 NO implementation decisions. ORD-145 is not included because its menu was not observed and it is an evidence-only placeholder, not a settled capability decision. Do not infer a decision from the source comparison's older recommendation column.
 
 ## 7. Dependencies, release gates and safeguards
 
