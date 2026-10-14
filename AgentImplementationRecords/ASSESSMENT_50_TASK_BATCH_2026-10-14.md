@@ -5,6 +5,16 @@
 
 > **Evidence limitation:** This public record preserves the assessment findings and decisions available in the HU+DI conversation. It is a faithful consolidation of the reported findings, not a byte-for-byte copy of the local source file `docs/DeltaImplementationPlan/ASSESSMENT_50_TASK_BATCH_2026-10-14.md`. The complete 71-row task inventory, individual acceptance criteria, evidence links, dependencies, validation steps, and effort estimates remain in that local file until separately synchronized.
 
+## Baseline status and use
+
+**This published document is the current HU+DI working baseline for implementation planning across the 590+ implementation items.** Use the assessment findings below to move forward; do not rerun the assessment or create a duplicate assessment merely to restate these findings.
+
+The agent identified 71 tasks as locally actionable and recommended 55 for the first batch. This is a readiness assessment and proposed batch, not proof that every one of the 590+ master-inventory items was individually revalidated. The agent explicitly reported that it had not checked every master-inventory row individually.
+
+The narrative supplied to HU+DI records the assessment conclusions, environment findings, workstreams, deferred candidates, open HU+DI decisions, and execution declaration. It does not include the complete row-by-row text of the 71-task matrix. Do not treat the absence of that matrix from this narrative as a reason to restart the assessment; if the individual rows are needed for execution tracking, synchronize the existing inventory as a separate follow-up.
+
+---
+
 ## 1. Assessment outcome
 
 - The agent identified **71 tasks reported as locally actionable**.
