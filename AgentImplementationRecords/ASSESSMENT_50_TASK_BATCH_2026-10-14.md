@@ -111,3 +111,62 @@ This document is a continuity record of the assessment report relayed to HU+DI. 
 `docs/DeltaImplementationPlan/ASSESSMENT_50_TASK_BATCH_2026-10-14.md`
 
 Do not treat this summary as a replacement for task-level evidence or as authorization for any deferred work.
+
+
+---
+
+## 10. Agent assessment report — full narrative supplied by HU
+
+The following preserves the assessment narrative supplied by HU from the coding agent. It supplements the consolidated continuity notes above. The 71 individual task rows remain in the local source file named above; they are not reproduced in this narrative because they were not included in the report text supplied here.
+
+> I found 71 tasks that can go ahead locally, so the 50-task minimum is met, and I recommend 55 of them as the first batch. The full assessment is in `docs/DeltaImplementationPlan/ASSESSMENT_50_TASK_BATCH_2026-10-14.md`. It's a new, untracked file and the only change I made. All 71 rows are in it, each with original IDs, evidence, dependencies, acceptance criteria, validation and effort.
+
+### Findings
+
+- **Repository:** HEAD `d3b9ca8`. Nothing is staged, and `git status --short` shows 13 entries (11 modified, 2 untracked). The homepage rearrangement is already committed in `f48cda5`.
+- **Environment (checked today):**
+  - Docker and PostgreSQL 17 are healthy, and `effyklean` has 0 pending migrations.
+  - The CI workflow has never run, and there is no scheduler definition.
+  - The Zoho Payments signing and webhook keys are present. The return URL and checkout base are still absent.
+  - There are no Inventory tax IDs and no Shiprocket variables.
+- **Master inventory is stale:** its dispositions predate many HU YES decisions, and some rows checked are already built (coupon minimum quantity, image alt text, blog editor). The agent treated “master says missing and ledger says YES” as a candidate gap, not a confirmed one.
+- **What was checked in code:**
+  - No order notes, tags or comments model exists.
+  - No order export route exists.
+  - The Admin refund and return routes only record outcomes.
+  - Staff invites and MFA reset are deliberately command-line only.
+  - The Zoho Payments gateway is rebuilt on every request, so there's no shared token cache.
+- **Not checked:** other statuses come from the master and haven't been re-checked row by row.
+- **Local copies:** the decision ledger, the conflict analysis and the HU+DI checkpoint exist only in the public repo, not locally.
+
+### Task backlog
+
+The tasks are grouped into ten workstreams: foundations, orders list, order detail and timeline, fulfilment and integration visibility, catalogue and content, customers, discounts, system shell, analytics, and Zoho stock visibility. The stock tasks are read-only, and Zoho stays the authority.
+
+The 16 other candidates (T02, T06, T07, T46, T48, T49, T55, T57, T58, T59, T66, T68 and T69–T71) are deferred or second-wave:
+- T02 waits on a commit decision.
+- T06 and T07 are end-of-batch gates.
+- T46, T48, T49, T55 and T69–T71 are larger models.
+- T57, T58, T59, T66 and T68 are low priority.
+
+Work that depends on a provider or an open decision is listed in sections 4 and 7 of the local assessment document. The agent did not count it among locally ready tasks.
+
+### Decisions for HU+DI
+
+1. **Commit boundary:** may the uncommitted payment and test changes be committed locally first? Does syncing records to the public repo count as an authorized push? The register says no push without separate approval.
+2. **Returned packages (ORD-076):** keep the existing record-only returned-package inspection? The plan excludes it, but SPEC §14.10 and the code have it.
+3. **Stock writes (INV-003 onward):** approve Zoho write scopes and a scope for them, or keep stock read-only in Admin?
+4. **Staff invite and MFA reset (USR-003/004):** move them from the command line into Admin with Director re-verification?
+5. **Assisted orders (DC-22):** decide the bank-transfer/UPI verification flow and where Zoho Sales Orders get created. This unblocks about ten tasks.
+6. **Discounts:** automatic discounts, buy-X-get-Y, combo packs, and which wins when a combo and a coupon both apply.
+7. **Gift cards (GFT-001/002) and catalogs/price lists (COL-009/010):** these need a design decision.
+8. **Notifications:** pick the email provider, sender domain and consent wording.
+9. **122-row audit:** label which rows were explicitly answered, derived from a rule, or have no recovered decision.
+10. **Provider setup HU owns:**
+    - the return URL and the sandbox checkout host (from Zoho Support);
+    - Inventory token scopes and GST taxes;
+    - the Shiprocket approach.
+
+### Agent's execution declaration
+
+The agent reported: “I changed no code, tests, migrations, config, .env, log, register or services. I ran no tests or migrations, made no provider calls, and did not stage, commit or push. My restricted proxy on 8010 and HU's Django server are still running; stop them when convenient.”
