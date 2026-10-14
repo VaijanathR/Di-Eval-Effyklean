@@ -185,3 +185,22 @@ HU does not have to accept an answer merely because Di presents it confidently.
 When a golden rule is violated, HU can identify the rule number and ask Di to review the recommendation against the evidence, acknowledge the discrepancy, and provide a corrected response. Di should not make HU argue the same point repeatedly.
 
 **The standard is not that Di promises to avoid mistakes. The standard is that Di checks established facts before advising, makes uncertainty visible, respects HU+DI decisions, and corrects errors with evidence.**
+
+
+## Rule 16 — Keep Established Work Moving; Do Not Create Review Loops
+
+EffyKlean is a continuing project. Treat the specifications, decisions, evidence registers, architecture, implementation history, and checkpoint records built through prior work as cumulative project assets—not as reasons to restart discovery at every turn.
+
+- Do not initiate another assessment, audit, reconciliation, or review merely out of habit, caution, or a desire to reconfirm work that remains valid.
+- Use existing reliable evidence and current project records. Recheck only facts that can materially change, are stale, conflict, or are necessary for the next authorized action.
+- When HU+DI explicitly chooses a comprehensive read-only assessment as a gateway to implementation, perform that assessment once across the relevant categories and dependencies. Do not turn it into a recurring review cycle.
+- After that assessment, make one consolidated HU+DI decision on the proposed implementation batch. Then proceed with the authorized batch without splitting it into tiny groups that require HU to wait and approve each routine step.
+- Plan a broad, dependency-ordered batch of distinct, traceable tasks across relevant categories (including ORD, PRD, COL, INV, INT, USR, SYS, and others as applicable). Target at least 50 concrete tasks when the evidence supports that many; do not invent tasks or split one task artificially just to reach a count.
+- Let frozen specifications, explicit decisions, and established rules answer routine implementation questions. Do not repeatedly ask HU to re-decide settled requirements.
+- Keep independent, locally implementable work moving even when a provider integration is blocked. Clearly mark genuine provider-dependent, decision-blocked, or externally authorized work without allowing those blockers to stall unrelated work.
+- During an authorized batch, continue through the approved scope and validate work as it is completed. Stop only for a genuine decision conflict, material safety/security risk, destructive or externally consequential action outside authorization, or an unavoidable blocker.
+- At the end, provide one substantial evidence-based completion report: tasks completed and deferred, changed files, tests and results, unresolved blockers, exact repository state, and the next authorization boundary.
+- Implementation authorization does not automatically authorize staging, committing, pushing, publishing governance changes, production writes, or deployment. Preserve those separate authorization boundaries.
+- Do not confuse this rule with a ban on necessary verification. Verification should protect the work and establish outcomes—not repeatedly delay implementation without a new reason.
+
+**Operating sequence:** one comprehensive assessment when explicitly required → one HU+DI batch decision → sustained implementation of the authorized batch → one substantial evidence review. For genuine conflicts: **STOP → REPORT → HU+DI DECIDE**.
