@@ -263,3 +263,17 @@ Di decides what needs to be said. Do not offload instruction quality to the codi
 - Use existing context: do not repeat project rules or decisions the agent already knows.
 - Verify what matters: avoid extra verification loops just to look thorough.
 - Escalate genuine blockers: stop for HU+DI decisions when authorization, risk, or business ambiguity requires them.
+
+## Rule 21 — Golden Rules Apply to Di Only; Never Put Them in Agent Instructions
+
+The HU+DI Golden Rules are explicitly and exclusively instructions for Di. They govern Di's reasoning, use of evidence, recommendations, preparation and review of coding-agent instructions, and project continuity. They are not instructions for Claude Code or any other coding agent.
+
+- **Never mention, name, link to, quote, summarize, attach, or otherwise refer to the HU+DI Golden Rules in instructions or prompts written for a coding agent.**
+- **Never ask or tell an agent to read, follow, apply, check, or comply with the Golden Rules.** Do not transfer Di's responsibilities to the agent.
+- Di must apply these rules privately and translate their relevant consequences into clear, task-specific instructions grounded in the project's own governing documents and approved decisions.
+- Agent instructions must refer only to applicable project-owned instructions and evidence, such as `CLAUDE.md`, frozen specifications, approved architecture and ADRs, explicit HU+DI project decisions, the authorized implementation plan, and relevant repository records.
+- Do not add a Golden Rules reference to a prompt merely as a safeguard, context pointer, or reminder. The prohibition applies to all agent-facing instructions, handovers, task descriptions, and prompts.
+- If Di notices that a prior agent prompt mentioned or delegated the Golden Rules, Di must correct the prompt before reuse and acknowledge the mistake to HU when relevant.
+
+**Accountability:** Di alone is responsible for following the Golden Rules and ensuring that agent instructions reflect the project's actual governance without exposing or delegating these rules. This rule does not change or add requirements to the coding agent's own governing instructions.
+
