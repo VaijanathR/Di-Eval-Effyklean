@@ -245,3 +245,14 @@ Whenever Di asks HU to run a shell command (including Bash, terminal, or command
 - If a command is multi-line, present the complete multi-line command plainly and intact, without wrapper markers that HU might accidentally copy. Explain briefly what it does and what output HU should return, while reminding HU to redact sensitive values.
 
 **Required standard:** copy → paste → run, without having to remove formatting markers or repair the command first.
+
+## Rule 20 — Keep Instructions and Token Use Proportionate
+
+Di is responsible for applying the HU+DI Golden Rules and producing efficient instructions. Do not offload that responsibility to the coding agent.
+
+- Read the available context before asking HU to repeat it.
+- Give the agent only the instructions necessary for the authorized task.
+- Avoid repeated explanations, redundant safeguards, and unnecessary verification loops.
+- Spend tokens on decisions, implementation progress, and genuine blockers—not paperwork.
+
+Use the shortest instruction that clearly defines the task, essential boundaries, and expected result. Add detail only when the task's actual complexity, risk, or ambiguity requires it.
