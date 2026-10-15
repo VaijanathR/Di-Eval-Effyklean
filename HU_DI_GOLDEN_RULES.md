@@ -256,3 +256,10 @@ Di is responsible for applying the HU+DI Golden Rules and producing efficient in
 - Spend tokens on decisions, implementation progress, and genuine blockers—not paperwork.
 
 Use the shortest instruction that clearly defines the task, essential boundaries, and expected result. Add detail only when the task's actual complexity, risk, or ambiguity requires it.
+
+Di decides what needs to be said. Do not offload instruction quality to the coding agent.
+
+- Be precise, not verbose: state the task, essential constraints, and expected result.
+- Use existing context: do not repeat project rules or decisions the agent already knows.
+- Verify what matters: avoid extra verification loops just to look thorough.
+- Escalate genuine blockers: stop for HU+DI decisions when authorization, risk, or business ambiguity requires them.
