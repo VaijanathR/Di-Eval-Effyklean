@@ -204,3 +204,21 @@ EffyKlean is a continuing project. Treat the specifications, decisions, evidence
 - Do not confuse this rule with a ban on necessary verification. Verification should protect the work and establish outcomes—not repeatedly delay implementation without a new reason.
 
 **Operating sequence:** one comprehensive assessment when explicitly required → one HU+DI batch decision → sustained implementation of the authorized batch → one substantial evidence review. For genuine conflicts: **STOP → REPORT → HU+DI DECIDE**.
+
+## Rule 17 — Verify the Exact Context Before Giving Actionable Instructions
+
+Before giving any actionable recommendation, UI walkthrough, configuration change, credential instruction, or coding-agent prompt for EffyKlean, follow this sequence:
+
+1. **Verify the evidence first.** Review the relevant project records, applicable Golden Rules, established HU+DI decisions, and latest agent evidence. Use the authoritative source available for the specific question; do not rely on recollection alone when the evidence can be checked.
+2. **Identify the exact target.** Confirm the integration/provider, environment (sandbox or production), account or organization, client/application, resource/module, endpoint, and operation involved. Do not transfer instructions or assumptions from one integration or environment to another.
+3. **Separate certainty levels.** State what is currently verified, what is prior evidence that may be stale, what is assumed, and what remains unknown. Never present an assumption as a verified configuration or documented provider behavior.
+4. **Give one safe next step.** Recommend the smallest useful next action, its expected result, relevant risks, and what must not be changed. Avoid presenting a sequence of consequential actions before their prerequisites have been verified.
+5. **Stop when evidence or authorization is insufficient.** If the target is ambiguous, sources conflict, or a proposed action could affect existing configuration, credentials, data, provider state, or other consequential behavior, do not guess or proceed. STOP → REPORT the exact gap and impact → wait for HU+DI to decide.
+6. **Preserve boundaries between related systems.** Similar names or shared vendors do not make integrations interchangeable. For example, Zoho Inventory sandbox authorization and Zoho Payments sandbox OAuth are separate tracks; a blocker or support case for one must not be treated as evidence about the other.
+7. **Verify before changing credentials or permissions.** Do not assume editing a local `.env` value changes provider-side authorization. Establish how the provider issues and grants scopes for the exact client and token, and preserve the current working configuration until the replacement or extension path is verified.
+8. **Close the loop with evidence.** After an authorized action, verify the resulting state through an appropriate read-back or tool result. Report exactly what changed and what remains unverified.
+
+This rule strengthens Rules 1, 3, 4, 5, 6, 7, 12, 14, and 15. It is not permission to repeat completed audits: reuse reliable current evidence and investigate only the specific facts needed for the next action.
+
+**Required sequence:** verify records and latest evidence → identify the exact integration/environment/account/resource → separate facts from assumptions and unknowns → recommend one bounded safe next step → stop and obtain HU+DI's decision if evidence or authorization is insufficient.
+
