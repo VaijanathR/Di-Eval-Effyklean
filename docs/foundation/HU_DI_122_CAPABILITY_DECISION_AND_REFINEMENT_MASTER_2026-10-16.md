@@ -35,7 +35,7 @@ The three source documents below are included verbatim as fetched for this conso
 
 ## 1. Read this before using the record
 
-This document is a durable working baseline created from the public analysis repository's current decision/evidence map and the linked HU+DI records. It is **not** proof that every original answer has been recovered.
+This canonical record preserves HU's authoritative original YES/NO decisions for the 122 capabilities and consolidates the three source records reproduced in the appendices. Some row-level citations or descriptions in the map may remain imperfect; those are documentation defects to reconcile, not grounds to question or downgrade HU's original decisions.
 
 The current map contains 122 unique Plan 2.3 capability IDs and working dispositions. Its own header states that only PRD-005 and PRD-042 have original answers explicitly recovered in the plan; other dispositions are working reconciliation. Therefore:
 
