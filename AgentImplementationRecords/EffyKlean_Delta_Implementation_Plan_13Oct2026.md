@@ -9,6 +9,7 @@
 **File:** `plan/first/EffykleanDeltaImplemenationPlanFinal13oct2026.md`  
 **Prepared:** 13 October 2026  
 **Status:** **HU review draft — not yet approved as the controlling implementation plan**  
+**Status correction (2026-10-16, traceable):** the header above is the original text of source commit `cdfb0ac` and is kept unchanged. By the HU+DI execution decision effective 2026-10-13 (status register, "Authorization record"), this plan is the **controlling plan for controlled local implementation from 2026-10-13**. That decision does not authorise deployment, live payments, live provider writes, production configuration, DNS or cutover.  
 **Purpose:** Consolidate the Admin capability YES/NO decisions, the agreed conflict reconciliations, and the pending implementation tasks reported by the EffyKlean coding agent into one prioritised, phase-wise plan.
 
 ## 1. Source of truth and precedence
