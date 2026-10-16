@@ -269,3 +269,6 @@ Validation: full suite 2271 passed, 0 failed (25 min, PostgreSQL, mock/local evi
 | Plan header wording | Corrected (traceable note added; original header kept) | Plan copy, "Status correction (2026-10-16)" |
 | Publication | See `PROJECT_LOG.md` 2026-10-16 publication entry for commit IDs | Pushed state is recorded there, not assumed here |
 Disclosure: while checking configuration the agent printed the Zoho Inventory sandbox client id, client secret, refresh token and organisation id into the session transcript. They are test-organisation credentials, but HU should consider rotating them.
+
+## Update 2026-10-16 batch 13 (consolidated closure pass; Batch 1 still NOT accepted)
+A-05: CI green on `5f2ff5c` (run 38898823275). Payments sandbox: real session creation re-verified through the app gateway (provider-confirmed); payment completion, signed return and webhook still NOT evidenced (HTTPS reachable endpoint needed). Catalogue: 15 intended products present and visible; five local test products also visible, hide step awaits HU (see `PROJECT_LOG.md` 2026-10-16). Plan 2.3 122-row map: `docs/foundation/ROW122_DECISION_EVIDENCE_MAP_2026-10-16.md` (84 rows not traced by ID; none accepted). Scheduler for saved-shipping purge: not configured on any host. Inventory credential rotation: deferred by HU.
