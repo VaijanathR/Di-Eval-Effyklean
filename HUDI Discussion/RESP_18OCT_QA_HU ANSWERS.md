@@ -60,3 +60,61 @@ Persistent register of HU's answers to Di's batched questions. Update this same 
 
 ## Update protocol
 After every later HU batch submission, append the submitted answers, notes, clarifications, status changes, and pending evidence to this same document. Preserve history; do not silently overwrite earlier answers. Keep this register separate from any eventual coding-agent execution prompt.
+
+
+## Batch 2 — Items 11–20
+
+### 11. Backup and recovery retention
+**HU selection:** Yes — defer exact retention periods; keep backup capability.
+**Direction:** Keep backup/restore capability and the existing recovery-drill evidence. Do not block implementation on an arbitrary retention number. Propose practical retention periods later with recovery objectives and cost implications. **Status:** Direction recorded; exact periods deferred.
+
+### 12. Frozen acceptance criteria and the 590+ task inventory
+**HU selection:** Need more information.
+**HU note:** “I need more information on this. what is 139 AC frozen baseline? i want all the 590+ tasks mapped and implemented. provide more information and ask this question again with proper data for me to take a call”
+**Direction:** Do not treat this as an accepted reduction in scope, and do not treat a passing test suite as proof that all 590+ tasks are mapped or implemented. HU wants the full 590+ task inventory mapped and implemented, and needs a data-backed explanation before deciding the acceptance-criteria approach. The “139 AC frozen baseline” means the count of acceptance criteria in frozen SPEC v0.8 (commit `8601602`); it is not the total task count. The latest agent report separately says 100 criteria remain untagged, down from 122. These are different measures: acceptance criteria are testable requirements; implementation tasks are work items, and they need an explicit traceability mapping rather than being assumed equivalent. **Required follow-up:** Re-present this question only after assembling the actual inventory: source and count of all 590+ tasks; unique task IDs and status; mapping to the 139 frozen ACs, specification sections, architecture/ADRs, implementation commits and tests/evidence; tasks with no AC mapping and ACs with no task/evidence; duplicates, superseded tasks and genuine conflicts; what “implemented” means and what remains. Show counts and examples, not just a headline, then ask HU to decide the treatment of unmapped tasks. **Status:** Pending data-backed explanation and re-ask; no scope reduction approved.
+
+### 13. Zoho OAuth scopes and credential rotation
+**HU selection:** No — authorize all scopes listed in the report.
+**HU note:** “DI dont be so conservative and suspicious as if the agent is trying to steal money. this sandbox environment. give the permissions to implement the tasks i want to be implemented.”
+**Direction:** HU authorizes the listed Zoho scopes for the sandbox implementation/testing environment so the agent can implement the intended tasks. The listed scopes are: Zoho Inventory `items.UPDATE`, `contacts.UPDATE`, `invoices.READ`, `customerpayments.READ`, `inventoryadjustments.CREATE`, `packages.READ`, `shipmentorders.READ`; and Zoho Payments settings create/read/update scopes as specified in the agent report. Apply this authorization to sandbox credentials and sandbox organization only; this is not authorization to change production credentials, perform production writes, or expose secrets. Credential rotation should be coordinated to avoid unnecessarily breaking the working sandbox. **Status:** Sandbox scope authorization recorded; agent must use the exact scope strings supported by the Zoho app/API.
+
+### 14. Temporary webhook URL and scheduler
+**HU selection:** No selection submitted; interim direction supplied in HU note.
+**HU note:** “i have already told the agent that i will keep update the webhook if required till we come to a concrete plan on endpoint. use the current temporary setup till we complete testing and development.”
+**Direction:** Continue using the current temporary webhook/tunnel arrangement for development and sandbox testing. HU will update the webhook URL as needed while the team works toward a concrete endpoint plan. Keep temporary URL/tunnel secrets out of committed configuration. This does not approve production deployment or make the temporary URL the permanent go-live endpoint. Scheduler/production hosting decision remains open until the concrete plan is ready. **Status:** Interim testing direction recorded; long-term endpoint/hosting/scheduler plan pending.
+
+### 15. Shopify / effyklean.com data preservation and eventual redirect
+**HU selection:** No selection submitted; substantive direction supplied in HU note.
+**HU note:** “collect all the details you want from shopify and effyklean.com and save it to our effyklean project. for all the redirect or integrations not the functionality and setup and keep it. I can keep the shopify account active as long as i want. and once the effyklean.in the current project is live i will redirect effyklean.com to effyklean.in. is my answer clear? you dont have to close shopiffy, you just take all those data content and links and integrations and save to our project.”
+**Direction:** Do not close or deactivate Shopify. Collect and preserve the relevant Shopify and effyklean.com content, product/catalogue data, URL/link inventory, redirect information, integration details and configuration/operating notes in the EffyKlean project so that needed content and integrations can be retained or deliberately recreated. Preserve the current functionality/setup; do not assume that the new site should discard an integration just because it is Shopify-related. When effyklean.in is live, HU intends to redirect effyklean.com to effyklean.in. Gather/export evidence first; do not change domain/DNS, close the store, or alter live integrations as part of this collection task. **Status:** Direction recorded; data collection and preservation required; eventual redirect is a future HU-directed action.
+
+### 16. Shiprocket and Zoho dispatch workflow
+**HU selection:** No selection submitted; explicit deferral supplied in HU note.
+**HU note:** “WHY? why do you want to check what zoho does with shiprocket? i told you so many times that its zoho functionality. leave it for later time for testing.”
+**Direction:** Leave the current Zoho-managed Shiprocket behavior alone for now. Defer Shiprocket sandbox testing and any trigger/workflow investigation to a later testing phase. Do not redesign or duplicate Zoho dispatch functionality. HU has already stated second-day dispatch and customer delay notifications are managed through Zoho. **Status:** Deferred; not a current decision blocker.
+
+### 17. Outbox tasks marked done for stub orders
+**HU selection:** Need more information.
+**HU note:** “what is this - we are replacing stubs with sandbox links. if sandbox link is there then disable stubs if not keep them. why is this a rocket science question?”
+**Direction:** HU's intended replacement rule is: where a working sandbox integration/link is available, disable the corresponding stub; where it is not available, retain the stub. Do not interpret a stub task marked “done” as proof of a real sandbox sync. Before asking again, provide a short evidence-based list of the five affected outbox tasks: test order/correlation marker, task type, what “done” currently means in code/data, whether a real sandbox call occurred, whether a working sandbox path exists, and the proposed action (disable stub or retain). Keep the check narrow. **Status:** General direction recorded; specific five-task interpretation awaits concrete evidence, then re-ask only if a real choice remains.
+
+### 18. Distributor and Bulk customer functionality
+**HU selection:** No selection submitted; HU note supplied.
+**HU note:** “why is this a question? I WILL DELETE A DISTRIBUTOR OR A BULK CUSTOMER. I WANT THAT FUNCTIONALITY NO QUESTIONS ASKED”
+**Direction:** Record HU's requirement that authorized Admin functionality must allow deletion of a Distributor or Bulk customer record without unnecessary business-decision escalation. Do not silently equate customer-record deletion with whether a Distributor/Bulk customer may cancel an order: those are different operations. Preserve the explicit deletion requirement; before implementation, check the frozen spec and data-integrity protections so deletion does not cascade into orders, payments or audit records contrary to existing safeguards. If a separate order-cancellation behavior genuinely remains ambiguous, bring concrete current-vs-spec evidence rather than repeating the prior broad question. **Status:** Customer deletion requirement recorded; implementation details must preserve related business records and frozen safeguards.
+
+### 19. Director/Admin and Marketing role
+**HU selection:** No selection submitted; substantive direction supplied in HU note.
+**HU note:** “what is this? what role removal? the director and admin will have marketing function. dont need a new marketing role if it has to be developed”
+**Direction:** Director and Admin should have the Marketing function; do not create a separate Marketing role merely to provide that function. The earlier question conflated this with a separate role-removal/permission conflict. Before raising it again, identify the exact existing role-removal operation, frozen-spec clause and later rule that supposedly conflict. Do not change permissions or role-removal behavior based on an unexplained abstract conflict. **Status:** Marketing access direction recorded; any distinct role-removal issue requires precise evidence before escalation.
+
+### 20. Admin low-stock view and invoice details
+**HU selection:** No selection submitted; HU note supplied.
+**HU note:** “why are you guys so much into other peoples business that is zoho functionality let zoho take care of it. what is inthe storefront that is troubling you?”
+**Direction:** Low-stock management and invoice status/details belong to Zoho's operational functionality. Do not add a parallel storefront/Admin implementation merely because Zoho exposes those functions. Only consider a storefront feature if a frozen acceptance criterion explicitly requires it or evidence shows it is necessary for the website's own safe order flow; if so, present the exact criterion and affected screen before asking HU. **Status:** Defer; no additional storefront feature authorized.
+
+## Batch 2 summary
+- Directions recorded: 11, 13, 14 (interim testing setup), 15 (Shopify data preservation and future redirect), 16 (defer Shiprocket testing), 17 (stub replacement rule), 18 (Distributor/Bulk customer deletion requirement), 19 (Director/Admin Marketing function), 20 (Zoho owns low-stock/invoice operations).
+- Needs a data-backed explanation and a new decision question: 12, including full mapping of the 590+ task inventory.
+- Needs a narrow evidence package before any re-ask: 17 (five outbox tasks) and any distinct role-removal conflict in 19.
+- No agent instructions issued. This document remains a decision register, not an execution prompt.
