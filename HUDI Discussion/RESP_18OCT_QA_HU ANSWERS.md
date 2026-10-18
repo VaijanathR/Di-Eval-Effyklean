@@ -118,3 +118,59 @@ After every later HU batch submission, append the submitted answers, notes, clar
 - Needs a data-backed explanation and a new decision question: 12, including full mapping of the 590+ task inventory.
 - Needs a narrow evidence package before any re-ask: 17 (five outbox tasks) and any distinct role-removal conflict in 19.
 - No agent instructions issued. This document remains a decision register, not an execution prompt.
+
+
+## HU clarification update — Batch 2 corrections (approved by HU)
+
+HU approved the following corrected wording on 2026-10-18. These corrections supersede any inconsistent summary language in Batch 2 items 12, 15, and 20 above. Preserve the earlier entries as history; apply the following as the current direction.
+
+### 12. Implementation plan, 597 activities, and clarification audit — corrected
+
+**HU clarification:** The 590+ activities were already part of the implementation plan. The earlier assessment identified 597 activities (103 cross-cutting/platform and 494 Shopify Admin), 71 locally actionable tasks, and a proposed first batch of 55. A separate audit identified 122 rows requiring classification or clarification. HU wants the planned activities accounted for and implemented—not a new scope exercise that treats the 139 frozen acceptance criteria as the entire task inventory.
+
+**Direction:** Continue from the existing implementation plan and preserve its task IDs, grouping, dependencies, priorities, and evidence. Do not rerun the assessment or recreate the inventory unnecessarily.
+
+Reconcile the existing records and report:
+- The status of all 597 planned activities, with original IDs preserved.
+- Which are implemented, partially implemented, not started, blocked, superseded, duplicated, or awaiting a specific decision, with evidence where available.
+- The disposition of each of the 122 audit rows: already answered by HU, resolvable from an established rule or existing evidence, or genuinely missing a decision.
+- Which activities map to the 139 frozen acceptance criteria, and which are platform, operational, integration, or other tasks that require separate traceability.
+- The exact remaining work and genuine blockers, without presenting already-settled questions as unresolved.
+
+Ask HU only about decisions that remain genuinely unresolved after this reconciliation, with the relevant evidence and specific choices. Do not infer that all 122 rows require HU input, and do not reduce the planned implementation scope to the acceptance-criteria count.
+
+**Status:** Existing plan is the baseline. Reconciliation against current implementation evidence is required; no scope reduction is approved.
+
+### 15. Shopify and effyklean.com project knowledge and functionality — corrected
+
+**HU clarification:** The requirement is that everything relevant from Shopify and effyklean.com be available within the EffyKlean project for use. The concern is not whether HU keeps or closes a Shopify account.
+
+**Direction:** Collect and preserve the relevant existing site content, catalogue/product information, page and URL inventory, configuration, integrations, workflows, and other implementation-relevant details from Shopify and effyklean.com in the EffyKlean project. Keep the source information and evidence organized so it can be used to build, validate, and operate the new project. Do not assume an existing integration or configuration should be discarded merely because the new storefront is being built independently.
+
+The intended future state is for effyklean.in to provide the storefront functionality represented by Shopify and effyklean.com, with the required existing integrations connected to EffyKlean Admin and effyklean.in as they previously operated with Shopify Admin/settings and effyklean.com. Any eventual domain redirection is a separate transition activity.
+
+**Status:** Project knowledge and functionality preservation are required. Collect and document the source details; do not make live domain, account, or integration changes as part of the collection work.
+
+### 20. Storefront scope versus Zoho and other integrations — corrected
+
+**HU clarification:** Do not build Zoho functionality into the storefront. The storefront should implement the functionality that exists on Shopify and effyklean.com—no additional Zoho operational features or parallel implementations.
+
+**Direction:** Treat Shopify and effyklean.com as the functional reference for the storefront scope. Reproduce the relevant existing customer-facing and site functionality in effyklean.in. Keep integrations working with EffyKlean Admin and effyklean.in in the corresponding way they previously worked with Shopify Admin/settings and effyklean.com.
+
+Zoho remains responsible for its own operational functionality, including stock/inventory operations, invoicing, GST handling, and its existing connected workflows. Do not add parallel storefront/Admin features for those functions merely because Zoho provides them. Implement only the integration interfaces and website behavior needed to preserve the intended end-to-end operation.
+
+**Status:** Scope boundary recorded. Any proposed feature outside the existing Shopify/effyklean.com storefront functionality must be supported by a specific frozen requirement and reviewed before inclusion.
+
+## Current HU decision status after approved corrections
+
+- Items 1–11: directions/answers recorded as described in Batch 1 and Batch 2.
+- Item 12: the plan is not awaiting a broad HU scope decision. Reconcile the 597-task plan and the 122-row clarification audit against actual evidence, then ask only genuinely unresolved questions.
+- Item 13: listed Zoho scopes authorized for sandbox implementation/testing only; no production authorization.
+- Item 14: current temporary webhook/tunnel may be used for development/testing; permanent endpoint/hosting plan remains pending.
+- Item 15: collect and preserve Shopify and effyklean.com project knowledge; no account-closure decision is requested.
+- Item 16: Shiprocket sandbox/trigger testing deferred to a later testing phase.
+- Item 17: use a working sandbox integration where available; otherwise retain the stub. Present evidence for the five outbox tasks before asking any remaining narrow question.
+- Item 18: authorized Admin customer-record deletion for Distributor/Bulk customers is a requirement; preserve related orders/payments/audit records and distinguish customer deletion from order cancellation.
+- Item 19: Director and Admin have the Marketing function; do not create a separate Marketing role. Any distinct role-removal conflict must be supported by exact spec and implementation evidence before escalation.
+- Item 20: storefront scope is the functionality represented by Shopify and effyklean.com. Do not implement parallel Zoho operational functionality.
+- No coding-agent execution prompt has been issued. This register remains separate from any future implementation prompt.
