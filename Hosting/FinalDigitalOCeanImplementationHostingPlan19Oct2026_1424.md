@@ -293,3 +293,60 @@ Do not create any resources or accept charges until the exact resource plan, mon
 8. Execute sandbox end-to-end testing, reviewed cleanup, live-integration authorization, one controlled live order, and the separate public-launch decision.
 
 **Current status:** Strategy agreed; not yet authorized for cloud resource creation, deployment, repository publication, provider writes, database cleanup, live-order testing, or public launch.
+
+
+---
+
+## Addendum — HU+DI shipment-lifecycle direction (19 October 2026)
+
+**Status:** HU+DI working direction confirmed; focused read-only repository investigation delegated to a sub-agent. This addendum supersedes the earlier open-ended question about whether the existing Zoho-managed shipping workflow should be redesigned. It does not authorize implementation, state-model changes, provider-side changes, deployment, or publication of application code.
+
+### Decision: preserve the existing Zoho–Shiprocket business process
+
+HU confirms that EffyKlean.com has used the existing Zoho workflow for approximately two years. EffyKlean.in should adapt to this established process rather than redesign it.
+
+- EffyKlean.in continues to send the appropriate sales-order information to Zoho under the existing authorization and payment rules.
+- Zoho remains responsible for its existing shipment-creation and carrier-assignment process, including its existing Shiprocket integration.
+- Zoho notifies EffyKlean.in as shipment lifecycle events occur.
+- Subsequent Shiprocket status updates reach Zoho and are synchronized to EffyKlean.in through Zoho.
+- EffyKlean.in updates its local shipment/tracking record and customer-facing status from these notifications.
+- EffyKlean.in must not independently create a Shiprocket shipment or call a website-side shipment-creation operation that the real Zoho adapter explicitly does not support.
+
+### Lifecycle stages and event-name normalization
+
+The website should map the meaning of incoming events to a stable internal lifecycle, irrespective of minor differences in Zoho/Shiprocket notification labels. Expected stages are:
+
+1. Shipment created.
+2. Carrier assigned and tracking details available.
+3. Package picked up.
+4. Package in transit.
+5. Out for delivery.
+6. Package delivered.
+
+Relevant exceptions should be assessed from the actual supported workflow, including failed pickup/delivery, cancellation, return-to-origin, or other carrier exceptions. The above labels are semantic examples, not assertions about exact external event names or payload fields. The implementation must not infer that a generic “shipped” event means physical pickup unless the source event's semantics establish that.
+
+### Website implementation implications
+
+The earlier readiness report identified a mismatch: the current `SHIPMENT` outbox path calls `zoho.request_fulfilment`, while the real Zoho adapter reports shipment creation as unsupported. The intended correction is to adapt the website's handoff and inbound event-processing behavior to the established Zoho-managed process, not to make the adapter pretend that the website created a shipment.
+
+The focused read-only sub-agent investigation should verify the current code before proposing changes and report:
+
+- How the current order/shipment states and `SHIPMENT` outbox task behave.
+- Which existing authenticated callback/webhook and event-processing patterns can be reused.
+- The minimum required correlation fields, durable event history, idempotency, duplicate handling, out-of-order event handling, and recovery/reconciliation.
+- The smallest safe code/test change, with exact file and symbol references.
+- Any conflict with frozen specifications or approved state transitions.
+
+The outbox may be appropriate for reliable local processing of inbound events, but it must not continue to invoke an unsupported direct shipment-creation operation. The agent must not implement changes as part of this investigation.
+
+### Reliability and security requirements
+
+The proposed design must account for duplicate notifications, provider retries, delayed/out-of-order events, unknown event names, missing or conflicting correlation IDs, and missed notifications. It should authenticate incoming Zoho events, validate payloads, preserve auditable status history, and provide a reconciliation path for missed updates. Do not assume payment-webhook authentication can be reused for Zoho Inventory events without evidence.
+
+### Governance and remaining gate
+
+The high-level business direction is now established. Detailed internal state mapping, callback contract, schema changes, and any required amendment to frozen specifications remain subject to evidence and HU+DI review. If the code or frozen specification conflicts with the intended process, follow **STOP → REPORT → HU+DI DECIDE**. No implementation, provider-side configuration, webhook registration, tests with side effects, commits, pushes, deployment, or resource creation is authorized by this addendum.
+
+### Immediate next step
+
+Receive and review the sub-agent's read-only evidence report. HU+DI will then select the smallest safe implementation batch before authorizing any code changes.
