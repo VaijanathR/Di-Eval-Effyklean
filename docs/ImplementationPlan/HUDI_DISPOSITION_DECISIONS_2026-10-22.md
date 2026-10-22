@@ -123,17 +123,17 @@ These totals count each of the 597 original rows once. The pre-update Implemente
 
 | Primary disposition | Rows |
 |---|---:|
-| Implemented | 255 |
+| Implemented | 256 |
 | Duplicate and marked implemented (confirmed) | 0 |
-| BUILD | 183 |
-| LATER | 5 |
-| INVESTIGATE / HU+DI DECISION REQUIRED | 94 |
+| BUILD | 187 |
+| LATER | 7 |
+| INVESTIGATE / HU+DI DECISION REQUIRED | 87 |
 | EXCLUDE | 60 |
 | **Total** | **597** |
 
-The working register was reconciled against the 12-Oct HU+DI decision ledger, the canonical 122-capability master, and explicit 18-Oct HU clarifications. This populated prior-decision metadata in 386 rows, promoted 121 INVESTIGATE rows to BUILD based on recorded YES scope answers, moved 43 rows to EXCLUDE based on recorded NO answers or explicit scope boundaries, and moved one row to LATER. These are scope dispositions only and do not authorize execution.
+The working register was reconciled against the 12-Oct HU+DI decision ledger, the canonical 122-capability master, explicit 18-Oct HU clarifications and the recorded 22-Oct decisions. This populated prior-decision metadata in 386 rows, promoted 121 rows to BUILD based on recorded YES scope answers, moved 43 rows to EXCLUDE based on recorded NO answers or explicit scope boundaries, and moved one row to LATER. A further six cross-cutting rows were resolved from explicit prior HU directions (four BUILD, two LATER), and the Zoho Payments sandbox activity was classified Implemented based on HU's report that the sandbox is working; production readiness remains separate. These dispositions do not authorize execution.
 
-**Do not treat the 94 remaining INVESTIGATE rows as 94 fresh HU questions.** They comprise 51 MA feature rows with recorded prior answers but a conflict/composite-scope issue, and 43 MF cross-cutting, implementation, evidence, access, validation, or dependency items. MA-ORD-037 already has an explicit direction to continue investigating. Next, Di must resolve conflicts where established rules already decide the outcome, prepare evidence-backed proposals for genuine conflicts, and separate actual HU+DI decisions from technical evidence work before asking anything. Do not re-ask original feature questions.
+**Do not treat the 87 remaining INVESTIGATE rows as 87 fresh HU questions.** They comprise 51 MA feature rows with recorded prior answers but a conflict/composite-scope issue, and 36 MF cross-cutting, implementation, evidence, access, validation, or dependency items. MA-ORD-037 already has an explicit direction to continue investigating. Next, Di must resolve conflicts where established rules already decide the outcome, prepare evidence-backed proposals for genuine conflicts, and separate actual HU+DI decisions from technical evidence work before asking anything. Do not re-ask original feature questions.
 
 The older 443 YES / 50 NO / 1 evidence-only split for 494 MA rows remains a working, not fully source-verified historical tally; do not apply it blindly. MA-ORD-137 remains BUILD but its described implementation is only a local simulation. MA-PRD-039 retains HU's HSN clarification (default HSN 340290) without assuming every product's HSN was independently verified.
 ## Next step
