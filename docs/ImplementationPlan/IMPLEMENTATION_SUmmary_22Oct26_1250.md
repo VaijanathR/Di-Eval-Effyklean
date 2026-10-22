@@ -83,3 +83,11 @@ This is a reporting and planning aid, not an implementation authorization. Conti
 
 
 **Next HU response prepared:** MF-089 contact-form privacy/retention, with a concrete proposal recorded in the decision log and row-level register. MF-093 analytics consent and MF-105 customer data-request export remain evidence-first; no generic or repeat question will be posed.
+
+## Row-level DoD quality verification — 22 October 2026
+
+The 597-row working register was checked directly after retrieving the full CSV from GitHub. Validation confirmed 597 data rows, 597 unique source IDs, no blank Definition of Done cells, no blank evidence/validation-method cells, and disposition totals of 256 Implemented, 243 BUILD, 9 LATER, 13 INVESTIGATE and 76 EXCLUDE (597 total). The historical source snapshot `RECONCILED_597_STATUS_2026-10-18.csv` was not modified.
+
+The first populated-DoD check was not sufficient by itself: 183 of the 243 BUILD rows reused one of three generic DoD templates. Those 183 rows have now been rewritten with acceptance outcomes and evidence checks tailored to each row's recorded activity, while preserving each source ID, disposition, HU decision metadata, comments and other source fields. The other 60 BUILD rows already had bespoke DoDs and were retained. A post-update check must confirm these counts and that no generic BUILD template remains.
+
+These edits improve acceptance criteria; they do not prove that implementation is complete or tested, do not change HU disposition decisions, and do not authorize implementation, deployment, live provider writes, paid resources or production changes. Keep implementation status and runtime/provider verification separately evidenced.
