@@ -367,9 +367,10 @@ Priority order follows dependencies, not a promise of calendar dates. “Decisio
 
 ### Phase 9 — Remaining Shopify-parity inventory
 
-**P9-01 — Triage every unresolved row in the 597-activity inventory.**  
-**Status: INCOMPLETE — DEFERRED.** The assessment maps 597 rows as 259 DONE, 25 PARTIAL, 3 NOT DONE and 310 DEFERRED, including 148 explicit exclusions; 124 rows still await naming/decision.  
-**DoD:** each row receives one disposition: BUILD, explicit EXCLUDE/NotToBeIMPLEMENTED-inEffyklean, or LATER/DEFERRED, with authoritative decision/source and reason; update the row-level register and counts without deleting history; totals reconcile exactly to 597; no proposal-only row becomes a commitment by inference.
+**P9-01 — Reconcile every unresolved row in the 597-activity inventory into a four-disposition register.**  
+**Status: INCOMPLETE — DEFERRED.** The assessment reports 597 rows as 259 DONE, 25 PARTIAL, 3 NOT DONE and 310 DEFERRED, including 148 explicit exclusions; 124 rows await naming/decision. The source CSV `docs/discovery/RECONCILED_597_STATUS_2026-10-18.csv` was not present in the public repository at assessment time, so the new [310-row disposition triage draft](../../AgntGapAnalysis/Deferred310_Disposition_Triage_DRAFT_2026-10-22.csv) is explicitly provisional and does not replace the authoritative source ledger. It uses the 310 Appendix A.4 rows, preserves their recorded IDs/status text, and flags the need to verify against the original decision sources.  
+**Required dispositions:** `BUILD` (authoritatively approved for implementation); `EXCLUDE` (explicit authoritative NO / NotToBeIMPLEMENTED-inEffyklean decision); `LATER` (approved/intentional future phase, with dependency/reason); `INVESTIGATE / HU+DI DECISION REQUIRED` (ambiguous, conflicting, blocked, evidence-only, proposal-only, or no authoritative disposition). Identify possible duplicates in a separate `duplicate_of`/evidence field; do not delete or merge records solely on similar wording.  
+**DoD:** recover and verify the authoritative 597-row source and decision ledger; reconcile all 597 IDs, not just the 310 deferred subset; retain each source ID, full description, original status, source decision/citation, final disposition, reason, duplicate relationship if evidenced, owner/dependency and evidence; have HU+DI decide unresolved rows; update the row-level register and counts without deleting history; totals reconcile exactly to 597 and four dispositions; no proposal-only row becomes a commitment by inference. Do not treat this provisional triage as approval to implement.
 
 **P9-02 — Implement only the named BUILD subset and close every PARTIAL row.**  
 **Status: INCOMPLETE — DEFERRED.** Depends on P9-01 and HU+DI approval.  
