@@ -93,3 +93,12 @@ The 597-row working register was checked directly after retrieving the full CSV 
 The first populated-DoD check was not sufficient by itself: 183 of the 243 BUILD rows at that stage reused one of three generic DoD templates. Those 183 rows were rewritten with acceptance outcomes and evidence checks tailored to each row's recorded activity; the other 60 then-existing BUILD rows already had bespoke DoDs. The later MF-089 and MF-105 BUILD rows now also have decision-specific DoDs and evidence methods. The current register contains 245 BUILD rows; these records are planning/acceptance criteria, not proof of implementation or test completion.
 
 These edits improve acceptance criteria; they do not prove that implementation is complete or tested, do not change HU disposition decisions, and do not authorize implementation, deployment, live provider writes, paid resources or production changes. Keep implementation status and runtime/provider verification separately evidenced.
+
+
+## Follow-up reconciliation — ten INVESTIGATE records (22 October 2026)
+
+HU+DI reviewed all ten remaining INVESTIGATE entries. See [the detailed reconciliation addendum](./INVESTIGATE_10_HU_DI_RECONCILIATION_2026-10-22.md) and [the decision log](./HUDI_DISPOSITION_DECISIONS_2026-10-22.md).
+
+Key corrections: MF-006 must not trigger automatic Shopify re-observation; existing evidence and request provenance must be checked first. MF-008 is HU-confirmed as already implemented as a distributor enquiry form (independent code/runtime verification remains separate). MA-USR-020 is a composite record to reconcile against the 12-Oct Staff users decision ledger, not a new broad scope question. MA-ORD-037 remains INVESTIGATE without BUILD authorization. MF-002/MF-004, MF-005, MF-007, MF-009 and MF-050 are tracked as evidence/validation/authorization/behavior-investigation tasks according to the HU directions.
+
+**Register integrity note:** this update records the reconciliation in the decision log and a dedicated addendum. The existing 597-row working CSV has not yet been edited because the GitHub file-content retrieval returned an empty payload in the current connector response; it must not be overwritten with partial or fabricated contents. Therefore do not claim the CSV row-level statuses are updated until that exact file is safely read, updated and verified. The immutable 18-Oct snapshot remains untouched. No implementation or delegation is authorized.
