@@ -131,7 +131,7 @@ These totals count each of the 597 original rows once. The pre-update Implemente
 | EXCLUDE | 25 |
 | **Total** | **597** |
 
-Of the 251 rows still in INVESTIGATE, MA-ORD-037 has an explicit HU+DI decision to continue investigating. Therefore **250 rows currently need a new HU response**; the remaining 251 INVESTIGATE count is a disposition count, not itself a count of unanswered questions. MA-ORD-137 remains BUILD but the described implementation is only a local simulation. MA-PRD-039 retains HU's HSN clarification (default HSN 340290) without assuming every product's HSN was independently verified. MA-PRD-040 and MA-PRD-041 retain the earlier YES answers in the canonical 122-capability decision master; no new 22-Oct decision was recorded for them.
+Of the 251 rows still in INVESTIGATE, MA-ORD-037 has an explicit HU+DI decision to continue investigating. Therefore **250 rows currently need a new HU response based on the row-specific decisions mapped so far**; the remaining 251 INVESTIGATE count is a disposition count, not itself a count of unanswered questions. This is not yet a final historical total: the older 443 YES / 50 NO / 1 evidence-only split for 494 MA rows is explicitly documented in the 13-Oct plan as a working, not source-verified, tally because some answers were category-level. Do not apply that tally without mapping its individual decisions to current IDs. MA-ORD-137 remains BUILD but the described implementation is only a local simulation. MA-PRD-039 retains HU's HSN clarification (default HSN 340290) without assuming every product's HSN was independently verified. MA-PRD-040 and MA-PRD-041 retain the earlier YES answers in the canonical 122-capability decision master; no new 22-Oct decision was recorded for them.
 
 ## Next step
 
