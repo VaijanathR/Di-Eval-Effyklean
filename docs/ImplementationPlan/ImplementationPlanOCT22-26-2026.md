@@ -1,10 +1,14 @@
-## Disposition reconciliation update — 22 October 2026
+## Corrected disposition reconciliation — 22 October 2026
 
-The latest row-level disposition and HU+DI decisions are maintained in the [597-row working register](./RECONCILED_597_DISPOSITION_WORKING_2026-10-22.csv) and [HU+DI disposition decision log](./HUDI_DISPOSITION_DECISIONS_2026-10-22.md). This update supersedes earlier provisional statements in this plan that no rows had been promoted to BUILD or EXCLUDE.
+The row-level disposition register and HU+DI decision log have been corrected. The first update had changed the primary classification of 17 activities that were already marked Implemented; those original classifications have been restored. A further 32 prior HU YES/NO decisions were recovered from the canonical 122-capability decision master where no later 22-Oct batch entry superseded them. The historical 18-Oct source snapshot remains unchanged.
 
-Current six-category working totals: **238 Implemented + 0 confirmed duplicate + 49 BUILD + 4 LATER + 283 INVESTIGATE + 23 EXCLUDE = 597**. These categories represent primary disposition only; implementation/validation status remains separate. The 76 recorded decisions/clarifications are documented in the decision log and row-level columns, including HU comments and constraints. The original 18-Oct source snapshot remains unchanged.
+**250 items currently need a new HU response.** This is not the same as the number of rows whose primary disposition remains INVESTIGATE. The corrected register has 251 INVESTIGATE rows; MA-ORD-037 has a recorded HU+DI decision to continue investigating, leaving 250 without a new response.
 
-Exact individual decision times were not reliably available from the retained conversation record; the working register records the supported date and explicitly marks the exact time unavailable rather than fabricating timestamps. MA-PRD-040 and MA-PRD-041 were discussed as possible next items but remain undecided. Do not treat a recommendation as a decision, and do not infer BUILD from implementation status or EXCLUDE from a triage keyword.
+Corrected primary-disposition totals across all 597 rows: **255 Implemented + 0 confirmed duplicate + 62 BUILD + 4 LATER + 251 INVESTIGATE + 25 EXCLUDE = 597**.
+
+The 76 annotated rows in the 22-Oct log are not 76 new disposition decisions. Scope preferences for activities already marked Implemented do not replace the Implemented primary classification. The 32 recovered prior YES/NO answers are recorded separately; BUILD/EXCLUDE are scope dispositions, not blanket authorization to execute. Do not ask HU to repeat an already recorded decision.
+
+See the [corrected 597-row working register](./RECONCILED_597_DISPOSITION_WORKING_2026-10-22.csv), [HU+DI disposition log](./HUDI_DISPOSITION_DECISIONS_2026-10-22.md), and [corrected implementation summary](./IMPLEMENTATION_SUmmary_22Oct26_1250.md).
 
 ---
 
