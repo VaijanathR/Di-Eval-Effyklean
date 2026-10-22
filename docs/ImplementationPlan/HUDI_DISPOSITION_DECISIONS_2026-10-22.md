@@ -163,3 +163,12 @@ The current working register has 597 unique IDs and primary dispositions: 256 Im
 **HU response requested:** approve this proposal as written, or specify the exact wording/retention/access change. Do not repeat the generic contact-form scope question.
 
 MF-093 analytics consent and MF-105 customer data-request export remain evidence-first: compare existing policies and prior answers, prepare specific recommendations, and ask only if a genuine policy choice remains.
+
+
+## Reconciled MF decisions — 2026-10-22
+
+- **MF-089 — BUILD — HU explicit approval — 2026-10-22 (exact time not separately recorded)** — Contact-form privacy and retention. HU approved the proposed operational baseline as written: enquiry/support response only; no marketing without separate opt-in; proposed notice explaining enquiry response/support-record purpose and directing data questions to the Privacy Policy; retain 180 days after closure then delete/anonymize unless an ongoing issue, legal obligation or documented claim requires longer; restrict access to authorized Admin/Customer Care staff and audit access/deletion. Verify actual form fields; reference fields are name, email and phone, and retain a message field only if present. This approval is not a claim of legal sufficiency. Keep the form fail-closed until wording and retention controls are approved and implemented.
+- **MF-093 — LATER — prior HU decision preserved — 2026-10-22** — Analytics and marketing events with consent. Do not reopen the earlier scope answer or implement this in the current batch. Keep optional tracking disabled until an approved consent state permits it; prepare concrete consent controls and evidence before later implementation.
+- **MF-105 — BUILD — prior HU decision preserved — 2026-10-22** — Customer sign-in assistance and customer data-request export. Retain MF-105 as the source ID and split implementation into two distinct workstreams. Use time-limited single-use reset links; staff must not view/set customer passwords. Data exports require identity verification, customer-only data scope, exclusion of other customers' data and secrets, audit logging, and legal-hold/required-record handling. BUILD is a scope disposition, not blanket execution authorization.
+
+These reconciliations close the disposition mismatch for these three IDs only. The other ten INVESTIGATE rows remain untouched pending the agreed next triage.
