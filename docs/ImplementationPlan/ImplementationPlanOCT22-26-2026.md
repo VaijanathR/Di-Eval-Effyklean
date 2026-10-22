@@ -57,7 +57,69 @@ Every task below has a task-specific DoD. In addition, apply these rules whereve
 7. Never print secrets or place them in logs, URLs, reports or commits. No claiming a test or provider operation passed unless its result was actually observed.
 8. Before a task is closed, check its task-specific DoD, dependencies, regression risk, migration pairing, documentation/handoff and exact outstanding work. One task at a time; stop after its report and wait for HU's next authorization.
 
-## 4. Priority and task status plan
+## 4. Implementation already completed (retain; do not redo without a specific reason)
+
+These are implementation scopes already established in the project history or directly recorded by HU. They are labelled **IMPLEMENTATION COMPLETED** because the described implementation exists; that label does not falsely claim production readiness or a fresh test run. Evidence level is stated per item.
+
+**C-01 — Django/PostgreSQL foundation and fail-closed settings.**  
+**Status: IMPLEMENTATION COMPLETED.**  
+**DoD/evidence:** foundation scaffold, Python/Django/PostgreSQL/uv/pytest/Ruff setup and fail-closed production settings exist; assessment ran Ruff check/format and Django check successfully. Remaining: current-tree database-backed test/CI evidence is separate under P0-05.
+
+**C-02 — Local B2C storefront-to-payment-to-order journey with stubs.**  
+**Status: IMPLEMENTATION COMPLETED.**  
+**DoD/evidence:** catalogue/cart/checkout, server-side price review, payment attempt, provider-confirmed payment reconciliation, idempotent order placement and outbox enqueue exist; tests cover failure/replay/amount mismatch and NO PAYMENT → NO DISPATCH. Evidence: code/test-body reading plus historical test runs; assessment did not rerun tests. Production shipment lifecycle remains incomplete under Phase 2.
+
+**C-03 — Zoho Payments adapter and sandbox session creation.**  
+**Status: IMPLEMENTATION COMPLETED.**  
+**DoD/evidence:** adapter, token cache, hosted-session creation, signed-return/webhook processing logic and mock tests exist; HU confirms Payments sandbox works. The adapter implementation and sandbox readiness are completed at this scope. Webhook registration/webhook-first end-to-end proof, settlement/charge retrieval and production remain separately incomplete under P3/P8/P10.
+
+**C-04 — Zoho Inventory adapter, stock-read path and guarded Sales Order/outbox foundations.**  
+**Status: IMPLEMENTATION COMPLETED.**  
+**DoD/evidence:** Inventory adapter, stock reads, mapping/sync task infrastructure, guarded Sales Order flow, idempotency, retries and mock tests exist; recorded history includes sandbox reads and selected authorized test writes. HU says Zoho Inventory sandbox is integrated with Shiprocket sandbox. This does not mean production mapping/write policy or the EffyKlean delivery-status lifecycle is complete.
+
+**C-05 — Zoho Inventory sandbox ↔ Shiprocket sandbox integration on the Zoho side.**  
+**Status: IMPLEMENTATION COMPLETED.**  
+**DoD/evidence:** HU explicitly confirmed this integration as completed/known. Preserve that as HU-reported sandbox completion; do not repeat setup as though it were unstarted. Independent provider-console verification was not available to the assessment, and production evidence is not claimed. The EffyKlean application's inbound status sync and real-adapter lifecycle remain Phase 2 gaps.
+
+**C-06 — Transactional outbox and bounded retry infrastructure.**  
+**Status: IMPLEMENTATION COMPLETED.**  
+**DoD/evidence:** outbox/worker command, idempotency/correlation and three-total-attempt patterns exist with tests. Remaining scheduler deployment and non-retryable-error correction are P6-04 and P2-07, not a reason to rebuild the existing outbox.
+
+**C-07 — Core Admin, audit, MFA and role-authorized capability foundations.**  
+**Status: IMPLEMENTATION COMPLETED.**  
+**DoD/evidence:** Admin orders/products/customers/revisions/content/collections/coupons/staff/reports/system areas, MFA, audit events and role checks exist in the assessed code. Specific capability gaps, unresolved RBAC defaults, security issues and the 25 partial activity rows remain open elsewhere in this plan.
+
+**C-08 — Distributor/Bulk application, negotiated pricing and quotation flows.**  
+**Status: IMPLEMENTATION COMPLETED.**  
+**DoD/evidence:** application/review, Director-approved business pricing, Bulk enquiry/quote/acceptance and customer-role workflows exist with test coverage read by the assessor. GST display/arithmetic, business-account identity verification, bank/UPI and assisted orders remain separate gaps.
+
+**C-09 — Catalogue revision/publishing framework and SEO baseline.**  
+**Status: IMPLEMENTATION COMPLETED.**  
+**DoD/evidence:** revision workflow, publication gates, canonical/OG/JSON-LD/sitemap/robots and product availability vocabulary exist. Product-data verification, Zoho item mapping, five dilution-text conflicts, unpublished SEO/blog drafts and content approval remain open.
+
+**C-10 — Signed-in customer saved-shipping implementation and retention logic.**  
+**Status: IMPLEMENTATION COMPLETED.**  
+**DoD/evidence:** saved address model/code, optional feature flag, customer removal, retention/purge logic and tests were recorded in the 16-Oct history; migration 0005 was applied to the local `effyklean` database by HU-authorized work at that time. The assessment could not access the database or rerun tests. Confirm the current private-repository migration state before any later migration task; do not rebuild this feature. Provider-reported delivery is still needed to renew retention correctly.
+
+**C-11 — Core storefront policy pages and contact-information content scaffolding.**  
+**Status: IMPLEMENTATION COMPLETED.**  
+**DoD/evidence:** policy-page code/content scaffolding and canonical contact-detail tests exist. This is implementation completion of the scaffolding only; approved privacy/terms/retention, replacement wording correction, publication prerequisites and HU content sign-off remain incomplete under Phase 4/7.
+
+**C-12 — Scheduler definitions, backup/restore documentation and media-storage adapter.**  
+**Status: IMPLEMENTATION COMPLETED.**  
+**DoD/evidence:** scheduler definitions/advisory-lock logic, a backup/restore procedure with a reported local drill, and S3-compatible media adapter/migration tooling exist. Hosted scheduling, managed-database backup/restore, approved RPO/RTO, Spaces provisioning and checksum-verified migration remain incomplete under Phase 6.
+
+**C-13 — Public/private decision, instruction and status-history records.**  
+**Status: IMPLEMENTATION COMPLETED.**  
+**DoD/evidence:** Delta plan, status register, 122-capability master, SSD audit requirement, hosting instructions and gap assessment exist. Their existence is complete; the assessment identified stale/conflicting content, and this new plan is a reconciliation layer—not proof that every local/public copy is synchronized.
+
+**C-14 — No-COD / prepaid rule and core price/order safeguards.**  
+**Status: IMPLEMENTATION COMPLETED.**  
+**DoD/evidence:** the current code and tests enforce prepaid payment gating, no COD, price snapshots/idempotency and historical order pricing. Do not implement COD as a “gap”; the exclusion is recorded in Section 6. The GST conflict and the cancellation decision conflict are not covered by this completion label.
+
+---
+
+## 5. Priority and task status plan
 
 Priority order follows dependencies, not a promise of calendar dates. “Decision first” tasks are not coding authorizations. The task IDs retain the assessment's identifiers so each gap can be traced.
 
