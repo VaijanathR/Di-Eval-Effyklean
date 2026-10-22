@@ -80,3 +80,6 @@ The prior YES/NO answers remain authoritative unless a later explicit HU+DI refi
 ## Governance
 
 This is a reporting and planning aid, not an implementation authorization. Continue to apply **STOP → REPORT → HU+DI DECIDE** for frozen-spec/architecture conflicts, new business decisions, unclear authorization and ambiguous exclusions. No deployment, paid-resource creation, production credentials/writes, DNS/cutover or external communications are authorized by this summary.
+
+
+**Next HU response prepared:** MF-089 contact-form privacy/retention, with a concrete proposal recorded in the decision log and row-level register. MF-093 analytics consent and MF-105 customer data-request export remain evidence-first; no generic or repeat question will be posed.
