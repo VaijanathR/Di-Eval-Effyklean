@@ -480,3 +480,33 @@ The current working NO implementation IDs after applying recovered answers and f
 2. Review the 122-row reconciliation audit and the corrected count-status note. Do not treat 443 YES / 50 NO / 1 evidence-only as final until the row-level decision evidence has been traced as described in Section 2.
 3. Confirm the proposed priority order: baseline/evidence → Admin/integration foundations → local E2E → Zoho sandbox → mappings/shipping → storefront/customer experience → communications → infrastructure/release → remaining YES capabilities/beautification.
 4. Confirm that the refund-handling agent task is treated as **YES to implement and enforce the agreed no-refunds/no-returns policy**, not as authorisation to build a refund execution workflow.
+
+---
+
+## HU+DI disposition triage reconciliation — 2026-10-22
+
+This section records the latest HU-reviewed disposition tally and supersedes the earlier **250-question queue** as the current triage-count reference. It does not rewrite or replace the underlying 597-row evidence register or the separate capability YES/NO decision ledger.
+
+**Current disposition tally (597 records total):**
+
+| Disposition | Records |
+|---|---:|
+| Implemented | 256 |
+| BUILD | 243 |
+| LATER | 9 |
+| INVESTIGATE | 13 |
+| EXCLUDE | 76 |
+| **Total** | **597** |
+
+**Interpretation and governance**
+
+- These are **work dispositions**, not implementation-completion, test-validation, or production-readiness counts. “Implemented” means dispositioned to the implemented category; it does not, by itself, prove each record is implemented correctly or validated.
+- BUILD identifies work to be built; LATER is explicitly deferred; EXCLUDE is out of scope; INVESTIGATE requires evidence gathering, validation, dependency checks or reconciliation before any further disposition or decision is requested.
+- The 13 INVESTIGATE records are **not 13 questions for Hu**. Do not turn evidence work into a user questionnaire.
+- Do not ask Hu to decide scope for already-implemented activities, or repeat a decision/answer already recorded in the project history. Check the authoritative decision ledger, prior HU+DI records and relevant evidence first.
+- The disposition tally is distinct from the master's original evidence dispositions (NO ACTION, VALIDATE, BLOCKED-DEC, REJECT/OOS, IMPLEMENT, FIX) and from individual capability YES/NO answers. Do not infer one classification from another.
+- AgntGapAnalysis/Deferred310_Disposition_Triage_DRAFT_2026-10-22.csv is explicitly a draft working aid and says row-level dispositions require verification against the authoritative 597-row source/decision ledger. It must not be treated as a final row-by-row authority merely because its proposed dispositions resemble the aggregate tally.
+- Maintain record-level traceability when reconciling the register: retain the activity ID, disposition, source for Hu's response or governing rule, and any evidence/validation still outstanding. Where the exact record-level source cannot be established, mark it for reconciliation instead of inventing a response.
+- The next step is to reconcile record-level dispositions into the implementation plan and status register, preserving existing DoDs and implementation evidence. Only after that reconciliation should the remaining genuine policy/authorization decisions be presented to HU+DI.
+
+Source: HU+DI triage tally confirmed in the 2026-10-22 conversation; related working materials are in AgntGapAnalysis/. This addendum records the aggregate tally without claiming the row-by-row reconciliation is complete.
