@@ -1,85 +1,71 @@
-# EffyKlean Implementation Summary — 22 October 2026, 12:50
+# EffyKlean Implementation Summary — 22 October 2026, reconciliation update
 
 ## Purpose
 
-This note summarizes the current published assessment of the 597 EffyKlean activity records and the provisional disposition of the 310 records assessed as DEFERRED. It is a status snapshot, not an authorization to implement, exclude, deploy, or perform provider/production writes.
+This is a working status and disposition snapshot for the 597 EffyKlean activity records. It is not authorization to implement, exclude, deploy, or perform provider/production writes.
 
-## 1. Current assessment of all 597 records
-
-The published gap assessment reports the following original status counts:
-
-| Existing assessment status | Count | Meaning |
-|---|---:|---|
-| DONE | 259 | Assessed as implemented/verified in the gap assessment |
-| PARTIAL | 25 | Implementation is incomplete or only partly evidenced |
-| NOT DONE | 3 | Identified as not built |
-| DEFERRED | 310 | Held for a decision, exclusion, later phase, investigation, authorization, or another unresolved reason |
-| **Total** | **597** | **All records in the assessment's reported inventory** |
-
-Source: [GAP_ASSESSMENT_211020261727.md](../../AgntGapAnalysis/GAP_ASSESSMENT_211020261727.md).
-
-These are the assessment's existing status categories. They must not be mistaken for the final HU+DI disposition categories requested below.
-
-## 2. Provisional four-way disposition of the 310 DEFERRED records
-
-The draft triage register currently proposes this breakdown:
-
-| Provisional disposition | Count | Interpretation |
-|---|---:|---|
-| BUILD | 0 | No deferred row has yet been established by this draft as authoritatively approved and pending implementation |
-| LATER | 3 | Provisionally identified as intentionally postponed |
-| INVESTIGATE / HU+DI DECISION REQUIRED | 256 | Source wording, authority, scope, evidence, or final decision remains unclear |
-| EXCLUDE | 51 | Candidate exclusions requiring confirmation against authoritative decisions |
-| **Total deferred records triaged in draft** | **310** | **Provisional only** |
-
-Draft register: [Deferred310_Disposition_Triage_DRAFT_2026-10-22.csv](../../AgntGapAnalysis/Deferred310_Disposition_Triage_DRAFT_2026-10-22.csv).
-
-**These four counts are provisional, not final HU+DI decisions.** In particular, source labels that combine terms such as “deferred/excluded/not authorized” do not prove that an explicit NO decision was made. A proposed feature or an unauthorized feature must not be reclassified as BUILD merely by inference. No deferred row has been labelled BUILD in the draft.
-
-## 3. Requested final summary categories for all 597 records
-
-HU requested a final count across these categories:
-
-1. **Implemented** — implementation evidenced as complete.
-2. **Duplicate and marked implemented** — a duplicate record reported as implemented, separately identified and cross-referenced to the related record.
-3. **BUILD** — explicitly approved for implementation and pending action.
-4. **LATER** — intentionally postponed to a future phase, with reason/dependency.
-5. **INVESTIGATE / HU+DI DECISION REQUIRED** — unresolved, ambiguous, conflicting, insufficiently evidenced, or awaiting a decision.
-6. **EXCLUDE** — explicitly excluded from EffyKlean by an authoritative decision.
-
-| Requested final category | Count currently established |
-|---|---:|
-| Implemented | 259 records are assessed DONE, but the underlying IDs and duplicate treatment still require reconciliation |
-| Duplicate and marked implemented | Not yet separately verified |
-| BUILD | 0 among the 310 deferred rows in the draft; the all-597 total is not established |
-| LATER | 3 provisionally among the deferred rows |
-| INVESTIGATE / HU+DI DECISION REQUIRED | 256 provisionally among the deferred rows; unresolved rows may also exist outside that subset |
-| EXCLUDE | 51 provisional candidates among the deferred rows; not final exclusions |
-| **Grand total in the six requested categories** | **Not yet safely calculable** |
-
-The 25 PARTIAL and 3 NOT DONE records have not been automatically forced into BUILD, LATER, INVESTIGATE, or EXCLUDE. Their intended outcomes require record-level evidence and, where needed, HU+DI decisions. Likewise, the 259 DONE count must not be treated as the count of unique non-duplicate features until the underlying rows and duplicate relationships are checked.
-
-## 4. Evidence gap and required reconciliation
-
-The assessment identifies `docs/discovery/RECONCILED_597_STATUS_2026-10-18.csv` as the source register, but that CSV could not be located in the public repository or the available local project path during this review. The assessment appendix also abbreviates some descriptions, so it is not a safe substitute for the complete 597-row inventory.
-
-To finalize the requested six-category summary:
-
-- Recover and inspect the authoritative 597-row CSV and related decision records.
-- Preserve every original record ID and its full description/status.
-- Assign each record exactly one primary disposition from the six requested categories.
-- Track duplicates in separate duplicate-reference/evidence fields; do not silently delete or merge records based on similar wording.
-- Require authoritative evidence for IMPLEMENTED, BUILD, LATER, and EXCLUDE; keep ambiguous records in INVESTIGATE / HU+DI DECISION REQUIRED.
-- Record decision source, rationale, dependency/owner where relevant, and evidence for each row.
-- Reconcile all six category counts to exactly 597 and explain how duplicate records are counted.
-- Obtain HU+DI decisions for unresolved records before treating the register as final or using it as implementation authorization.
-
-## 5. Governance
-
-This document is a reporting snapshot only. It does not approve implementation, scope changes, exclusions, paid-resource creation, deployment, production writes, DNS/cutover, or external communications. Continue to apply **STOP → REPORT → HU+DI DECIDE** wherever a frozen specification, architecture, authorization boundary, or business decision is unclear.
-
-## References
-
-- [Gap assessment](../../AgntGapAnalysis/GAP_ASSESSMENT_211020261727.md)
-- [Draft 310-row disposition triage register](../../AgntGapAnalysis/Deferred310_Disposition_Triage_DRAFT_2026-10-22.csv)
+- [Original source inventory and status register](./RECONCILED_597_STATUS_2026-10-18.csv)
+- [New 597-row disposition working register](./RECONCILED_597_DISPOSITION_WORKING_2026-10-22.csv)
 - [Consolidated implementation plan](./ImplementationPlanOCT22-26-2026.md)
+- [Draft deferred-row triage register](../../AgntGapAnalysis/Deferred310_Disposition_Triage_DRAFT_2026-10-22.csv)
+
+The 18-Oct source CSV remains unchanged as the historical source snapshot. The new companion register preserves its original ten columns and adds draft disposition, rationale, duplicate-reference, next-action and review-state fields.
+
+## 1. Inventory integrity
+
+The source CSV contains 597 data rows, 597 unique non-empty IDs, no duplicate IDs, 103 MF records and 494 MA records. Its `basis_2026_10_18` field is blank in 305 rows. This does not prove those statuses are wrong, but the basis is not recorded in that field.
+
+Unique IDs do not prove the activities themselves are non-duplicative. No row has yet been confirmed as “Duplicate and marked implemented” because no verified duplicate relationship is evidenced in the source register. This is not a finding that no duplicates exist.
+
+## 2. Six-category working view across all 597 rows
+
+The new `RECONCILED_597_DISPOSITION_WORKING_2026-10-22.csv` assigns exactly one provisional primary disposition to every source ID.
+
+| Primary disposition | Rows | Current interpretation |
+|---|---:|---|
+| Implemented | 255 | Source status records implementation, without asserting production readiness. Acceptance and validation are separate. |
+| Duplicate and marked implemented | 0 confirmed | Duplicate mapping remains open; 0 means none confirmed, not none exist. |
+| BUILD | 0 confirmed | No row was promoted to BUILD from a legacy label or proposal alone. |
+| LATER | 4 | Three records say Admin enters real values later; one says Zoho-managed Shiprocket, test later. Confirm phase/dependency for each. |
+| INVESTIGATE / HU+DI DECISION REQUIRED | 338 | Unresolved, incomplete, blocked, evidence-insufficient, or requiring authoritative decision. |
+| EXCLUDE | 0 confirmed | No row promoted to final EXCLUDE without explicit authoritative exclusion evidence. |
+| **Total** | **597** | One provisional primary disposition per source ID. |
+
+These are conservative working counts, not final approved totals. BUILD and EXCLUDE remain zero *confirmed* because the available source does not establish current approval/exclusion evidence consistently enough to safely assign them. The previous 310-row triage register's 51 EXCLUDE rows remain candidates only and are kept in INVESTIGATE in the full working register pending authoritative decisions.
+
+The 255 Implemented rows are those whose status records implementation without explicit missing-scope wording such as “unpublished”, “webhook not registered”, “committed-tree proof still needs” or “fulfilment time not built”. Those four records are kept in INVESTIGATE until their remaining scope or evidence is resolved. Even an Implemented disposition does not mean production-ready; use source status, basis, validation level and next action together.
+
+## 3. Cross-check findings
+
+1. The full source CSV is now present under `docs/ImplementationPlan/`; earlier notes saying it could not be located were accurate at the time but are now stale.
+2. The historical assessment counts (259 DONE, 25 PARTIAL, 3 NOT DONE, 310 DEFERRED) are not the same thing as the six final dispositions. Preserve original status fields rather than forcing a direct one-to-one mapping.
+3. The draft triage register contains 310 unique source IDs, all present in the source CSV. Its 51 EXCLUDE entries are not final exclusions without authoritative decision evidence.
+4. The source contains four explicit later-handling records. The previous triage count of three LATER rows needs reconciliation against the “Zoho-managed Shiprocket, test later” record.
+5. The source has no verified duplicate map. Duplicate detection and `duplicate_of` evidence remain open.
+6. The source has 41 rows with legacy `source_disposition=IMPLEMENT`; that legacy field alone does not prove “approved and pending BUILD now”. Current statuses include implemented work, proposal-only/no-authorization states and partial work, so no automatic BUILD promotion was made.
+7. The source basis field is blank in 305 rows. Populate supporting evidence as records are reviewed; do not invent evidence or claim verification from test names alone.
+
+## 4. Rules for finalization and implementation batches
+
+- Preserve every original ID and all original source columns.
+- Assign exactly one final primary disposition to each row; the final six totals must sum to 597.
+- Record duplicate relationships separately in `duplicate_of` with evidence. Do not delete or merge rows merely because descriptions look similar.
+- BUILD requires authoritative approval for the specific activity and a defined remaining implementation outcome.
+- LATER requires an intentional future phase, reason/dependency and owner where applicable.
+- EXCLUDE requires an authoritative explicit decision that the activity is not to be implemented in EffyKlean.
+- Implemented requires evidence that the defined implementation scope is complete; validation and production readiness are tracked separately.
+- Keep ambiguous/conflicting/incompletely evidenced rows in INVESTIGATE / HU+DI DECISION REQUIRED.
+- Before implementation batching, group only approved BUILD rows into bounded batches with prerequisites, acceptance criteria, evidence requirements, risk/authorization boundaries and a stop condition. Do not delegate to a coding agent without Hu's explicit authorization.
+
+## 5. Next steps
+
+1. Review all 338 INVESTIGATE rows, prioritizing historical PARTIAL/NOT DONE records, deferred rows and explicit residual-scope items.
+2. Resolve the 51 EXCLUDE candidates against authoritative HU decisions and the original decision ledger.
+3. Confirm duplicates from evidence, and populate `duplicate_of` only where supported.
+4. Confirm the four LATER candidates' intended phase/dependency.
+5. Identify any genuinely approved, not-yet-built activities and assign BUILD only after confirming explicit approval.
+6. Publish final counts and a batch plan after HU+DI review.
+
+## Governance
+
+This is a reporting and planning aid, not an implementation authorization. Continue to apply **STOP → REPORT → HU+DI DECIDE** for frozen-spec/architecture conflicts, new business decisions, unclear authorization and ambiguous exclusions. No deployment, paid-resource creation, production credentials/writes, DNS/cutover or external communications are authorized by this summary.
