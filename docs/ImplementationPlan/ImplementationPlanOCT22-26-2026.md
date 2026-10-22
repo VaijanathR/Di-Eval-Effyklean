@@ -468,3 +468,7 @@ The source assessment's local application snapshot is dated 22 October and canno
 
 
 The first explicit HU response prepared from this triage is MF-089 contact-form privacy/retention; its concrete proposed fields, notice, retention and access controls are recorded in the decision log and working register. MF-093 consent and MF-105 data export remain evidence-first and are not being asked as generic questions.
+
+## Row-level DoD quality verification — 22 October 2026
+
+Post-update verification of the companion working register confirms 597 rows and 597 unique IDs, with no blank DoD or evidence-method cells. Dispositions remain 256 Implemented, 243 BUILD, 9 LATER, 13 INVESTIGATE and 76 EXCLUDE. Of 243 BUILD rows, 183 previously used one of three generic templates; each has now been rewritten with row-specific acceptance outcomes and evidence checks. The remaining 60 BUILD rows already had bespoke DoDs and were preserved. No disposition or HU decision metadata was changed, and the 18-Oct historical source CSV remains unchanged. These are planning/acceptance criteria only—not proof of implementation or test completion, nor authorization to implement or deploy.
