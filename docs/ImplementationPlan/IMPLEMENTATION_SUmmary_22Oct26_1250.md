@@ -66,7 +66,7 @@ The prior YES/NO answers remain authoritative unless a later explicit HU+DI refi
 
 ## 5. Next steps
 
-1. Continue with the remaining 283 INVESTIGATE rows; do not ask HU to repeat the 76 decisions/clarifications already recorded., prioritizing historical PARTIAL/NOT DONE records, deferred rows and explicit residual-scope items.
+1. Continue with the 250 rows that still need a new HU response. Do not ask HU to repeat prior decisions or the 22-Oct responses already recorded. Prioritize historical PARTIAL/NOT DONE records, deferred rows and explicit residual-scope items.
 2. Resolve the 51 EXCLUDE candidates against authoritative HU decisions and the original decision ledger.
 3. Confirm duplicates from evidence, and populate `duplicate_of` only where supported.
 4. Confirm the four LATER candidates' intended phase/dependency.
