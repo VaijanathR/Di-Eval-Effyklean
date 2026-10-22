@@ -10,7 +10,7 @@ This is a working status and disposition snapshot for the 597 EffyKlean activity
 - [HU+DI disposition decision log — 22 Oct 2026](./HUDI_DISPOSITION_DECISIONS_2026-10-22.md)
 - [Draft deferred-row triage register](../../AgntGapAnalysis/Deferred310_Disposition_Triage_DRAFT_2026-10-22.csv)
 
-The 18-Oct source CSV remains unchanged as the historical source snapshot. The new companion register preserves its original ten columns and adds draft disposition, rationale, duplicate-reference, next-action and review-state fields.
+The 18-Oct source CSV remains unchanged as the historical source snapshot. The companion register preserves the original columns, adds separate HU decision metadata, restores the 17 primary Implemented rows changed by the first update, and records 32 recovered prior decisions. The six-category primary disposition is not to be used to reclassify activities already marked Implemented.
 
 ## 1. Inventory integrity
 
@@ -18,25 +18,29 @@ The source CSV contains 597 data rows, 597 unique non-empty IDs, no duplicate ID
 
 Unique IDs do not prove the activities themselves are non-duplicative. No row has yet been confirmed as “Duplicate and marked implemented” because no verified duplicate relationship is evidenced in the source register. This is not a finding that no duplicates exist.
 
-## 2. Six-category working view across all 597 rows — updated 22 October 2026
+## 2. Corrected disposition and response count — 22 October 2026
 
-The working register now includes **76 recorded HU+DI decisions/clarifications** from the decision discussion. The row-level decision status includes the disposition, authority, supported decision date, explicit timestamp limitation, and HU comment/constraint. See the [HU+DI disposition decision log](./HUDI_DISPOSITION_DECISIONS_2026-10-22.md).
+The 22-Oct register update initially misclassified 17 rows that were already marked Implemented. Those 17 primary classifications have now been restored from the pre-update working register. The update also failed to account for prior HU decisions already preserved in the canonical [122-capability decision master](../foundation/HU_DI_122_CAPABILITY_DECISION_AND_REFINEMENT_MASTER_2026-10-16.md). I recovered 32 additional prior YES/NO answers into the working register where no later 22-Oct batch entry superseded them. The immutable 18-Oct source CSV remains unchanged.
 
-| Primary disposition | Rows | Current interpretation |
+**Current number of items needing a new HU response: 250.**
+
+The count is calculated from the original 338 INVESTIGATE rows, less 87 distinct rows already answered by either the recorded 22-Oct batch or a recovered prior HU decision. One row, MA-ORD-037, remains classified INVESTIGATE because HU explicitly chose to continue investigating it; that is a recorded direction, not an unanswered question. Therefore the register contains 251 INVESTIGATE rows, of which 250 still need a new HU response.
+
+### Corrected primary-disposition totals
+
+| Primary disposition | Rows | Meaning |
 |---|---:|---|
-| Implemented | 238 | Recorded as implemented in the working disposition. This does not itself prove acceptance, complete validation or production readiness. |
-| Duplicate and marked implemented | 0 confirmed | No duplicate relationship has been verified and confirmed. |
-| BUILD | 49 | HU-selected Build or D acceptance of Di’s BUILD recommendation. Implementation may still be outstanding. |
-| LATER | 4 | Three records require real Admin-entered values later, plus one Zoho-managed Shiprocket/test-later record; see row-level reasons. |
-| INVESTIGATE / HU+DI DECISION REQUIRED | 283 | Remaining unresolved rows, including evidence gaps, conflicts, unsubmitted decisions and the decision to continue investigating MA-ORD-037. |
-| EXCLUDE | 23 | HU-selected Exclude or D acceptance of Di’s EXCLUDE recommendation, with row-level rationale. |
-| **Total** | **597** | Exactly one primary disposition per source ID. |
+| Implemented | 255 | Restored to the original working-register classification; validation remains separately tracked. |
+| Duplicate and marked implemented (confirmed) | 0 | No duplicate relationship has been verified and confirmed. |
+| BUILD | 62 | Includes the 30 additional recovered YES answers and current batch BUILD decisions; this is scope disposition, not permission for an agent to execute. |
+| LATER | 4 | Deferred to a later phase with row-level rationale. |
+| INVESTIGATE / HU+DI DECISION REQUIRED | 251 | 250 need a new HU response; MA-ORD-037 has a recorded decision to continue investigating. |
+| EXCLUDE | 25 | Includes the 2 additional recovered NO answers and current batch exclusions. |
+| **Total** | **597** | Every source ID counted once. |
 
-The 76 recorded decision/clarification rows are now represented in the working register. Decision date is recorded as **2026-10-22** where supported by the current reconciliation discussion; the exact time of earlier individual decisions is not available in the retained record, so it is explicitly marked unavailable rather than fabricated. The original 18-Oct source CSV remains unchanged.
+The 76 rows annotated in the 22-Oct decision log are **not 76 new disposition decisions**. Some entries record scope preferences for rows already marked Implemented, one records the HSN clarification, and entries that were recommendations or evidence-only are not new HU disposition decisions. The row-level register keeps the primary classification separate from decision notes and validation status.
 
-**Do not conflate dispositions with implementation status.** BUILD is authorization/scope disposition, not a claim that code is complete. MA-ORD-137 is BUILD but was described as a local simulation; MA-PRD-039 is marked as already implemented based on HU’s clarification that default HSN is 340290, without assuming every product’s HSN was independently verified. MA-PRD-040 and MA-PRD-041 were discussed as possible next items but have no HU decision yet and remain unresolved.
-
-The earlier 310-row triage’s 51 EXCLUDE entries remain *candidates only* unless individually supported by the now-recorded HU decision or other authoritative evidence. Do not bulk-convert triage candidates to EXCLUDE.
+The prior YES/NO answers remain authoritative unless a later explicit HU+DI refinement supersedes them. MA-PRD-040 and MA-PRD-041 retain their earlier YES scope answers from the canonical 122-capability decision master; the 22-Oct batch did not establish new decisions for those rows. MA-PRD-039 retains HU's clarification that the default HSN is 340290, without assuming each product value was independently verified.
 
 ## 3. Cross-check findings
 
