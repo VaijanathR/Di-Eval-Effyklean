@@ -272,3 +272,29 @@ Disclosure: while checking configuration the agent printed the Zoho Inventory sa
 
 ## Update 2026-10-16 batch 13 (consolidated closure pass; Batch 1 still NOT accepted)
 A-05: CI green on `5f2ff5c` (run 38898823275). Payments sandbox: real session creation re-verified through the app gateway (provider-confirmed); payment completion, signed return and webhook still NOT evidenced (HTTPS reachable endpoint needed). Catalogue: 15 intended products present and visible; five local test products also visible, hide step awaits HU (see `PROJECT_LOG.md` 2026-10-16). Plan 2.3 122-row map: `docs/foundation/ROW122_DECISION_EVIDENCE_MAP_2026-10-16.md` (84 rows not traced by ID; none accepted). Scheduler for saved-shipping purge: not configured on any host. Inventory credential rotation: deferred by HU.
+
+---
+
+## HU+DI disposition triage reconciliation (2026-10-22)
+
+The current aggregate disposition tally for the **597-record register** supersedes the earlier 250-question queue as the current triage-count reference:
+
+| Disposition | Records |
+|---|---:|
+| Implemented | 256 |
+| BUILD | 243 |
+| LATER | 9 |
+| INVESTIGATE | 13 |
+| EXCLUDE | 76 |
+| **Total** | **597** |
+
+These counts are dispositions, **not** verified implementation or validation counts. “Implemented” is not evidence by itself that each record's code is correct, tested or production-ready. The original master evidence labels (NO ACTION, VALIDATE, BLOCKED-DEC, REJECT/OOS, IMPLEMENT, FIX) and the capability YES/NO decision ledger remain distinct from this newer disposition classification.
+
+Governance for follow-up:
+- Do not present all 13 INVESTIGATE records as questions for Hu. Most require evidence gathering, validation, dependency checks or decision-history reconciliation.
+- Do not ask Hu again about implemented scope or repeat a decision already captured in the project history. Search the authoritative decision ledger, previous HU+DI records and implementation evidence first.
+- Preserve the existing task-specific DoDs and validation evidence. Do not convert a disposition into a completion claim.
+- AgntGapAnalysis/Deferred310_Disposition_Triage_DRAFT_2026-10-22.csv is a draft working aid, not an authoritative row-by-row ledger; its own review-state column requires verification against the authoritative 597-row source/decision ledger.
+- Row-level synchronization is complete only when each disposition is traceable to the applicable activity ID and a source decision or governing rule. If a record cannot yet be reconciled, keep it explicitly unresolved rather than guessing.
+
+Next step: perform the record-level reconciliation into the plan and status register before moving on to the next genuinely unresolved HU+DI decision. The MF-089 contact-form policy proposal remains a separate pending policy decision; this tally does not approve it.
