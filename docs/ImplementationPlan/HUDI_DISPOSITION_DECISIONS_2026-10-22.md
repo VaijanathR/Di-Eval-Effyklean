@@ -143,3 +143,23 @@ Do not continue the old 250-question queue; it included rows whose original scop
 ## Row-level response triage update — 22 October 2026
 
 The current working register has 597 unique IDs and primary dispositions: 256 Implemented, 243 BUILD, 9 LATER, 13 INVESTIGATE and 76 EXCLUDE. The 87 INVESTIGATE entries are not 87 unanswered questions: 51 are MA feature rows with recorded answers but conflict/composite-scope issues, and 36 are MF cross-cutting/technical/evidence/access/dependency rows. The 32 MF rows that previously had blank decision metadata have now been checked against `RESP_18OCT_QA_HU ANSWERS.md` and known project directions; row-level metadata now records prior answers, evidence/validation work, deferred dependencies, or the exact unresolved policy issue. Do not ask a generic or repeated question from those rows. MF-089 contact-form privacy/retention remains explicitly unresolved and must be presented only with concrete fields, purpose, proposed notice, retention/deletion behavior and the specific policy conflict. No application code or external provider settings were changed.
+
+
+## First concrete HU response prepared — MF-089 contact-form privacy and retention
+
+**Status:** Proposal presented to HU; no answer/approval recorded yet. Keep the contact form fail-closed until HU+DI approves the policy and the required wording is reviewed.
+
+**Reference evidence:** The 12-Oct EffyKlean comparison records the contact form as Name/Phone/Email on effyklean.com and name/email/phone on effyklean.in. The working register explicitly says the privacy wording and retention/deletion behavior are unresolved. Do not ask whether a contact form is wanted; that scope is already known.
+
+**Proposed operational baseline for HU to approve or amend:**
+- Purpose: respond to the contact/support inquiry and maintain the support record only.
+- Fields: Name, Email and Phone; retain any message field only if it is confirmed in the actual form.
+- Proposed notice: “We use your details to respond to your enquiry and maintain a support record. We do not use them for marketing unless you separately opt in. See our Privacy Policy for how to contact us about your data.”
+- Retention: delete/anonymize the enquiry 180 days after closure unless an ongoing issue, legal obligation or documented claim requires longer retention.
+- Access: authorized Admin/Customer Care staff only, with access/deletion audit.
+- Marketing: no marketing use without a separate opt-in; no SMS default.
+- This is an operational proposal, not a claim of legal sufficiency. The contact form stays disabled until the approved wording and data lifecycle are recorded.
+
+**HU response requested:** approve this proposal as written, or specify the exact wording/retention/access change. Do not repeat the generic contact-form scope question.
+
+MF-093 analytics consent and MF-105 customer data-request export remain evidence-first: compare existing policies and prior answers, prepare specific recommendations, and ask only if a genuine policy choice remains.
