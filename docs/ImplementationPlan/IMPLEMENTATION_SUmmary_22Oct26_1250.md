@@ -28,17 +28,17 @@ The 22-Oct register update initially misclassified 17 rows that were already mar
 
 **Do not use the earlier 250 figure as a fresh-question count.** It was calculated before the historical question ledger and prior HU scope answers were fully mapped to the 597 IDs. The updated register now carries those prior answers forward. The true count of new HU+DI decisions is not asserted until the remaining INVESTIGATE rows are triaged into resolvable-by-rule, evidence/validation/access work, and genuine unresolved conflicts.
 
-The register was reconciled against the 12-Oct HU+DI decision ledger, canonical 122-capability master, explicit 18-Oct HU clarifications and recorded 22-Oct dispositions. The updated primary counts are 255 Implemented, 183 BUILD, 5 LATER, 94 INVESTIGATE and 60 EXCLUDE (597 total). Prior scope answers are recorded and must not be asked again. The 94 INVESTIGATE rows are not a count of new HU questions: 51 are feature rows with recorded answers but conflict/composite-scope issues, and 43 are cross-cutting or technical/evidence/access/validation/dependency items. MA-ORD-037 already has a recorded direction to continue investigating. Di must resolve matters covered by established rules and prepare concrete evidence-backed proposals before asking HU about a genuinely unresolved decision. The older 443 YES / 50 NO / 1 evidence-only tally remains a working, not fully source-verified historical split; do not apply it blindly.
+The register was reconciled against the 12-Oct HU+DI decision ledger, canonical 122-capability master, explicit 18-Oct HU clarifications and recorded 22-Oct dispositions. The updated primary counts are 256 Implemented, 187 BUILD, 7 LATER, 87 INVESTIGATE and 60 EXCLUDE (597 total). Prior scope answers are recorded and must not be asked again. The 87 INVESTIGATE rows are not a count of new HU questions: 51 are feature rows with recorded answers but conflict/composite-scope issues, and 36 are cross-cutting or technical/evidence/access/validation/dependency items. MA-ORD-037 already has a recorded direction to continue investigating. Di must resolve matters covered by established rules and prepare concrete evidence-backed proposals before asking HU about a genuinely unresolved decision. The older 443 YES / 50 NO / 1 evidence-only tally remains a working, not fully source-verified historical split; do not apply it blindly.
 
 ### Corrected primary-disposition totals
 
 | Primary disposition | Rows | Meaning |
 |---|---:|---|
-| Implemented | 255 | Restored to the original working-register classification; validation remains separately tracked. |
+| Implemented | 256 | Restored original classifications plus the Zoho Payments sandbox activity confirmed working by HU; production readiness remains separate. |
 | Duplicate and marked implemented (confirmed) | 0 | No duplicate relationship has been verified and confirmed. |
-| BUILD | 183 | Includes recorded 22-Oct dispositions and prior HU YES scope answers reconciled to the current IDs; this is scope disposition, not permission for an agent to execute. |
-| LATER | 5 | Deferred to a later phase with row-level rationale, including the previously directed future redirect activity. |
-| INVESTIGATE / HU+DI DECISION REQUIRED | 94 | Not a fresh-question count; triage for prior-answer conflicts, evidence/access/validation and genuine remaining decisions. |
+| BUILD | 187 | Includes recorded 22-Oct dispositions, prior HU YES scope answers and explicit HU clarifications reconciled to the current IDs; this is scope disposition, not permission for an agent to execute. |
+| LATER | 7 | Deferred to a later phase with row-level rationale, including the future redirect and parked DigitalOcean hosting/process-supervision work. |
+| INVESTIGATE / HU+DI DECISION REQUIRED | 87 | Not a fresh-question count; triage for prior-answer conflicts, evidence/access/validation and genuine remaining decisions. |
 | EXCLUDE | 60 | Includes recorded 22-Oct exclusions, prior HU NO answers and explicit HU scope boundaries. |
 | **Total** | **597** | Every source ID counted once. |
 
