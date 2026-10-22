@@ -2,7 +2,7 @@
 
 The row-level disposition register and HU+DI decision log have been corrected. The first update had changed the primary classification of 17 activities that were already marked Implemented; those original classifications have been restored. A further 32 prior HU YES/NO decisions were recovered from the canonical 122-capability decision master where no later 22-Oct batch entry superseded them. The historical 18-Oct source snapshot remains unchanged.
 
-**250 items currently need a new HU response.** This is not the same as the number of rows whose primary disposition remains INVESTIGATE. The corrected register has 251 INVESTIGATE rows; MA-ORD-037 has a recorded HU+DI decision to continue investigating, leaving 250 without a new response.
+**250 items currently need a new HU response based on row-specific decisions mapped so far.** This is not the same as the number of rows whose primary disposition remains INVESTIGATE. It is not yet a final historical total: the 13-Oct plan explicitly marks the older 443 YES / 50 NO / 1 evidence-only split across 494 MA rows as a working tally, not fully source-verified, because some answers were category-level rather than row-specific. Do not apply that tally until individual decisions are mapped to current IDs. The corrected register has 251 INVESTIGATE rows; MA-ORD-037 has a recorded HU+DI decision to continue investigating, leaving 250 without a new response.
 
 Corrected primary-disposition totals across all 597 rows: **255 Implemented + 0 confirmed duplicate + 62 BUILD + 4 LATER + 251 INVESTIGATE + 25 EXCLUDE = 597**.
 
