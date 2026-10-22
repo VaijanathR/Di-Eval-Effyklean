@@ -8896,3 +8896,15 @@ Evidence limits
 - 78 of the 117 proposed rejections rest only on the inventory's own recommendation, and 39 rest on a SPEC clause, a decision, or a frozen rule.
 
 The full dataset is also in my scratchpad as …/scratchpad/out/all.json and s1.md to s6.md, outside the repository. Say if you want it moved somewhere.
+
+---
+
+## HU+DI disposition triage update (2026-10-22)
+
+A later HU+DI disposition triage classifies the 597 records as follows: **256 Implemented, 243 BUILD, 9 LATER, 13 INVESTIGATE, 76 EXCLUDE** (total 597). This newer tally supersedes the earlier 250-question queue as the current aggregate disposition reference.
+
+These categories are **work dispositions**, not verified implementation or validation counts. They are not interchangeable with this file's original evidence dispositions (NO ACTION, VALIDATE, BLOCKED-DEC, REJECT/OOS, IMPLEMENT, FIX), nor do they replace individual HU YES/NO capability decisions. In particular, this register's historical evidence labels remain intact and should not be silently recoded to match the newer tally.
+
+The 13 INVESTIGATE records are not automatically questions for Hu; first gather evidence, validate dependencies, and reconcile prior decisions. The file AgntGapAnalysis/Deferred310_Disposition_Triage_DRAFT_2026-10-22.csv is a draft aid whose row-level classifications require verification against the authoritative 597-row source/decision ledger. Do not treat it as final row-by-row evidence. Reconcile each row to its source decision or governing rule before marking the record-level synchronization complete.
+
+The implementation plan and status register carry the same aggregate tally and the rules for follow-up. This note is an addendum; it does not claim the full row-by-row reconciliation is complete.
