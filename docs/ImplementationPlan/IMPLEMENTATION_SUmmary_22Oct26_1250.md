@@ -26,9 +26,9 @@ Unique IDs do not prove the activities themselves are non-duplicative. No row ha
 
 The 22-Oct register update initially misclassified 17 rows that were already marked Implemented. Those 17 primary classifications have now been restored from the pre-update working register. The update also failed to account for prior HU decisions already preserved in the canonical [122-capability decision master](../foundation/HU_DI_122_CAPABILITY_DECISION_AND_REFINEMENT_MASTER_2026-10-16.md). I recovered 32 additional prior YES/NO answers into the working register where no later 22-Oct batch entry superseded them. The immutable 18-Oct source CSV remains unchanged.
 
-**Current mapped count needing a new HU response: 250.** This is the verified count from the row-specific decisions currently mapped into the register, not yet the final count for all historical decisions.
+**Do not use the earlier 250 figure as a fresh-question count.** It was calculated before the historical question ledger and prior HU scope answers were fully mapped to the 597 IDs. The updated register now carries those prior answers forward. The true count of new HU+DI decisions is not asserted until the remaining INVESTIGATE rows are triaged into resolvable-by-rule, evidence/validation/access work, and genuine unresolved conflicts.
 
-The count is calculated from the original 338 INVESTIGATE rows, less 87 distinct rows already answered by either the recorded 22-Oct batch or a recovered prior HU decision. One row, MA-ORD-037, remains classified INVESTIGATE because HU explicitly chose to continue investigating it; that is a recorded direction, not an unanswered question. Therefore the register contains 251 INVESTIGATE rows, of which 250 still need a new HU response. One limitation remains: the older plan records the 443 YES / 50 NO / 1 evidence-only split for 494 MA rows as a working tally, explicitly not fully source-verified because some answers were category-level rather than row-specific. That tally must not be blindly subtracted or applied; until its individual decisions are mapped to current IDs, 250 is the current verified mapped count, not a claim that every historical answer has been reconciled.
+The register was reconciled against the 12-Oct HU+DI decision ledger, canonical 122-capability master, explicit 18-Oct HU clarifications and recorded 22-Oct dispositions. The updated primary counts are 255 Implemented, 183 BUILD, 5 LATER, 94 INVESTIGATE and 60 EXCLUDE (597 total). Prior scope answers are recorded and must not be asked again. The 94 INVESTIGATE rows are not a count of new HU questions: 51 are feature rows with recorded answers but conflict/composite-scope issues, and 43 are cross-cutting or technical/evidence/access/validation/dependency items. MA-ORD-037 already has a recorded direction to continue investigating. Di must resolve matters covered by established rules and prepare concrete evidence-backed proposals before asking HU about a genuinely unresolved decision. The older 443 YES / 50 NO / 1 evidence-only tally remains a working, not fully source-verified historical split; do not apply it blindly.
 
 ### Corrected primary-disposition totals
 
@@ -36,10 +36,10 @@ The count is calculated from the original 338 INVESTIGATE rows, less 87 distinct
 |---|---:|---|
 | Implemented | 255 | Restored to the original working-register classification; validation remains separately tracked. |
 | Duplicate and marked implemented (confirmed) | 0 | No duplicate relationship has been verified and confirmed. |
-| BUILD | 62 | Includes the 30 additional recovered YES answers and current batch BUILD decisions; this is scope disposition, not permission for an agent to execute. |
-| LATER | 4 | Deferred to a later phase with row-level rationale. |
-| INVESTIGATE / HU+DI DECISION REQUIRED | 251 | 250 need a new HU response; MA-ORD-037 has a recorded decision to continue investigating. |
-| EXCLUDE | 25 | Includes the 2 additional recovered NO answers and current batch exclusions. |
+| BUILD | 183 | Includes recorded 22-Oct dispositions and prior HU YES scope answers reconciled to the current IDs; this is scope disposition, not permission for an agent to execute. |
+| LATER | 5 | Deferred to a later phase with row-level rationale, including the previously directed future redirect activity. |
+| INVESTIGATE / HU+DI DECISION REQUIRED | 94 | Not a fresh-question count; triage for prior-answer conflicts, evidence/access/validation and genuine remaining decisions. |
+| EXCLUDE | 60 | Includes recorded 22-Oct exclusions, prior HU NO answers and explicit HU scope boundaries. |
 | **Total** | **597** | Every source ID counted once. |
 
 The 76 rows annotated in the 22-Oct decision log are **not 76 new disposition decisions**. Some entries record scope preferences for rows already marked Implemented, one records the HSN clarification, and entries that were recommendations or evidence-only are not new HU disposition decisions. The row-level register keeps the primary classification separate from decision notes and validation status.
@@ -70,7 +70,7 @@ The prior YES/NO answers remain authoritative unless a later explicit HU+DI refi
 
 ## 5. Next steps
 
-1. Continue with the 250 rows that still need a new HU response. Do not ask HU to repeat prior decisions or the 22-Oct responses already recorded. Prioritize historical PARTIAL/NOT DONE records, deferred rows and explicit residual-scope items.
+1. Do not continue the old 250-question queue. Triage the 94 INVESTIGATE rows against prior HU answers, frozen business rules and later refinements; resolve what is already settled without asking HU. Present only genuinely unresolved decisions, each with evidence and a recommended resolution. Keep implementation/validation status separate from scope disposition.
 2. Resolve the 51 EXCLUDE candidates against authoritative HU decisions and the original decision ledger.
 3. Confirm duplicates from evidence, and populate `duplicate_of` only where supported.
 4. Confirm the four LATER candidates' intended phase/dependency.
