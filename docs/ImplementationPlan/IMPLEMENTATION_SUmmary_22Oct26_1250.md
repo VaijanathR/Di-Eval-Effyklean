@@ -70,7 +70,7 @@ The prior YES/NO answers remain authoritative unless a later explicit HU+DI refi
 
 ## 5. Next steps
 
-1. Do not continue the old 250-question queue. Triage the 94 INVESTIGATE rows against prior HU answers, frozen business rules and later refinements; resolve what is already settled without asking HU. Present only genuinely unresolved decisions, each with evidence and a recommended resolution. Keep implementation/validation status separate from scope disposition.
+1. Do not continue the old 250-question queue. Triage the 87 INVESTIGATE rows against prior HU answers, frozen business rules and later refinements; resolve what is already settled without asking HU. Present only genuinely unresolved decisions, each with evidence and a recommended resolution. Keep implementation/validation status separate from scope disposition.
 2. Resolve the 51 EXCLUDE candidates against authoritative HU decisions and the original decision ledger.
 3. Confirm duplicates from evidence, and populate `duplicate_of` only where supported.
 4. Confirm the four LATER candidates' intended phase/dependency.
