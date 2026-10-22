@@ -119,20 +119,23 @@ Implementation status, validation, production readiness, and disposition remain 
 
 ## Corrected working-register totals
 
-These totals count each of the 597 original rows once. The pre-update Implemented classification has been restored for all 17 affected rows. A further 32 existing YES/NO answers were recovered from the canonical 122-capability master and applied only where the working register still showed INVESTIGATE and no later 22-Oct batch entry superseded that answer.
+These totals count each of the 597 original rows once. The pre-update Implemented classification has been restored for all 17 affected rows. The earlier count of 250 purportedly unanswered rows was provisional and is superseded by the historical-answer reconciliation below. Existing HU answers must be carried forward; a prior YES is scope intent, not execution authorization, and a prior NO must not be asked again.
 
 | Primary disposition | Rows |
 |---|---:|
 | Implemented | 255 |
 | Duplicate and marked implemented (confirmed) | 0 |
-| BUILD | 62 |
-| LATER | 4 |
-| INVESTIGATE / HU+DI DECISION REQUIRED | 251 |
-| EXCLUDE | 25 |
+| BUILD | 183 |
+| LATER | 5 |
+| INVESTIGATE / HU+DI DECISION REQUIRED | 94 |
+| EXCLUDE | 60 |
 | **Total** | **597** |
 
-Of the 251 rows still in INVESTIGATE, MA-ORD-037 has an explicit HU+DI decision to continue investigating. Therefore **250 rows currently need a new HU response based on the row-specific decisions mapped so far**; the remaining 251 INVESTIGATE count is a disposition count, not itself a count of unanswered questions. This is not yet a final historical total: the older 443 YES / 50 NO / 1 evidence-only split for 494 MA rows is explicitly documented in the 13-Oct plan as a working, not source-verified, tally because some answers were category-level. Do not apply that tally without mapping its individual decisions to current IDs. MA-ORD-137 remains BUILD but the described implementation is only a local simulation. MA-PRD-039 retains HU's HSN clarification (default HSN 340290) without assuming every product's HSN was independently verified. MA-PRD-040 and MA-PRD-041 retain the earlier YES answers in the canonical 122-capability decision master; no new 22-Oct decision was recorded for them.
+The working register was reconciled against the 12-Oct HU+DI decision ledger, the canonical 122-capability master, and explicit 18-Oct HU clarifications. This populated prior-decision metadata in 386 rows, promoted 121 INVESTIGATE rows to BUILD based on recorded YES scope answers, moved 43 rows to EXCLUDE based on recorded NO answers or explicit scope boundaries, and moved one row to LATER. These are scope dispositions only and do not authorize execution.
 
+**Do not treat the 94 remaining INVESTIGATE rows as 94 fresh HU questions.** They comprise 51 MA feature rows with recorded prior answers but a conflict/composite-scope issue, and 43 MF cross-cutting, implementation, evidence, access, validation, or dependency items. MA-ORD-037 already has an explicit direction to continue investigating. Next, Di must resolve conflicts where established rules already decide the outcome, prepare evidence-backed proposals for genuine conflicts, and separate actual HU+DI decisions from technical evidence work before asking anything. Do not re-ask original feature questions.
+
+The older 443 YES / 50 NO / 1 evidence-only split for 494 MA rows remains a working, not fully source-verified historical tally; do not apply it blindly. MA-ORD-137 remains BUILD but its described implementation is only a local simulation. MA-PRD-039 retains HU's HSN clarification (default HSN 340290) without assuming every product's HSN was independently verified.
 ## Next step
 
-Continue only with the 250 rows that still require HU response. Do not re-ask the recovered prior YES/NO answers or the recorded 22-Oct decisions. Preserve all IDs and comments; do not classify activities already marked Implemented as BUILD/EXCLUDE merely because a scope preference was discussed.
+Do not continue the old 250-question queue; it included rows whose original scope answers were already recorded. Use the revised 597-row register and its historical-answer metadata. Review the 94 INVESTIGATE rows to separate conflicts that need a proposed HU+DI resolution from technical/evidence/access/dependency work. Do not ask original capability questions again, and do not ask about activities already classified Implemented. Only after that triage should Di present genuinely unresolved decisions, with concise evidence and a recommended resolution.
