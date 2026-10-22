@@ -1,3 +1,13 @@
+## Disposition reconciliation update — 22 October 2026
+
+The latest row-level disposition and HU+DI decisions are maintained in the [597-row working register](./RECONCILED_597_DISPOSITION_WORKING_2026-10-22.csv) and [HU+DI disposition decision log](./HUDI_DISPOSITION_DECISIONS_2026-10-22.md). This update supersedes earlier provisional statements in this plan that no rows had been promoted to BUILD or EXCLUDE.
+
+Current six-category working totals: **238 Implemented + 0 confirmed duplicate + 49 BUILD + 4 LATER + 283 INVESTIGATE + 23 EXCLUDE = 597**. These categories represent primary disposition only; implementation/validation status remains separate. The 76 recorded decisions/clarifications are documented in the decision log and row-level columns, including HU comments and constraints. The original 18-Oct source snapshot remains unchanged.
+
+Exact individual decision times were not reliably available from the retained conversation record; the working register records the supported date and explicitly marks the exact time unavailable rather than fabricating timestamps. MA-PRD-040 and MA-PRD-041 were discussed as possible next items but remain undecided. Do not treat a recommendation as a decision, and do not infer BUILD from implementation status or EXCLUDE from a triage keyword.
+
+---
+
 # EffyKlean — Consolidated Implementation Plan and Status Baseline
 **Plan date:** 22 October 2026  
 **Status:** HU+DI working plan; not blanket authorisation to execute every task. Each implementation batch still requires HU approval under the existing governance rules.  
