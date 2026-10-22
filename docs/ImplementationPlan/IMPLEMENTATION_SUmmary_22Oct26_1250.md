@@ -7,6 +7,7 @@ This is a working status and disposition snapshot for the 597 EffyKlean activity
 - [Original source inventory and status register](./RECONCILED_597_STATUS_2026-10-18.csv)
 - [New 597-row disposition working register](./RECONCILED_597_DISPOSITION_WORKING_2026-10-22.csv)
 - [Consolidated implementation plan](./ImplementationPlanOCT22-26-2026.md)
+- [HU+DI disposition decision log — 22 Oct 2026](./HUDI_DISPOSITION_DECISIONS_2026-10-22.md)
 - [Draft deferred-row triage register](../../AgntGapAnalysis/Deferred310_Disposition_Triage_DRAFT_2026-10-22.csv)
 
 The 18-Oct source CSV remains unchanged as the historical source snapshot. The new companion register preserves its original ten columns and adds draft disposition, rationale, duplicate-reference, next-action and review-state fields.
@@ -17,23 +18,25 @@ The source CSV contains 597 data rows, 597 unique non-empty IDs, no duplicate ID
 
 Unique IDs do not prove the activities themselves are non-duplicative. No row has yet been confirmed as “Duplicate and marked implemented” because no verified duplicate relationship is evidenced in the source register. This is not a finding that no duplicates exist.
 
-## 2. Six-category working view across all 597 rows
+## 2. Six-category working view across all 597 rows — updated 22 October 2026
 
-The new `RECONCILED_597_DISPOSITION_WORKING_2026-10-22.csv` assigns exactly one provisional primary disposition to every source ID.
+The working register now includes **76 recorded HU+DI decisions/clarifications** from the decision discussion. The row-level decision status includes the disposition, authority, supported decision date, explicit timestamp limitation, and HU comment/constraint. See the [HU+DI disposition decision log](./HUDI_DISPOSITION_DECISIONS_2026-10-22.md).
 
 | Primary disposition | Rows | Current interpretation |
 |---|---:|---|
-| Implemented | 255 | Source status records implementation, without asserting production readiness. Acceptance and validation are separate. |
-| Duplicate and marked implemented | 0 confirmed | Duplicate mapping remains open; 0 means none confirmed, not none exist. |
-| BUILD | 0 confirmed | No row was promoted to BUILD from a legacy label or proposal alone. |
-| LATER | 4 | Three records say Admin enters real values later; one says Zoho-managed Shiprocket, test later. Confirm phase/dependency for each. |
-| INVESTIGATE / HU+DI DECISION REQUIRED | 338 | Unresolved, incomplete, blocked, evidence-insufficient, or requiring authoritative decision. |
-| EXCLUDE | 0 confirmed | No row promoted to final EXCLUDE without explicit authoritative exclusion evidence. |
-| **Total** | **597** | One provisional primary disposition per source ID. |
+| Implemented | 238 | Recorded as implemented in the working disposition. This does not itself prove acceptance, complete validation or production readiness. |
+| Duplicate and marked implemented | 0 confirmed | No duplicate relationship has been verified and confirmed. |
+| BUILD | 49 | HU-selected Build or D acceptance of Di’s BUILD recommendation. Implementation may still be outstanding. |
+| LATER | 4 | Three records require real Admin-entered values later, plus one Zoho-managed Shiprocket/test-later record; see row-level reasons. |
+| INVESTIGATE / HU+DI DECISION REQUIRED | 283 | Remaining unresolved rows, including evidence gaps, conflicts, unsubmitted decisions and the decision to continue investigating MA-ORD-037. |
+| EXCLUDE | 23 | HU-selected Exclude or D acceptance of Di’s EXCLUDE recommendation, with row-level rationale. |
+| **Total** | **597** | Exactly one primary disposition per source ID. |
 
-These are conservative working counts, not final approved totals. BUILD and EXCLUDE remain zero *confirmed* because the available source does not establish current approval/exclusion evidence consistently enough to safely assign them. The previous 310-row triage register's 51 EXCLUDE rows remain candidates only and are kept in INVESTIGATE in the full working register pending authoritative decisions.
+The 76 recorded decision/clarification rows are now represented in the working register. Decision date is recorded as **2026-10-22** where supported by the current reconciliation discussion; the exact time of earlier individual decisions is not available in the retained record, so it is explicitly marked unavailable rather than fabricated. The original 18-Oct source CSV remains unchanged.
 
-The 255 Implemented rows are those whose status records implementation without explicit missing-scope wording such as “unpublished”, “webhook not registered”, “committed-tree proof still needs” or “fulfilment time not built”. Those four records are kept in INVESTIGATE until their remaining scope or evidence is resolved. Even an Implemented disposition does not mean production-ready; use source status, basis, validation level and next action together.
+**Do not conflate dispositions with implementation status.** BUILD is authorization/scope disposition, not a claim that code is complete. MA-ORD-137 is BUILD but was described as a local simulation; MA-PRD-039 is marked as already implemented based on HU’s clarification that default HSN is 340290, without assuming every product’s HSN was independently verified. MA-PRD-040 and MA-PRD-041 were discussed as possible next items but have no HU decision yet and remain unresolved.
+
+The earlier 310-row triage’s 51 EXCLUDE entries remain *candidates only* unless individually supported by the now-recorded HU decision or other authoritative evidence. Do not bulk-convert triage candidates to EXCLUDE.
 
 ## 3. Cross-check findings
 
@@ -59,7 +62,7 @@ The 255 Implemented rows are those whose status records implementation without e
 
 ## 5. Next steps
 
-1. Review all 338 INVESTIGATE rows, prioritizing historical PARTIAL/NOT DONE records, deferred rows and explicit residual-scope items.
+1. Continue with the remaining 283 INVESTIGATE rows; do not ask HU to repeat the 76 decisions/clarifications already recorded., prioritizing historical PARTIAL/NOT DONE records, deferred rows and explicit residual-scope items.
 2. Resolve the 51 EXCLUDE candidates against authoritative HU decisions and the original decision ledger.
 3. Confirm duplicates from evidence, and populate `duplicate_of` only where supported.
 4. Confirm the four LATER candidates' intended phase/dependency.
