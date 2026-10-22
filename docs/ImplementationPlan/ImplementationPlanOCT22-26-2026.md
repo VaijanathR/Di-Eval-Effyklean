@@ -397,7 +397,7 @@ Priority order follows dependencies, not a promise of calendar dates. “Decisio
 **Status: INCOMPLETE — DEFERRED.**  
 **DoD:** every temporary-arrangement row has evidence of clearance; domain redirect/rollback is agreed; Shopify is retained as Hu directed until transition approval; monitoring and backups work; observation period and rollback owner are recorded; separate HU+DI authorization exists for deployment, credentials, DNS and cutover.
 
-## 5. NotToBeIMPLEMENTED-inEffyklean — explicit exclusions and architectural boundaries
+## 6. NotToBeIMPLEMENTED-inEffyklean — explicit exclusions and architectural boundaries
 
 These are exclusions from the EffyKlean build, not gaps to “finish”. If a future source row uses a conflicting label, apply the latest explicit HU decision and report the inconsistency; do not revive an excluded feature from Shopify screenshots or a parity inventory.
 
@@ -416,7 +416,7 @@ These are exclusions from the EffyKlean build, not gaps to “finish”. If a fu
 
 The 597-row inventory contains many more explicit exclusions. For each row, retain its exact ID, source decision and disposition in the row-level register. The list above is a guardrail summary, not permission to overwrite the source IDs or treat every deferred row as NO.
 
-## 6. Not to be mistaken for completed work
+## 7. Not to be mistaken for completed work
 
 - **Zoho Payments sandbox working** = HU-reported sandbox readiness; it does not prove a webhook registered, webhook-first order placement, settlement retrieval or production.
 - **Zoho Inventory sandbox integrated with Shiprocket sandbox** = HU-reported sandbox integration; it does not prove the EffyKlean application can create/track production shipments or receive delivery status.
@@ -428,7 +428,7 @@ The 597-row inventory contains many more explicit exclusions. For each row, reta
 - **Production settings fail closed in several cases** is not a staging environment, production deployment or full security sign-off.
 - **A task's implementation completed** is not automatically HU acceptance of the batch or permission to commit/push/deploy.
 
-## 7. Current gate order
+## 8. Current gate order
 
 1. HU+DI decide the blocking conflicts in P1-01, P1-02 and P1-06 first; do not implement around them.
 2. Reconcile the current private tree and establish an approved reproducible baseline (P0), without losing Hu's uncommitted work.
@@ -437,7 +437,7 @@ The 597-row inventory contains many more explicit exclusions. For each row, reta
 5. Provision staging only after explicit spend/access approval (P6); complete HU-supplied catalogue/content data (P7); run approved sandbox acceptance (P8).
 6. Triage the remaining 597 rows (P9); only after all critical launch gaps, approved decisions, evidence and UAT are complete may HU+DI consider release (P10).
 
-## 8. Known assessment limitations and handoff
+## 9. Known assessment limitations and handoff
 
 The source assessment's local application snapshot is dated 22 October and cannot be assumed to equal a fresh private-repository state. Its static checks were Ruff check/format and Django check; it collected 2,491 tests but did not run them, migration checks, browser tests, penetration tests, provider consoles, database reads or DigitalOcean checks. Several prior test/provider results are class-3 agent reports. The status register public mirror lags later records. This plan therefore records implementation status at the strongest supportable level and deliberately leaves external/runtime verification incomplete where evidence is absent.
 
