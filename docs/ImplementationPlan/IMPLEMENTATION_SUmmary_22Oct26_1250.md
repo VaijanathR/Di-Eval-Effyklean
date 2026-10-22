@@ -22,9 +22,9 @@ Unique IDs do not prove the activities themselves are non-duplicative. No row ha
 
 The 22-Oct register update initially misclassified 17 rows that were already marked Implemented. Those 17 primary classifications have now been restored from the pre-update working register. The update also failed to account for prior HU decisions already preserved in the canonical [122-capability decision master](../foundation/HU_DI_122_CAPABILITY_DECISION_AND_REFINEMENT_MASTER_2026-10-16.md). I recovered 32 additional prior YES/NO answers into the working register where no later 22-Oct batch entry superseded them. The immutable 18-Oct source CSV remains unchanged.
 
-**Current number of items needing a new HU response: 250.**
+**Current mapped count needing a new HU response: 250.** This is the verified count from the row-specific decisions currently mapped into the register, not yet the final count for all historical decisions.
 
-The count is calculated from the original 338 INVESTIGATE rows, less 87 distinct rows already answered by either the recorded 22-Oct batch or a recovered prior HU decision. One row, MA-ORD-037, remains classified INVESTIGATE because HU explicitly chose to continue investigating it; that is a recorded direction, not an unanswered question. Therefore the register contains 251 INVESTIGATE rows, of which 250 still need a new HU response.
+The count is calculated from the original 338 INVESTIGATE rows, less 87 distinct rows already answered by either the recorded 22-Oct batch or a recovered prior HU decision. One row, MA-ORD-037, remains classified INVESTIGATE because HU explicitly chose to continue investigating it; that is a recorded direction, not an unanswered question. Therefore the register contains 251 INVESTIGATE rows, of which 250 still need a new HU response. One limitation remains: the older plan records the 443 YES / 50 NO / 1 evidence-only split for 494 MA rows as a working tally, explicitly not fully source-verified because some answers were category-level rather than row-specific. That tally must not be blindly subtracted or applied; until its individual decisions are mapped to current IDs, 250 is the current verified mapped count, not a claim that every historical answer has been reconciled.
 
 ### Corrected primary-disposition totals
 
