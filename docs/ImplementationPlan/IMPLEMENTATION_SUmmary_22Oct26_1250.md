@@ -4,7 +4,7 @@
 
 ## Definition of Done coverage check — 22 October 2026
 
-The consolidated implementation plan `ImplementationPlanOCT22-26-2026.md` was checked task by task: **63 implementation-task entries, 63 task-specific DoD sections (63/63 covered)**. The DoD for each task is recorded in that plan beside the task; the global evidence, test, governance, authorization and closure rules apply across tasks. The 597-row disposition CSV is an activity/disposition register, not a list of 597 authorized implementation tasks, so it does not substitute for or duplicate the task-specific DoDs. Task completion still requires evidence against its own DoD and HU authorization; this coverage check does not authorize implementation.
+The consolidated implementation plan `ImplementationPlanOCT22-26-2026.md` has **63 implementation-task entries with 63 task-specific DoDs (63/63)**. In addition, the [597-row disposition working register](./RECONCILED_597_DISPOSITION_WORKING_2026-10-22.csv) now has a populated **row-specific DoD and validation-evidence method for all 597 records (597/597)**. The two counts cover different things: the plan contains bounded implementation tasks; the register covers every source activity, including already implemented, BUILD, LATER, INVESTIGATE and EXCLUDE rows. For unresolved rows, the DoD is to resolve source evidence and obtain an explicit HU+DI disposition before implementation; a DoD does not authorize implementation.
 
 This is a working status and disposition snapshot for the 597 EffyKlean activity records. It is not authorization to implement, exclude, deploy, or perform provider/production writes.
 
