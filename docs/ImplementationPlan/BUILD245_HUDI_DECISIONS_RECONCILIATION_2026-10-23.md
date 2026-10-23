@@ -41,7 +41,7 @@ The old report combines five different things: (1) settled HU scope answers, (2)
 - Customer address decision already recorded: one saved address, three-month retention and active-order protection. Multiple saved addresses are parked (**MA-CUS-006**); do not re-open it as a generic yes/no question.
 - GST is inclusive; GST Number + Name produces a Zoho GST invoice only when the pair is valid, otherwise consumer treatment. Do not invent tax exemptions. **MA-CUS-014/045** need accountant-approved tax rules before any exception is implemented.
 - **MA-PRD-047**: publication must be blocked until commercial data is verified. This is a gate, not permission to publish provisional MRP/concentrate/Zoho data.
-- **MA-PRD-057**: scheduled publication must not bypass the established authorised-staff publication gate. Do not build an automatic publishing bypass while the exact authorization model remains unspecified.
+- **MA-PRD-057 — HU clarification (23-Oct-2026):** A scheduled publication time does not publish the product automatically. Publication occurs only after the required approval is complete and an authorised Admin or Director manually publishes it. If they forget or approval remains incomplete, the product stays unpublished, even after the scheduled time. Do not implement automatic publication or any schedule-based bypass of approval, authorisation, or verified-commercial-data gates.
 
 ### Shopify-only mechanics and consent/language constraints
 - Shopify plan/billing, packing-slip Liquid/package mechanics, app settings and feature previews have no direct EffyKlean equivalent as-is: **MA-SET-004/015/017/025/034**. Reuse the underlying business need only if the frozen spec or a prior HU decision requires a Django-native equivalent.
