@@ -24,8 +24,9 @@ Purpose: replace repeated questions from the generated 22-Oct prompt with a smal
    - Implementation must still enforce role-based access, record who changed exemption status and when, and retain the evidence/reason captured for the decision where applicable. This approval does not authorise non-compliant exemptions or remove applicable legal/tax obligations.
 
 5. **Marketing, channels, pixels and social/AI commerce — MA-MKT-001/002/003/004/007/013; MA-CHN-002/003/005/006/007/008; MA-SET-072; MA-PRD-096.**
-   - Di recommendation: no new provider, pixel, campaign, social login, marketplace or AI-commerce integration until purpose, data flow, consent, provider, wording, ownership and ongoing cost are documented. Existing WhatsApp notifications do not authorise WhatsApp marketing/commerce.
-   - HU+DI decision needed only for a specific proposed provider/use case; no blanket approval.
+   - **HU decision (23-Oct-2026): KEEP THESE AS FEATURES.** Marketing/channel capabilities remain features in the product scope/roadmap, not blanket exclusions. WhatsApp marketing is handled through Meta; it is not to be operated directly from EffyKlean's Admin page. EffyKlean may provide integration configuration and API-key/credential settings for supported integrations.
+   - Integration settings must be access-controlled and secrets must not be exposed in the Admin UI, logs or ordinary responses. A configured integration does not itself authorise campaigns, tracking pixels, social login, marketplaces, AI-commerce, customer-data sharing or consent changes; review the specific provider/use case, data flow, consent, wording, ownership and ongoing cost before enabling it.
+   - This records scope direction only; it does not authorise implementation, new provider connections, live credentials, campaigns or tracking. Existing transactional WhatsApp notifications remain distinct from marketing.
 
 6. **Analytics and customer segmentation — MA-ANA-011/022/017/027/018/020; MA-ANA-012/013/021/024/026; MA-CNT-042.**
    - Di recommendation: keep tracking-dependent analytics gated by MF-093 privacy/consent/retention approval. Prefer essential operational reports first; do not add pixels or behavioural tracking to reproduce Shopify dashboards.
