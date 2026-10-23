@@ -190,3 +190,16 @@ The source file contains assistant acknowledgements such as “Agreed, Hu” / �
 - The authoritative row-level decisions already present include MA-PRD-047, MA-PRD-057, MA-PRD-063, MA-CUS-009, MA-CUS-014, MA-CUS-045, MA-PRD-071, MA-SET-011 and MA-SET-013; their implementation statuses are not changed by this index.
 - This establishes coverage of explicit HU messages visible in this one source file only. It does not establish exhaustive coverage of every earlier chat thread or prove implementation completion.
 
+
+
+## 597-row response reconciliation crosswalk — 23 October 2026
+
+The row-level file [HU_RESPONSE_RECONCILIATION_597_2026-10-23.csv](./HU_RESPONSE_RECONCILIATION_597_2026-10-23.csv) has been created from the immutable 18-Oct 597-row snapshot, the canonical 12-Oct 122-capability decision master, the 22-Oct HU+DI disposition log, the 245-row BUILD ledger, the 151-item decision crosswalk, and the 23-Oct genuine-decision shortlist. It contains 597 unique source IDs and keeps historical implementation/status fields separate from HU decision evidence.
+
+Verified crosswalk counts:
+- **215 rows** have an existing HU decision/response summary traced to a source record. These include original 12-Oct YES/NO decisions, recorded 22-Oct dispositions/directions, and 23-Oct refinements. Summaries from decision logs/shortlists are not presented as verbatim HU quotes; verbatim is used only where the source itself supplies it.
+- **144 rows** are reconciled from an existing ledger/crosswalk without treating that reconciliation as a new HU response.
+- **238 rows** have no HU decision found in the sources checked for this pass. This is explicitly **not** a claim that Hu never answered, nor that these rows all require a question. They must be checked against the relevant historical source before any question is asked; many may be implemented or technical/evidence tasks.
+- Current row-level disposition evidence is available for 245 rows through the BUILD ledger/crosswalk/correction overlay. The separate 597-row working disposition CSV currently fetches as a zero-byte file. This response crosswalk does not pretend to reconstruct the other 352 primary dispositions; that is a distinct data-recovery task and must be completed without guessing.
+
+This is the first cross-source, 597-ID response reconciliation pass—not a claim of exhaustive historical-chat coverage. Keep STOP → REPORT → HU+DI DECIDE, do not delegate to a coding agent without Hu's explicit authorization, and do not ask Hu to repeat an answer already marked RECORDED AND VERIFIED.
