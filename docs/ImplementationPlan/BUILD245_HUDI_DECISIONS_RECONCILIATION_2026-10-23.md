@@ -1,3 +1,18 @@
+## Authoritative row-level status correction — 23 October 2026
+
+This note supersedes any conflicting aggregate totals or “unreconciled” claims elsewhere in this file. The current fetched source files have been compared by unique ID.
+
+- **597-ID register:** 597 rows / 597 unique IDs. Current dispositions: **340 Implemented, 152 BUILD, 74 EXCLUDE, 17 LATER, 14 INVESTIGATE** (597 total).
+- **245-ID implementation ledger:** 245 rows / 245 unique IDs. Implementation outcomes: **83 DONE (verified), 62 PARTIAL, 100 DEFERRED** (245 total). Current dispositions within those 245 IDs: **83 Implemented, 141 BUILD, 13 LATER, 8 EXCLUDE** (245 total).
+- All 83 verified DONE rows remain promoted to Implemented. Exact-ID comparison: every one of the 245 ledger IDs exists in the 597 register; **zero disposition mismatches**. The 597 response crosswalk also matches the 597 register by ID and current disposition.
+- The earlier “163 pending” figure is not current: 62 PARTIAL + 100 DEFERRED = **162**. Of these, **141 are current BUILD** (61 PARTIAL + 80 DEFERRED); **21 are not BUILD** (1 PARTIAL and 12 DEFERRED are LATER; 8 DEFERRED are EXCLUDE).
+- **Coverage gap before implementation handoff:** 11 additional IDs are marked BUILD in the 597 register but are not in the 245-row implementation ledger: MF-070, MF-071, MF-074, MF-078, MF-092, MF-107, MF-109, MF-114, MA-ORD-068, MA-DSC-023 and MA-SET-061. They need explicit ledger coverage; do not assume implementation status or evidence.
+- MF-055 policy is approved and recorded; it remains PARTIAL / BUILD pending implementation and scoped sandbox validation. MF-084 legal wording still needs Hu/legal confirmation; MF-094 needs source/spec parity investigation before any narrow question; MF-115 is a release evidence gate, not a new policy question. These are distinct from the 83 already implemented.
+
+Historical totals below are retained only as historical record and must not be used as current status.
+
+---
+
 # BUILD-245 decision reconciliation — HU+DI working result (2026-10-23)
 
 **Purpose:** Reconcile `BUILD245_HUDI_DECISIONS_NEEDED_2026-10-22.md` against prior HU answers, the canonical 122-capability master, the 22-Oct disposition decision log, the updated 245-row BUILD ledger, and known frozen EffyKlean rules.
@@ -175,7 +190,7 @@ This update supersedes earlier current-disposition counts in this document where
 
 This supersedes the preceding disposition counts where they conflict with the corrected row-level files.
 
-- Current 245-row dispositions: **83 Implemented, 143 BUILD, 13 LATER, 6 EXCLUDE**. Implementation status remains **83 DONE (verified), 62 PARTIAL, 100 DEFERRED**.
+- Current 245-row dispositions: **83 Implemented, 141 BUILD, 13 LATER, 8 EXCLUDE**. Implementation status remains **83 DONE (verified), 62 PARTIAL, 100 DEFERRED**.
 - Ninety-five unique rows in `BUILD245_LEDGER_2026-10-22.csv` have at least one corrected disposition, reason category or next action compared with the pre-reconciliation version. Stale broad questions were replaced by the recorded HU direction plus the specific remaining technical, provider, legal, consent, evidence or detailed-specification gate.
 - Current-scope refinements now applied in both the 245-row ledger and 597-ID crosswalk:
   - LATER: MA-CUS-006 (multiple saved addresses), MA-PRD-075, MA-SET-029, MA-SET-075, MA-MKT-012 (translations pending verified text), MA-ANA-012/013/021/024/026, MA-SET-027, MA-CNT-042 and MA-MKT-002 (optional tracking/attribution pending the MF-093 consent/privacy/retention/access gate).
@@ -187,9 +202,9 @@ This supersedes the preceding disposition counts where they conflict with the co
 
 This update supersedes earlier statements in this document that the 597-row working-disposition CSV was zero-byte. The current GitHub fetch returns **597 rows and 597 unique IDs**. In this pass, all 245 IDs in the current BUILD ledger were synchronized to the corrected 245-row ledger and response crosswalk; a direct ID join found **zero disposition mismatches** between those three records. The 597-row working register now reflects the corrected dispositions and later HU refinements.
 
-Current 597-row register counts: **340 Implemented, 143 BUILD, 13 LATER, 6 EXCLUDE, 9 INVESTIGATE and 86 UNRECONCILED — DO NOT GUESS** (597 total). Thus 511 rows have a row-level classification; the 86 unreconciled rows remain unassigned. Aggregate arithmetic implies 10 further LATER and 76 further EXCLUDE among those 86, but those individual IDs are not mapped to authoritative evidence. Do not assign them from the aggregate.
+Current 597-row register counts are **340 Implemented, 152 BUILD, 74 EXCLUDE, 17 LATER and 14 INVESTIGATE** (597 total; 597 unique IDs). The register is populated and the current exact-ID comparisons found no disposition mismatches against the response crosswalk or the 245-row ledger for IDs in common. The earlier 86-UNRECONCILED statement is superseded.
 
-Current 245-row ledger dispositions: **83 Implemented, 143 BUILD, 13 LATER and 6 EXCLUDE**. Its implementation-status counts remain 83 DONE (verified), 62 PARTIAL and 100 DEFERRED. The 597-ID response crosswalk has 597 unique IDs; the decision overlay has 151 rows; the correction overlay has 19 unique row-specific corrections. Original HU answers remain historical evidence, and later specific refinements control current disposition. No coding agent was delegated and no implementation/deployment/provider action was performed by this reconciliation.
+Current 245-row ledger dispositions: **83 Implemented, 141 BUILD, 13 LATER and 8 EXCLUDE**. Its implementation-status counts remain 83 DONE (verified), 62 PARTIAL and 100 DEFERRED. The 597-ID response crosswalk has 597 unique IDs; the decision overlay has 151 rows; the correction overlay has 19 unique row-specific corrections. Original HU answers remain historical evidence, and later specific refinements control current disposition. No coding agent was delegated and no implementation/deployment/provider action was performed by this reconciliation.
 
 ## Latest audit correction — 23-Oct-2026
 
