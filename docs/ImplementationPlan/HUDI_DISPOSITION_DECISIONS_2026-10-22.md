@@ -1,3 +1,11 @@
+## Current status reconciliation — 23 October 2026 (supersedes 22-Oct totals)
+
+The per-item BUILD ledger contains 245 unique IDs: 83 are `DONE (verified)`, 62 `PARTIAL`, and 100 `DEFERRED`. Reconciliation against the 597-item primary-disposition register promotes 82 of the 83 verified-DONE BUILD rows to `Implemented`. MF-089 remains `BUILD`: although its code/tests exist, the host must schedule the contact-retention job and HU legal review of wording remains outstanding. No item was promoted based on aggregate arithmetic alone; each promotion is listed in [CURRENT_597_STATUS_RECONCILIATION_2026-10-23.csv](./CURRENT_597_STATUS_RECONCILIATION_2026-10-23.csv) with its row-level implementation, resolved-path, validation, evidence and limits.
+
+**Current 597-item primary-disposition totals: 339 Implemented + 163 BUILD + 10 LATER + 9 INVESTIGATE + 76 EXCLUDE = 597.** The remaining 163 BUILD rows are 62 PARTIAL + 100 DEFERRED + MF-089. This is the current count to use in future queries. The 22-Oct 597-row register and the 18-Oct source snapshot remain preserved as historical evidence; apply the 23-Oct reconciliation overlay for the current status. This does not authorize production writes, deployment, provider actions or work on deferred rows.
+
+---
+
 # HU+DI Disposition Decisions Recorded — 22 October 2026
 
 ## Purpose and scope
@@ -142,7 +150,7 @@ Do not continue the old 250-question queue; it included rows whose original scop
 
 ## Row-level response triage update — 22 October 2026
 
-The current working register has 597 unique IDs and primary dispositions: 257 Implemented, 245 BUILD, 10 LATER, 9 INVESTIGATE and 76 EXCLUDE. The 87 INVESTIGATE entries were the pre-reconciliation snapshot, not 87 unanswered questions. HU approved MF-089 as BUILD; the earlier MF-093 LATER and MF-105 BUILD decisions are preserved. Before the follow-up reconciliation, the ten INVESTIGATE rows comprised two MA records with an existing direction/composite-scope note and eight MF cross-cutting, technical, evidence, access, validation, dependency or policy records. After MF-008 was reclassified Implemented on HU confirmation, nine primary INVESTIGATE rows remain. The 32 MF rows that previously had blank decision metadata have been checked against `RESP_18OCT_QA_HU ANSWERS.md` and known project directions; row-level metadata records prior answers, evidence/validation work, deferred dependencies, or the exact unresolved policy issue. Do not ask a generic or repeated question from those rows. No application code or external provider settings were changed.
+The current 22-Oct baseline had 597 unique IDs and primary dispositions: 257 Implemented, 245 BUILD, 10 LATER, 9 INVESTIGATE and 76 EXCLUDE before the 23-Oct status reconciliation. The 87 INVESTIGATE entries were the pre-reconciliation snapshot, not 87 unanswered questions. HU approved MF-089 as BUILD; the earlier MF-093 LATER and MF-105 BUILD decisions are preserved. Before the follow-up reconciliation, the ten INVESTIGATE rows comprised two MA records with an existing direction/composite-scope note and eight MF cross-cutting, technical, evidence, access, validation, dependency or policy records. After MF-008 was reclassified Implemented on HU confirmation, nine primary INVESTIGATE rows remain. The 32 MF rows that previously had blank decision metadata have been checked against `RESP_18OCT_QA_HU ANSWERS.md` and known project directions; row-level metadata records prior answers, evidence/validation work, deferred dependencies, or the exact unresolved policy issue. Do not ask a generic or repeated question from those rows. No application code or external provider settings were changed.
 
 
 ## MF-089 decision and implementation gate — 22 October 2026
