@@ -11,7 +11,7 @@ Purpose: replace repeated questions from the generated 22-Oct prompt with a smal
 
 2. **Gift cards — MA-GFT-001/002, MA-SET-032.**
    - Di recommendation: keep excluded/deferred until a written policy covers issuance, redemption, expiry, partial redemption, refunds, fraud controls and liability/accounting. No implementation before policy approval.
-   - **HU+DI decision needed:** are gift cards a business requirement at all? If yes, accountant-approved terms first.
+   - **HU decision (23-Oct-2026): AGREED with Di.** Exclude gift cards from current scope and leave them deferred for possible future reconsideration. No implementation unless HU+DI reopens the decision and accountant-approved terms are available.
 
 3. **Customer/order-history deletion, anonymisation and merging — MA-CUS-009/020/050.**
    - Di recommendation: no bulk deletion or merge until legal retention, tax/accounting records, active orders, audit trail, legal holds and reversible identity mapping are specified. Treat contact-form MF-089's 180-day retention separately.
