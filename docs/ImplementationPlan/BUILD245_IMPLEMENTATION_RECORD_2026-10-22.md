@@ -1,3 +1,11 @@
+## Current status reconciliation — 23 October 2026 (supersedes 22-Oct totals)
+
+The per-item BUILD ledger contains 245 unique IDs: 83 are `DONE (verified)`, 62 `PARTIAL`, and 100 `DEFERRED`. Reconciliation against the 597-item primary-disposition register promotes 82 of the 83 verified-DONE BUILD rows to `Implemented`. MF-089 remains `BUILD`: although its code/tests exist, the host must schedule the contact-retention job and HU legal review of wording remains outstanding. No item was promoted based on aggregate arithmetic alone; each promotion is listed in [CURRENT_597_STATUS_RECONCILIATION_2026-10-23.csv](./CURRENT_597_STATUS_RECONCILIATION_2026-10-23.csv) with its row-level implementation, resolved-path, validation, evidence and limits.
+
+**Current 597-item primary-disposition totals: 339 Implemented + 163 BUILD + 10 LATER + 9 INVESTIGATE + 76 EXCLUDE = 597.** The remaining 163 BUILD rows are 62 PARTIAL + 100 DEFERRED + MF-089. This is the current count to use in future queries. The 22-Oct 597-row register and the 18-Oct source snapshot remain preserved as historical evidence; apply the 23-Oct reconciliation overlay for the current status. This does not authorize production writes, deployment, provider actions or work on deferred rows.
+
+---
+
 # BUILD-245 implementation record (2026-10-22)
 
 Authority: HU+DI "Full BUILD Implementation Mandate and Mandatory Completion Audit" over the
@@ -84,4 +92,4 @@ new retention/limit rule, so it is parked for HU+DI.
 
 The public per-item ledger is present at `docs/ImplementationPlan/BUILD245_LEDGER_2026-10-22.csv`. The earlier note above saying it was absent from the public repository tree was incorrect and is superseded by this correction. The CSV contains 245 data rows and 245 unique non-empty IDs. Its row-level `primary_status` counts reconcile exactly: 83 `DONE (verified)`, 62 `PARTIAL`, and 100 `DEFERRED` (245 total); there are 0 `NOT DONE` rows. The later aggregate of 64 PARTIAL / 247 total was erroneous; use the ledger's 62 PARTIAL count. Individual BUILD status evidence is available directly in the CSV, so no status needs to be inferred from aggregate figures.
 
-The separate 597-row primary disposition register remains 257 Implemented, 245 BUILD, 10 LATER, 9 INVESTIGATE, and 76 EXCLUDE (597 total), as recorded in the implementation summary. These disposition counts are distinct from the BUILD ledger's implementation-status counts.
+The 22-Oct baseline primary disposition was 257 Implemented, 245 BUILD, 10 LATER, 9 INVESTIGATE, and 76 EXCLUDE. Current 23-Oct disposition is 339 Implemented, 163 BUILD, 10 LATER, 9 INVESTIGATE, and 76 EXCLUDE; use the reconciliation overlay. These disposition counts are distinct from the BUILD ledger's implementation-status counts.
