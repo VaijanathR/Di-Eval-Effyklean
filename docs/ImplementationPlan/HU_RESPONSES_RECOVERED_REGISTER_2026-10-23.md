@@ -203,3 +203,13 @@ Verified crosswalk counts:
 - Current row-level disposition evidence is available for 245 rows through the BUILD ledger/crosswalk/correction overlay. The separate 597-row working disposition CSV currently fetches as a zero-byte file. This response crosswalk does not pretend to reconstruct the other 352 primary dispositions; that is a distinct data-recovery task and must be completed without guessing.
 
 This is the first cross-source, 597-ID response reconciliation pass—not a claim of exhaustive historical-chat coverage. Keep STOP → REPORT → HU+DI DECIDE, do not delegate to a coding agent without Hu's explicit authorization, and do not ask Hu to repeat an answer already marked RECORDED AND VERIFIED.
+
+
+## Superseding update — 23 October 2026, earlier HU answers incorporated
+
+After the initial crosswalk pass, I also reconciled the 18-Oct persistent HU answers file [RESP_18OCT_QA_HU ANSWERS.md](../../HUDI%20Discussion/RESP_18OCT_QA_HU%20ANSWERS.md) against the 597 IDs and attached the applicable directions to 56 distinct rows. This preserves earlier instructions while leaving later, more-specific decisions authoritative. The row-level crosswalk has been re-fetched and now contains **597 unique IDs** with these current counts:
+- **252** rows with an existing HU decision/response source recorded;
+- **127** rows reconciled from existing ledgers without treating that reconciliation as a new HU response;
+- **218** rows where no HU decision was found in the sources checked so far. This is not proof that Hu never answered and does not mean all 218 require a question.
+
+These counts supersede the earlier initial-pass counts recorded above. The 18-Oct source was not a verbatim transcript of every earlier conversation; this is still not an exhaustive audit of every historical chat. The zero-byte 597-row disposition working CSV remains a separate unresolved record-reconstruction defect.
