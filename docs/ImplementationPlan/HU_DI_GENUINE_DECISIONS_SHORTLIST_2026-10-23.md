@@ -35,9 +35,10 @@ Purpose: replace repeated questions from the generated 22-Oct prompt with a smal
    - Report export/custom report builder details should follow the approved capability requirements and be verified against the canonical records; do not invent extra scheduling, report-library or segment-threshold behaviour where it is not specified.
 
 7. **Discount edge cases — MA-DSC-011/012/026.**
-   - Existing rule: first qualifying combo item receives no discount; later qualifying items receive the discount; if the first item is removed, the next becomes first.
-   - Di recommendation: preserve this rule; do not introduce customer-specific one-use limits or segment eligibility without a concrete need. Resolve coupon precedence only if coupon support is actually in scope.
-   - HU+DI decision needed only if a concrete campaign requires these extra rules.
+   - Existing combo rules remain unchanged: the first qualifying combo item receives no combo discount; later qualifying items receive it; if the first item is removed, the next becomes first. Combo rules are evaluated oldest-created first, and qualifying quantities cannot be reused.
+   - **HU decision (23-Oct-2026): APPROVED for implementation scope.** Coupon/promotion capability must support an optional one-use-per-customer limit and optional eligibility restrictions, including all customers, new customers, or specific customers/approved segments, so campaigns such as a generic festive coupon can control repeated redemption and audience eligibility.
+   - These controls are configurable per promotion/coupon, not mandatory for every offer. Preserve the existing discount precedence: B2C may use a combo discount OR a valid company promotion/coupon, not both; only one additional discount may apply to a sale price. Distributor pricing remains product-specific with optional quantity discounts and no combo offers.
+   - This records scope/business rules only; it does not by itself authorise coding-agent delegation, implementation, live campaign launch or marketing sends. Apply the applicable consent and campaign-approval requirements.
 
 8. **Public quantity price breaks / updates subscription — MA-PRD-071/070.**
    - Public product quantity price breaks remain out of scope until separately approved; distributor slabs are not public price breaks.
