@@ -8,6 +8,7 @@ This file is a recovery/index record for Hu's prior answers and decisions so the
 
 ## Primary source records recovered and checked
 
+0. `HUDI Discussion/HuDI Conversation 17-part2.md` — read from beginning to end and reconciled response-by-response in the source-specific audit below. This source is now covered; that does not imply all earlier chat threads have been audited.
 1. `HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md` — consolidated decisions 1–13 and prior answers.
 2. `BUILD245_HUDI_DECISIONS_RECONCILIATION_2026-10-23.md` — reconciled settled rules, dependencies, exclusions and safeguards.
 3. `BUILD245_DECISIONS_RECONCILED_LEDGER_2026-10-23.csv` — row-level BUILD245 reconciliation.
@@ -91,11 +92,41 @@ This file is a recovery/index record for Hu's prior answers and decisions so the
 - Do not delegate to a coding agent unless Hu explicitly authorises it.
 - Use STOP → REPORT → HU+DI DECIDE for frozen architecture/spec conflicts, new decisions, business ambiguity or authorization/risk issues.
 - Agent instructions should be concise and task-focused (task + constraints + expected report); don't offload instruction quality to agent.
+- Do not over-engineer, invent new settings/switches or split clear requirements into unnecessary functionality. Do the task; avoid repeated assurances, motivational statements, and assurance loops that frustrate Hu. Report concrete work and evidence.
 - If agent delegation is authorised, completion audit must map every plan/spec item to DONE (verified)/PARTIAL/NOT DONE/DEFERRED with command output or file-line evidence, and list shortcuts/stubs/placeholders/TODO/pass/test weakening/swallowed errors/out-of-scope claims.
 - Stage only explicit paths; never `git add -A`; no commit co-author trailers. Keep PROJECT_LOG.md, CLAUDE.md, README and status register updated before clearing context. Keep .claude session log private/out of Git.
 - Risk-based sufficient testing; no expensive full-suite rerun after narrow fixes unless a meaningful gate warrants it.
 - Hosting is preferred on DigitalOcean App Platform + Managed PostgreSQL; hosting setup was parked until the other work is ready. Hu wants it completed after the agent's other tasks, but no agent delegation or live deploy is authorised by this preference alone.
 - Preserve original sources and history; don't overwrite historical records to make them look current.
+
+## Source-specific response audit — `HUDI Discussion/HuDI Conversation 17-part2.md`
+
+**Audit result:** The complete source file was fetched from the repository and reviewed end-to-end. Each distinct decision, clarification, correction and process instruction in this source was compared with the current decision shortlist, reconciliation overlay, recovered-response register and 151-item decision crosswalk. The authoritative scope decisions below are recorded; implementation status and execution authorisation remain separate.
+
+| Source topic | Hu's recorded answer / correction | Target record and reconciliation result |
+|---|---|---|
+| Product lifecycle | Approved Draft, Active, Unlisted (direct-link only), Archived; no Suspended state unless a concrete operational need is evidenced. Preserve order/history and authorised staff action. | Shortlist Decision 1; recovered above. Scope decision resolved; implementation not authorised by this approval alone. |
+| Gift cards | Agreed to exclude from current scope and defer reconsideration unless HU+DI reopens it and accountant-approved terms exist. | Shortlist Decision 2; scope excluded/deferred. |
+| Customer/order-history deletion | Deletion YES; anonymisation NO. Only authenticated Admin or Director. Customer-record merging was not approved. Preserve required accounting/tax records, order integrity and audit evidence. | Shortlist Decision 3; deletion scope approved with safeguards; anonymisation NO; merge unapproved. Do not infer bulk deletion approval from this general answer. |
+| Tax-exemption controls | Approved; Admin or Director roles are responsible for applying tax rules. Record who/when and reason/evidence where applicable. | Shortlist Decision 4; scope approved, role enforcement and audit requirements retained. |
+| Marketing and channels | Marketing/channel capabilities are to be implemented as in-scope features, not parked as future features. WhatsApp marketing is managed through Meta, not directly in EffyKlean Admin; provide secure integration configuration/credential settings for supported integrations. | Shortlist Decision 5; feature scope approved. Provider setup, live credentials, campaigns, sends and privacy-sensitive tracking remain separate gates. |
+| Analytics and customer segmentation | Existing YES answers and AD-15 operational reporting approval stand; no new approval question is needed for already approved segmentation. Optional visitor/session/conversion/behaviour tracking remains gated by privacy/consent/retention controls. | Shortlist Decision 6; scope resolved from prior answers; MF-093 remains LATER. |
+| Coupon restrictions and discount rules | Rejected excluding one-use-per-customer and eligibility controls. Approved both as optional per-coupon controls (all customers, new customers, specific customers/approved segments). Preserve no stacking, combo order/first-item rule, and distributor pricing rules. | Shortlist Decision 7; scope approved, existing pricing precedence unchanged. |
+| Public quantity price breaks and “Subscribe” | Approved public quantity price breaks; quantity tier defines the selling price and does not stack as another discount. “Subscribe” means updates/communications, not recurring product orders or charges. | Shortlist Decision 8; quantity price-break scope resolved. Do not conflate updates subscription with product selling plans. |
+| Content, forms, search, chat and package features | Earlier YES answers for site preferences, storefront search/settings/filters, forms builder, customer-facing chat/chatbot and package feature stand. Do not re-ask. Do not assume a Shopify theme-builder/Tidio clone or override Zoho/Shiprocket ownership. | Shortlist Decision 9; prior YES answers preserved; detailed implementation/provider requirements and package/shipping boundaries remain. |
+| Admin-editable settings | Approved the proposed baseline split: safe contact/brand content may be editable through audited Admin controls; protected checkout/payment/GST/tax/shipping/Zoho-owned/domain settings stay restricted; extra fields require HU+DI approval. | Shortlist Decision 10; baseline approved; no broad unrestricted settings surface. |
+| Channel semantics / active products | Rejected the invented separate Staff-availability setting and challenged the assumption that Active must mean hidden from the website. Do not over-engineer or add unsupported channel switches/POS behaviour. Preserve the approved lifecycle and staff-order safeguards. | Shortlist Decision 11; no separate staff-availability setting; no new decision/task from Di's withdrawn proposal. |
+| Scheduled publication | Corrected Di's misreading: if the required approval is incomplete or Admin/Director forgets to publish, the product remains unpublished even after the scheduled time. Scheduled time never publishes by itself; authorised Admin/Director must manually publish after required approval. | Shortlist Decision 1 and Decision 13; MA-PRD-057 resolved. No automatic publication or schedule-based bypass. |
+| Product URL identity | Approved fixed product-ID URLs `/products/<id>/`; no editable slugs or slug-change redirects. | Shortlist Decision 12; MA-PRD-063 resolved. |
+| Work/process instructions | Asked whether every response was being saved; explicitly required the answers to be recovered and recorded before agent instructions. Rejected repeated assurances and asked for the task to be completed. | This register is the response index; the source-specific audit and row-level crosswalk are being updated. Do not prepare the next coding-agent instruction set until the wider response reconciliation is complete. No coding-agent delegation was authorised. |
+
+### Important interpretation corrections preserved
+
+- The “Active product must be hidden from the public website” wording was Hu challenging Di's invented assumption, not a new rule. The existing Unlisted state is sufficient; no Staff-availability switch is to be added.
+- The first response about scheduled publishing was corrected explicitly by Hu. The final authoritative rule is manual publication only after required approval; forgetting or reaching a scheduled time does not publish.
+- “Marketing/channel features” means implementation scope, not future-only roadmap items. It still does not authorise arbitrary live provider actions.
+- Updates subscription is not recurring product subscription.
+- Approval of customer deletion does not approve anonymisation or customer merging, and does not silently settle bulk-delete behaviour.
 
 ## Current decision shortlist (source-of-truth pointers)
 
@@ -118,6 +149,6 @@ Use the linked shortlist for the full detailed decision wording; this recovery f
 
 ## Coverage status — be honest
 
-- **Recovered and indexed:** decisions above, the 22-Oct disposition log, the 23-Oct reconciliation overlay, the latest ledger changes, and prior context explicitly retained in conversation memory.
-- **Not yet claimed exhaustive:** every individual message/answer across all prior chat threads has not been checked one-by-one against every relevant row in the 597-row register and canonical 122-capability master. This must be done before claiming complete response coverage or issuing the next coding-agent instruction set.
-- **Next reconciliation step:** compare the actual prior HU replies in the gap-analysis/decision threads against the shortlist, the 22-Oct decision log, canonical 122-capability master, the row-level 597-item disposition history and the 245-row ledger. Record each distinct HU response with its requirement ID(s), answer/condition, source conversation/date when known, target public record, and verification status. Use `SOURCE FOUND / RECORDED AND VERIFIED / MISSING FROM RECORD / AMBIGUOUS — DO NOT GUESS` as statuses. Never fabricate exact timestamps or verbatim quotes.
+- **Source audited and reconciled:** `HUDI Discussion/HuDI Conversation 17-part2.md` has been reviewed end-to-end and its distinct answers/corrections are mapped in the audit above. The shortlist contains the settled scope decisions; the row-level crosswalk and reconciliation overlay are being corrected to remove stale prompts that conflict with those answers.
+- **Not yet claimed exhaustive:** every answer across every earlier chat thread has not been checked one-by-one against every relevant row in the 597-row register and canonical 122-capability master. Do not claim complete historical response coverage or prepare the next coding-agent instruction set until that wider reconciliation is complete.
+- **Next reconciliation step:** continue comparing earlier gap-analysis/decision conversations with the shortlist, 22-Oct decision log, canonical 122-capability master, row-level 597-item disposition history and 245-row ledger. Record each distinct response with requirement ID(s), answer/condition, source, target record and verification status. Use `SOURCE FOUND / RECORDED AND VERIFIED / MISSING FROM RECORD / AMBIGUOUS — DO NOT GUESS`; never fabricate timestamps or verbatim quotes.
