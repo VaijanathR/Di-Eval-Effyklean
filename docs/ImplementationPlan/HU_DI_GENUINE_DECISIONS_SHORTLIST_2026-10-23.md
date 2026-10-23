@@ -41,10 +41,10 @@ Purpose: replace repeated questions from the generated 22-Oct prompt with a smal
    - This records scope/business rules only; it does not by itself authorise coding-agent delegation, implementation, live campaign launch or marketing sends. Apply the applicable consent and campaign-approval requirements.
 
 8. **Public quantity price breaks / updates subscription — MA-PRD-071/070.**
-   - Public product quantity price breaks remain out of scope until separately approved; distributor slabs are not public price breaks.
+   - **HU decision (23-Oct-2026): APPROVED.** Public product quantity price breaks are in scope (consistent with the prior YES recorded for MA-PRD-071). A quantity-based selling-price tier is a defined price for the qualifying quantity, not an extra discount stacked on top of a combo offer, coupon/promotion or another discount. Preserve the approved discount precedence and no-stacking rules. Distributor quantity slabs remain separate from public price breaks.
    - **HU clarification (23-Oct-2026): “Subscribe” means subscribing to EffyKlean updates/communications, not a recurring product order or recurring payment.** Do not gate the updates-subscription feature on Zoho Payments recurring-charge capability or product-subscription charging/cancellation policies.
    - Implement the updates-subscription capability according to the approved requirements, including applicable consent, communication preferences and unsubscribe handling. A subscription to updates does not by itself grant consent to every marketing channel or campaign.
-   - Any remaining uncertainty about this item must be checked against the specific MA-PRD-070 requirement; do not infer product subscriptions from the word “subscribe.”
+   - MA-PRD-070 product selling plans/recurring product subscriptions remain separate from updates subscriptions; do not infer approval for recurring product orders or charges.
 
 9. **EffyKlean-specific content/forms/search/chat/package features — MA-CNT-008/015/016/019/020; MA-PRD-105.**
    - Di recommendation: do not reproduce Shopify theme builders, generic form builders or Tidio by default. Retain the existing contact form and current storefront search unless a concrete unmet user journey is documented. Keep package/shipping ownership with the approved Zoho/Shiprocket flow.
