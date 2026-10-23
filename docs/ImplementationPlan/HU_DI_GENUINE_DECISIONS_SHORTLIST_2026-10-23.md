@@ -7,11 +7,11 @@ Purpose: replace repeated questions from the generated 22-Oct prompt with a smal
 1. **Product lifecycle — MA-PRD-052/053/083/091 (DC-10).**
    - Existing answer: original YES scope answers stand; exact lifecycle model was deferred by the frozen spec.
    - Di recommendation: use the smallest safe model: Draft, Active, Unlisted (direct-link only), Archived; do not add a separate Suspended state unless a specific operational need is evidenced. Archive/unlist must preserve order/history, block new sales as defined, and require authorised staff action. Bulk archive/unlist only after individual lifecycle behavior is verified.
-   - HU+DI decision needed: approve/refine this state model before implementation.
+   - **HU approval (23-Oct-2026): APPROVED.** Adopt the four-state model: Draft, Active, Unlisted (direct-link only), Archived. No Suspended state unless a concrete operational need is evidenced. Authorised staff action required; preserve order/history; scheduled publication must not bypass authorisation. This records the policy decision only; it does not authorise implementation.
 
 2. **Gift cards — MA-GFT-001/002, MA-SET-032.**
    - Di recommendation: keep excluded/deferred until a written policy covers issuance, redemption, expiry, partial redemption, refunds, fraud controls and liability/accounting. No implementation before policy approval.
-   - HU+DI decision needed: whether gift cards are a business requirement at all; if yes, accountant-approved terms first.
+   - **HU+DI decision needed:** are gift cards a business requirement at all? If yes, accountant-approved terms first.
 
 3. **Customer/order-history deletion, anonymisation and merging — MA-CUS-009/020/050.**
    - Di recommendation: no bulk deletion or merge until legal retention, tax/accounting records, active orders, audit trail, legal holds and reversible identity mapping are specified. Treat contact-form MF-089's 180-day retention separately.
