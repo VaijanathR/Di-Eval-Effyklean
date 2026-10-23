@@ -1,3 +1,11 @@
+## Current status reconciliation — 23 October 2026 (supersedes 22-Oct totals)
+
+The per-item BUILD ledger contains 245 unique IDs: 83 are `DONE (verified)`, 62 `PARTIAL`, and 100 `DEFERRED`. Reconciliation against the 597-item primary-disposition register promotes 82 of the 83 verified-DONE BUILD rows to `Implemented`. MF-089 remains `BUILD`: although its code/tests exist, the host must schedule the contact-retention job and HU legal review of wording remains outstanding. No item was promoted based on aggregate arithmetic alone; each promotion is listed in [CURRENT_597_STATUS_RECONCILIATION_2026-10-23.csv](./CURRENT_597_STATUS_RECONCILIATION_2026-10-23.csv) with its row-level implementation, resolved-path, validation, evidence and limits.
+
+**Current 597-item primary-disposition totals: 339 Implemented + 163 BUILD + 10 LATER + 9 INVESTIGATE + 76 EXCLUDE = 597.** The remaining 163 BUILD rows are 62 PARTIAL + 100 DEFERRED + MF-089. This is the current count to use in future queries. The 22-Oct 597-row register and the 18-Oct source snapshot remain preserved as historical evidence; apply the 23-Oct reconciliation overlay for the current status. This does not authorize production writes, deployment, provider actions or work on deferred rows.
+
+---
+
 
 ❯ where is this file BUILD245_HUDI_DECISIONS_NEEDED_2026-10-22.md?                                                                                                                                                 
   Ran 1 shell command
