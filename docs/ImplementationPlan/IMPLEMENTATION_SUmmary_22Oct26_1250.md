@@ -152,3 +152,10 @@ Current row-level classification:
 - **12 rows** were individually triaged as existing scope boundaries, frozen-spec/technical gates, or unapproved proposals. No broad HU question is warranted now; verify reference-site/SPEC evidence first, and STOP → REPORT → HU+DI DECIDE only if a real conflict remains.
 
 The prior 18-Oct/12-Oct cross-source pass has reduced the set with no recorded answer source to zero *untriaged* questions in this pass. This does **not** prove that every historical chat has been audited, nor that the remaining items are all implemented. The 597-row primary-disposition CSV is still zero bytes on GitHub, and only 245 rows currently have row-level disposition evidence in the active BUILD ledger/crosswalk. Do not claim that the complete 597 primary-disposition register is repaired; that separate reconstruction remains outstanding and must use source evidence rather than guessed classifications.
+
+
+## Correction — working disposition CSV restored, but not fully reconciled (23 October 2026)
+
+Correction to the earlier note that the working disposition CSV was zero bytes: it has now been populated and re-fetched. [RECONCILED_597_DISPOSITION_WORKING_2026-10-22.csv](./RECONCILED_597_DISPOSITION_WORKING_2026-10-22.csv) contains **597 rows and 597 unique IDs**. It keeps the immutable 18-Oct source fields, carries the prior HU response evidence, and separates the decision/scope answer from the current primary disposition.
+
+Row-level primary-disposition evidence now verifies **255 rows**: 84 Implemented, 160 BUILD, 2 EXCLUDE, and 9 INVESTIGATE. The other **342 rows are explicitly marked UNRECONCILED — DO NOT GUESS** because the existing sources checked so far do not support a reliable row-level current disposition for them. The previously reported aggregate 597 totals (340 Implemented, 160 BUILD, 10 LATER, 9 INVESTIGATE, 78 EXCLUDE) are retained as historical reported totals but are **not yet independently verified against all 597 row-level entries**. Reconstruct the 342 rows from source evidence before calling the disposition register complete or using aggregate totals as row-level proof.
