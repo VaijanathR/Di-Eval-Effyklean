@@ -70,36 +70,41 @@ The old report combines five different things: (1) settled HU scope answers, (2)
 - **MA-ANA-015/023**: settlement API/cost-basis/COGS reporting needs source and accounting evidence; do not invent settlement values or a cost authority.
 - **MA-SYS-012**: responsive/accessibility browser re-check is validation, not a new feature question.
 
-## Genuine unresolved decisions/specification work to consolidate before asking Hu
+## Status of the former decision queue after Hu's 23-Oct answers
 
-These are candidate decision clusters, not 1:1 questions. Di must first reconcile the exact capability rows with the canonical master, frozen spec and later HU clarifications, then provide one recommended proposal per cluster. Do not ask the original prompts verbatim.
+The historical 22-Oct prompts must not be used as an active questionnaire. The following decisions were resolved in the later conversation and are recorded in `HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md`:
 
-1. **Product lifecycle (DC-10):** MA-PRD-052/053/083/091. The original capability YES answers express desired scope, but the frozen spec deferred the exact archive/unpublish/unlisted/suspended state model. Propose the smallest safe lifecycle; retain history and prevent accidental removal of live products.
-2. **Publication scheduling:** MA-PRD-057. Recommend keeping scheduled publication out unless a staff-authorisation and audit model is explicitly approved; it must not bypass verified-commercial-data and publication gates.
-3. **Channel semantics — reconciled, no new HU decision:** MA-PRD-012/093, MA-COL-008, MA-PRD-100. Do not add a separate Staff-availability setting. Preserve the approved Draft / Active / Unlisted / Archived lifecycle and existing publication/catalogue/Zoho-mapping safeguards. Active does not mean hidden from the public website; Unlisted is the existing state for a product intentionally not publicly listed. Staff-entered orders follow the approved assisted-order workflow and verified-full-payment rule. Do not invent extra channel switches or POS-terminal behavior. Escalate only a concrete conflict with frozen requirements.
-4. **Admin-editable store/settings surface:** MA-SET-001/003/013/020 and any safe remainder of MA-SET-011. Separate safe store contact/brand content from frozen checkout, returns/store-credit, location, tax and payment authorities. Recommend which fields are native settings versus controlled deployment/Zoho-owned data.
-5. **Marketing, channels and providers:** MA-MKT-001/002/003/004/007/013; MA-CHN-002/003/005/006/007/008; MA-SET-072; MA-PRD-096. No provider/campaign/pixel/AI/marketplace/social-login action without purpose, data flow, consent, provider, wording and ownership defined. Existing WhatsApp notifications do not automatically approve WhatsApp commerce or marketing.
-6. **Analytics/reporting:** MA-ANA-011/022/017/027/018/020 and MA-CNT-042; MA-ANA-012/013/021/024/026 remain gated by MF-093 where they require session/pixel tracking. Decide only report-library/custom-builder scope or customer-segment thresholds that are not already answered. Tracking-dependent features remain later until consent/privacy/retention is approved.
-7. **Discount edge cases:** MA-DSC-011/012 and the unspecified edges of MA-DSC-026. Preserve the existing combo rule; propose customer eligibility/one-use identity and coupon precedence rules only where the canonical records truly leave them open.
-8. **Gift cards:** MA-GFT-001/002 and MA-SET-032. Terms, redemption controls, expiry and liability/accounting need one consolidated proposal; do not implement before the rules are approved.
-9. **Customer data:** MA-CUS-009/050/020. Customer/order-history deletion/anonymisation and merge behavior require retention/legal-hold safeguards and legal review. The contact-form MF-089 180-day rule is not automatically the customer/order-history rule.
-10. **Tax exceptions:** MA-CUS-014/045. Obtain accountant-approved criteria; no ad hoc exemption/collect-tax toggles.
-11. **Content/search/forms/chat:** MA-CNT-008/015/016/019/020 and MA-PRD-105. Distinguish a real EffyKlean use case from Shopify-specific builders/Tidio/theme mechanics. Existing contact form does not imply a general form-builder requirement; the sample package dimensions do not authorize a competing carrier workflow.
-12. **Price breaks/subscriptions:** MA-PRD-071/070. Public quantity price breaks are separate from approved distributor slabs. Recurring charges require verified Zoho Payments capability and a separate policy; do not infer subscription support from a working sandbox.
-13. **Draft orders:** MA-DRF-003/004/007 have recorded BUILD scope and must not be re-asked as yes/no. Remaining implementation details must preserve catalogue/Zoho mapping, full payment only, Zoho invoice/payment verification, and the approved manual-order workflow.
-14. **Policy/notification details:** MA-SET-057/060, MA-SET-021/022/023/024, MA-ORD-063 and MF-079. Keep the already-selected channels; only ask for specific wording/provider/approval inputs that cannot be sourced from the existing record.
+1. **Product lifecycle — resolved:** Draft, Active, Unlisted (direct-link only), Archived. No Suspended state absent a concrete evidenced need. Preserve history and authorised actions.
+2. **Publication scheduling — resolved:** MA-PRD-057 is manual-only after required approval by an authorised Admin/Director. Scheduled time alone never publishes; forgetting to publish leaves the product unpublished.
+3. **Channel semantics — resolved without a new switch:** no separate Staff-availability setting; no invented channel switches or POS-terminal behaviour. Preserve the approved lifecycle, catalogue/Zoho-mapping and assisted-order safeguards.
+4. **Admin-editable settings — baseline approved:** audited safe contact/brand content only; frozen checkout/payment/GST/tax, shipping authority, Zoho-owned data and domains/DNS remain restricted. Extra fields require HU+DI approval.
+5. **Marketing/channels — scope approved:** implement approved marketing/channel capabilities as features, not future-only items. WhatsApp marketing is managed through Meta. Provider-specific configuration, live credentials, campaigns, sends and privacy-sensitive tracking remain separately gated.
+6. **Analytics/segmentation — prior scope answers stand:** essential operational reporting and previously approved customer segmentation are not new questions. MF-093 tracking-dependent analytics remains LATER pending privacy/consent/retention controls.
+7. **Discount controls — resolved:** optional one-use-per-customer and optional eligibility restrictions are in scope; existing combo, no-stacking, sale-price and distributor rules remain unchanged.
+8. **Gift cards — resolved:** excluded/deferred unless HU+DI reopens the decision and accountant-approved terms are available.
+9. **Customer records — resolved as scoped:** deletion YES for authenticated Admin/Director with safeguards; anonymisation NO; customer-record merging unapproved. Do not infer bulk deletion approval from the general deletion answer.
+10. **Tax-exemption controls — scope approved:** authenticated Admin/Director only with change audit and supporting reason/evidence where applicable.
+11. **Content/forms/search/chat/package — prior YES answers stand:** do not ask again; preserve privacy, moderation, provider and Zoho/Shiprocket boundaries.
+12. **Quantity price breaks and updates subscription — resolved:** public quantity price breaks are in scope and set a tier selling price rather than stacking a discount. “Subscribe” is for EffyKlean updates, not recurring product orders/payments.
+13. **Product URL identity — resolved:** fixed `/products/<id>/`; no editable slugs or slug-change redirects.
+
+### Remaining work is not a fresh HU decision
+
+- **MA-PRD-047:** technical/specification follow-up to identify the verified source field for concentrate data. The existing fail-closed rule is settled: unverified/provisional commercial data cannot be published or used to display savings.
+- Other provider, privacy, hosting, catalogue, Zoho/Flow, email, Merchant Center, Spaces, accessibility and release-acceptance items remain execution/evidence gates at their proper stages. They must not be presented as unanswered business decisions unless the specific evidence reveals a genuine unresolved choice.
+- Scope approval is not implementation evidence or permission for coding-agent delegation, production writes, live provider changes or deployment.
 
 ## Corrections required in the working records
 
 - Mark the 22-Oct “decisions needed” document as superseded for question-generation purposes by this reconciliation overlay; preserve it unchanged as the historical generated list.
 - **MA-ORD-103** and **MA-ORD-105** have now been corrected in `BUILD245_LEDGER_2026-10-22.csv` to current disposition `EXCLUDE` while retaining implementation status `DEFERRED` (not implemented). `CURRENT_597_DISPOSITION_CORRECTIONS_2026-10-23.csv` records the row-level current-scope correction. The 18-Oct 597-row snapshot independently shows both as EXC / REJECT-OOS. The 22-Oct working 597 CSV is zero-byte in GitHub, so this correction overlay plus updated current totals is the traceable current disposition record; the historical snapshot remains unchanged.
-- Keep the original YES for product lifecycle capabilities in the canonical history while recording the later frozen-spec deferral as an unresolved refinement, not as a reversal of the original answer.
+- Keep the original YES for product lifecycle capabilities in the canonical history while recording the later approved four-state model as the resolved refinement, not as a reversal of the original answer.
 - Do not change any BUILD/Implemented status solely because a question was reconciled. Implementation, scope disposition, evidence, provider readiness, legal approval and production readiness remain separate fields.
 - Do not ask a question for a capability already marked Implemented. For each remaining candidate, first verify its current 597-row disposition and any later project-history answer.
 
 ## Limits of this pass
 
-This document reconciles established rules and known prior answers and consolidates the genuine decision clusters. The two known prior-NO disposition conflicts have been corrected in the 245-row ledger, and the current 597-item totals are updated; the full 22-Oct working 597 CSV is zero-byte, so the two-row current-disposition correction overlay is preserved separately while the 18-Oct full snapshot remains unchanged. This pass does not claim that the private/local app repository was available, that every technical dependency was freshly verified, or that any external provider action was performed. No coding agent was delegated; no production/provider writes or deployment were performed.
+This document now incorporates the end-to-end reconciliation of `HUDI Discussion/HuDI Conversation 17-part2.md`; the answered decisions listed above are not open questions. The two known prior-NO disposition conflicts remain corrected in the 245-row ledger, and the current 597-item totals are recorded in the existing correction overlay because the full 22-Oct working 597 CSV is zero-byte; the 18-Oct full snapshot remains historical. This pass does not claim that the private/local app repository was available, that every technical dependency was freshly verified, or that any external provider action was performed. No coding agent was delegated; no production/provider writes or deployment were performed.
 
 ## Consolidated next-step decision queue
 
