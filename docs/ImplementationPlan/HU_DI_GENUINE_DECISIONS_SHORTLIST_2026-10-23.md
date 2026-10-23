@@ -37,9 +37,11 @@ Purpose: replace repeated questions from the generated 22-Oct prompt with a smal
    - Di recommendation: preserve this rule; do not introduce customer-specific one-use limits or segment eligibility without a concrete need. Resolve coupon precedence only if coupon support is actually in scope.
    - HU+DI decision needed only if a concrete campaign requires these extra rules.
 
-8. **Public quantity price breaks / subscriptions — MA-PRD-071/070.**
-   - Di recommendation: keep public price breaks out until separately approved; distributor slabs are not public price breaks. Keep subscriptions out until Zoho Payments recurring-charge capability is verified and separate charging/cancellation policy is approved.
-   - Next action: capability verification and commercial proposal; no implementation from sandbox success alone.
+8. **Public quantity price breaks / updates subscription — MA-PRD-071/070.**
+   - Public product quantity price breaks remain out of scope until separately approved; distributor slabs are not public price breaks.
+   - **HU clarification (23-Oct-2026): “Subscribe” means subscribing to EffyKlean updates/communications, not a recurring product order or recurring payment.** Do not gate the updates-subscription feature on Zoho Payments recurring-charge capability or product-subscription charging/cancellation policies.
+   - Implement the updates-subscription capability according to the approved requirements, including applicable consent, communication preferences and unsubscribe handling. A subscription to updates does not by itself grant consent to every marketing channel or campaign.
+   - Any remaining uncertainty about this item must be checked against the specific MA-PRD-070 requirement; do not infer product subscriptions from the word “subscribe.”
 
 9. **EffyKlean-specific content/forms/search/chat/package features — MA-CNT-008/015/016/019/020; MA-PRD-105.**
    - Di recommendation: do not reproduce Shopify theme builders, generic form builders or Tidio by default. Retain the existing contact form and current storefront search unless a concrete unmet user journey is documented. Keep package/shipping ownership with the approved Zoho/Shiprocket flow.
