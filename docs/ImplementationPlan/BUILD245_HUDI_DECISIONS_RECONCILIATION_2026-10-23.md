@@ -204,3 +204,8 @@ This pass reconciled the 245 unique implementation-ledger IDs against the 597-ID
 - Three additional implementation-ledger follow-up descriptions were clarified from prior Hu direction: **MF-063** (Zoho Flow/Shiprocket inspection parked for later testing), **MF-079** (existing GoDaddy/Zoho messaging direction retained; exact drafts, credentials and delivery evidence remain), and **MF-088** (Spaces is the approved storage direction, but provisioning remains a separate HU-authorised action). These are operational follow-ups, not new scope questions.
 
 - Two additional repeat questions were removed: **MA-PRD-067** is already DONE (verified) under the recorded YES (G-23 no longer asks whether related links are wanted), and **MA-DSC-020** is already DONE (verified) under the frozen no-stacking/discount-precedence rules. Neither is a new HU decision.
+
+
+## Next genuine decision candidate prepared — MF-055
+
+The first remaining policy decision is customer-to-Zoho contact match/create (S-5), not broad feature scope. Evidence and Di's recommendation are recorded in [HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md](./HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md). Do not ask until the recommendation is shown to Hu; no production writes or agent delegation are authorised.
