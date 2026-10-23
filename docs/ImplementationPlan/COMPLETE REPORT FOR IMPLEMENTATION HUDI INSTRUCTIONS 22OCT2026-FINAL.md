@@ -1,3 +1,11 @@
+## Current status reconciliation — 23 October 2026 (supersedes 22-Oct totals)
+
+The per-item BUILD ledger contains 245 unique IDs: 83 are `DONE (verified)`, 62 `PARTIAL`, and 100 `DEFERRED`. Reconciliation against the 597-item primary-disposition register promotes 82 of the 83 verified-DONE BUILD rows to `Implemented`. MF-089 remains `BUILD`: although its code/tests exist, the host must schedule the contact-retention job and HU legal review of wording remains outstanding. No item was promoted based on aggregate arithmetic alone; each promotion is listed in [CURRENT_597_STATUS_RECONCILIATION_2026-10-23.csv](./CURRENT_597_STATUS_RECONCILIATION_2026-10-23.csv) with its row-level implementation, resolved-path, validation, evidence and limits.
+
+**Current 597-item primary-disposition totals: 339 Implemented + 163 BUILD + 10 LATER + 9 INVESTIGATE + 76 EXCLUDE = 597.** The remaining 163 BUILD rows are 62 PARTIAL + 100 DEFERRED + MF-089. This is the current count to use in future queries. The 22-Oct 597-row register and the 18-Oct source snapshot remain preserved as historical evidence; apply the 23-Oct reconciliation overlay for the current status. This does not authorize production writes, deployment, provider actions or work on deferred rows.
+
+---
+
 
 ❯ i am going to give you coding instruction in the next prompt. before that i want you to confirm that you will follow all the instructions in the original prompt, you will honestly report the completion of task, you will not decide on your own to defer or mark partially completed task as completed. you will not leave any task incomplete unless there is a genuine blocker. you will not give me a look good report while the task list is incomplete. you will not sweep tasks under the carpet. you will not mislead me or invent stuff on your own. your honesty is important, time taken to complete the tasks is not the criteria to rate your work. you should not stop until you reach the end of the instruction and completion of all possible tasks. is this acceptable to you?
 
