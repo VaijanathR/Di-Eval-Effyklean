@@ -14,9 +14,10 @@ Purpose: replace repeated questions from the generated 22-Oct prompt with a smal
    - **HU decision (23-Oct-2026): AGREED with Di.** Exclude gift cards from current scope and leave them deferred for possible future reconsideration. No implementation unless HU+DI reopens the decision and accountant-approved terms are available.
 
 3. **Customer/order-history deletion, anonymisation and merging — MA-CUS-009/020/050.**
-   - **HU decision (23-Oct-2026): GO for customer and order-history deletion as an Admin/senior-staff feature.** This is scope approval, not permission for an agent to implement or perform live deletion.
-   - Implementation guardrails: define deletion behavior and permissions; preserve required tax/accounting records, active-order integrity and audit evidence; log privileged actions. Where records cannot safely or lawfully be erased, specify the permitted outcome rather than silently deleting linked records. Treat contact-form MF-089's 180-day retention separately.
-   - Anonymisation and customer-record merging were grouped with deletion in the original cluster but were not explicitly approved by this answer; keep those two capabilities unapproved until Hu confirms their scope.
+   - **HU decision (23-Oct-2026): DELETION = YES for implementation; ANONYMISATION = NO for implementation.** Deletion is a GO for authenticated users with the Admin or Director role only. Customers and other staff must not have this capability.
+   - **Customer-record merging remains unapproved/out of scope** unless Hu explicitly approves it separately.
+   - Implementation guardrails for deletion: define exactly which customer/order data is deleted; preserve required tax/accounting records, active-order integrity and audit evidence; log privileged actions. Where a record cannot safely or lawfully be erased, specify the permitted outcome rather than silently deleting linked records. Treat contact-form MF-089's 180-day retention separately.
+   - This is scope approval only; it does not authorise coding-agent delegation, implementation, or live deletion without the applicable explicit authorisation.
 
 4. **Tax-exemption controls — MA-CUS-014/045.**
    - Di recommendation: no customer-facing exemption toggle until the accountant supplies objective eligibility, evidence and approval rules.
