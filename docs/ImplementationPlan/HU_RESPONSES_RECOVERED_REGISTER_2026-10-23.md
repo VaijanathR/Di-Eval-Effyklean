@@ -238,3 +238,20 @@ Row-level primary-disposition evidence now verifies **255 rows**: 84 Implemented
 ## Latest disposition-register update — 23 October 2026 (supersedes prior row counts)
 
 The working CSV now uses the historical status field to recover the **256 remaining rows explicitly marked implemented** in the 18-Oct snapshot. Re-fetch verification confirms 597 unique IDs. Row-level primary-disposition classifications now stand at **511 verified rows**: 340 Implemented, 160 BUILD, 2 EXCLUDE, and 9 INVESTIGATE. **86 rows remain UNRECONCILED — DO NOT GUESS.** The historical aggregate implies those 86 consist of 10 LATER and 76 EXCLUDE, but that split is not yet mapped to individual IDs from authoritative row-level evidence. Do not apply those aggregate numbers to specific rows by assumption. This supersedes the earlier statement that 255 dispositions were verified and the other 342 were unreconciled.
+
+## Superseding update — BUILD-245 prior-input reconciliation and stale-question cleanup (23-Oct-2026)
+
+This update supersedes the earlier BUILD-disposition counts below where they conflict with the corrected row-level records.
+
+### Verified source-to-record reconciliation
+
+- The 597-ID response crosswalk was re-fetched and checked for unique IDs. The 245-row BUILD ledger is joined to it by exact activity ID; response evidence and implementation status are kept separate.
+- Before correction, the 245-row ledger showed 160 BUILD dispositions, 83 Implemented and 2 EXCLUDE. Of the 160 BUILD rows, 156 had an identified prior response/decision source: 16 from the 18-Oct HU answer record, 69 from the existing decision/response records, 69 from the canonical original HU decisions, and 2 with an original YES superseded by a later exclusion/defer decision. Four rows — MF-055, MF-084, MF-094 and MF-115 — were ledger-only reconciliations, not explicit HU responses.
+- A concrete conflict was found and fixed: MA-GFT-001, MA-GFT-002 and MA-SET-032 still carried current disposition BUILD even though the later HU decision excludes gift cards from current scope and leaves them deferred for possible future reconsideration. The 245-row ledger and 597-ID response crosswalk now mark all three EXCLUDE while retaining implementation status DEFERRED. Reopen only through a later explicit HU+DI decision and accountant-approved terms. The original YES decisions remain historical evidence and are not erased.
+- The correction overlay `CURRENT_597_DISPOSITION_CORRECTIONS_2026-10-23.csv` now contains five corrections: MA-ORD-103/105 plus the three gift-card rows.
+- The corrected 245-row disposition counts are **83 Implemented, 157 BUILD and 5 EXCLUDE** (245 total). The separate implementation-status counts remain **83 DONE (verified), 62 PARTIAL and 100 DEFERRED**; changing scope disposition does not imply implementation.
+- Forty-six additional next-action/reason-category entries in the 245-row ledger were corrected so settled HU decisions are not still presented as broad open questions. The edits preserve genuine provider, legal, evidence, validation and detailed specification gates. They do not authorize deployment, live provider writes or implementation beyond existing authorization.
+
+### Remaining coverage boundary
+
+The current 597-row working-disposition CSV still fetches as a zero-byte file. The verified row-level slice now covers 511 of 597 IDs: 340 Implemented, 157 BUILD, 5 EXCLUDE and 9 INVESTIGATE; **86 IDs remain UNRECONCILED — DO NOT GUESS**. Historical aggregate arithmetic implies 10 LATER and 76 EXCLUDE among those 86, but their individual IDs are not yet mapped to authoritative row-level evidence. Do not call the entire 597-row disposition register repaired. Continue source-by-source reconciliation before presenting any remaining genuine HU+DI decisions. No coding agent was delegated.
