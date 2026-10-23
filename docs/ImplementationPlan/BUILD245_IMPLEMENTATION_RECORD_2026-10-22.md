@@ -78,3 +78,10 @@ new retention/limit rule, so it is parked for HU+DI.
 - HU tested the local storefront and admin pages and reported that they work as expected.
 - The latest agent report gives implementation-status totals of 83 DONE, 64 PARTIAL, 100 DEFERRED and 0 NOT DONE. These total 247, not the 245 BUILD records. The referenced per-item file `BUILD245_LEDGER_2026-10-22.csv` is absent from the public repository tree. These aggregate counts are recorded as reported, not reconciled or applied to individual rows. Do not infer item-level statuses until the agent supplies the missing per-item mapping and reconciles the discrepancy.
 - Earlier verification on commit `02ec994`: 2,765 tests passed; Ruff format/check and Django checks were clean. The local migrations and HU's manual storefront/admin testing are separate follow-up evidence.
+
+
+## Correction — BUILD-245 ledger located and reconciled (2026-10-23)
+
+The public per-item ledger is present at `docs/ImplementationPlan/BUILD245_LEDGER_2026-10-22.csv`. The earlier note above saying it was absent from the public repository tree was incorrect and is superseded by this correction. The CSV contains 245 data rows and 245 unique non-empty IDs. Its row-level `primary_status` counts reconcile exactly: 83 `DONE (verified)`, 62 `PARTIAL`, and 100 `DEFERRED` (245 total); there are 0 `NOT DONE` rows. The later aggregate of 64 PARTIAL / 247 total was erroneous; use the ledger's 62 PARTIAL count. Individual BUILD status evidence is available directly in the CSV, so no status needs to be inferred from aggregate figures.
+
+The separate 597-row primary disposition register remains 257 Implemented, 245 BUILD, 10 LATER, 9 INVESTIGATE, and 76 EXCLUDE (597 total), as recorded in the implementation summary. These disposition counts are distinct from the BUILD ledger's implementation-status counts.
