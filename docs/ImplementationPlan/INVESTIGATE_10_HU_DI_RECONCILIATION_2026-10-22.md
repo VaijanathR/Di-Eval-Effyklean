@@ -1,3 +1,11 @@
+## Current status reconciliation — 23 October 2026 (supersedes 22-Oct totals)
+
+The per-item BUILD ledger contains 245 unique IDs: 83 are `DONE (verified)`, 62 `PARTIAL`, and 100 `DEFERRED`. Reconciliation against the 597-item primary-disposition register promotes 82 of the 83 verified-DONE BUILD rows to `Implemented`. MF-089 remains `BUILD`: although its code/tests exist, the host must schedule the contact-retention job and HU legal review of wording remains outstanding. No item was promoted based on aggregate arithmetic alone; each promotion is listed in [CURRENT_597_STATUS_RECONCILIATION_2026-10-23.csv](./CURRENT_597_STATUS_RECONCILIATION_2026-10-23.csv) with its row-level implementation, resolved-path, validation, evidence and limits.
+
+**Current 597-item primary-disposition totals: 339 Implemented + 163 BUILD + 10 LATER + 9 INVESTIGATE + 76 EXCLUDE = 597.** The remaining 163 BUILD rows are 62 PARTIAL + 100 DEFERRED + MF-089. This is the current count to use in future queries. The 22-Oct 597-row register and the 18-Oct source snapshot remain preserved as historical evidence; apply the 23-Oct reconciliation overlay for the current status. This does not authorize production writes, deployment, provider actions or work on deferred rows.
+
+---
+
 # EffyKlean — HU+DI reconciliation of ten INVESTIGATE records
 
 Date: 2026-10-22
@@ -24,6 +32,6 @@ HU submitted responses for all ten records on 2026-10-22. This reconciliation re
 - An INVESTIGATE count is not a count of new HU questions. Separate scope decisions from evidence, validation, access, and authorization tasks.
 - Do not attribute a request to a named person or agent unless the source record proves provenance.
 - Do not repeat questions answered by the canonical 122-capability master or the 12-Oct HU+DI decision ledger.
-- The working CSV has now been updated and re-fetched. Commit `a5ecf972ee5a291557b5bf223b916d7e89e3a616`. Verified: 597 data rows, 22 columns, 597 unique IDs, each of the ten target IDs appears once, no non-target rows changed, and all ten original source columns are unchanged. MF-008 is now primary disposition Implemented based on HU confirmation; code/runtime verification remains separate. New primary counts: 257 Implemented, 245 BUILD, 10 LATER, 9 INVESTIGATE, 76 EXCLUDE. The immutable 18-Oct snapshot is unchanged.
+- The working CSV has now been updated and re-fetched. Commit `a5ecf972ee5a291557b5bf223b916d7e89e3a616`. Verified: 597 data rows, 22 columns, 597 unique IDs, each of the ten target IDs appears once, no non-target rows changed, and all ten original source columns are unchanged. MF-008 is now primary disposition Implemented based on HU confirmation; code/runtime verification remains separate. 22-Oct primary counts were 257 Implemented, 245 BUILD, 10 LATER, 9 INVESTIGATE, 76 EXCLUDE; current 23-Oct counts are 339 Implemented, 163 BUILD, 10 LATER, 9 INVESTIGATE, 76 EXCLUDE. The immutable 18-Oct snapshot is unchanged.
 - No code, local working tree, external system, or provider state was changed. No agent was delegated.
 
