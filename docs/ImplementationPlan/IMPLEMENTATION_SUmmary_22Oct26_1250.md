@@ -184,7 +184,7 @@ The working CSV now uses the historical status field to recover the **256 remain
 
 The latest row-level reconciliation corrects three stale current dispositions: MA-GFT-001, MA-GFT-002 and MA-SET-032 are EXCLUDE from current scope per Hu's later gift-card decision, while their implementation status remains DEFERRED. The 245-row ledger and 597-ID response crosswalk are corrected, and the correction overlay now contains five rows including the previously corrected MA-ORD-103/105.
 
-Current 245-row disposition counts: **83 Implemented, 141 BUILD, 13 LATER, 8 EXCLUDE**. Separate implementation statuses remain **83 DONE (verified), 62 PARTIAL, 100 DEFERRED**. Forty-six stale next-action/reason-category entries were updated so settled HU inputs no longer remain broad questions. The full 597-row current-disposition working CSV still fetches as zero bytes; 511 IDs have row-level classifications (340 Implemented, 157 BUILD, 5 EXCLUDE, 9 INVESTIGATE) and 86 remain UNRECONCILED — DO NOT GUESS. The unresolved aggregate arithmetic suggests 10 LATER and 76 EXCLUDE among those 86, but their individual IDs are not yet mapped to authoritative row-level evidence.
+Superseded interim statement: the working CSV is populated and has 597 rows / 597 unique IDs. Current dispositions are 340 Implemented, 152 BUILD, 74 EXCLUDE, 17 LATER and 14 INVESTIGATE. Exact-ID comparisons found zero disposition mismatches against the 597 response crosswalk and against the 245-row ledger for shared IDs; do not use the old 511-classified / 86-unreconciled aggregate.
 
 ## Latest superseding update — 23-Oct-2026
 
@@ -204,4 +204,4 @@ Current 245-row ledger dispositions: **83 Implemented, 141 BUILD, 13 LATER and 8
 
 The earlier count of 95 changed rows was an interim checkpoint. After the final pass replacing stale repeated questions with specific evidence/provider/legal/implementation actions, comparison with the pre-reconciliation 245-row ledger now confirms **114 unique rows** have at least one corrected disposition, reason category or next action. This does not mean those 114 capabilities are implemented.
 
-The current 597-row working register is populated (597 rows / 597 unique IDs) and has been synchronized with the corrected 245-row ledger and HU-response crosswalk. Re-fetch verification confirms zero disposition mismatches across the 245 exact-ID join. Current overall counts remain 340 Implemented, 143 BUILD, 13 LATER, 6 EXCLUDE, 9 INVESTIGATE and 86 UNRECONCILED — DO NOT GUESS. The 86 unresolved IDs still need authoritative source-by-source reconciliation; do not assign them from aggregate arithmetic.
+Current row-level totals: 340 Implemented, 152 BUILD, 74 EXCLUDE, 17 LATER and 14 INVESTIGATE (597 unique IDs). The earlier interim aggregate is superseded; the current register is populated and fully classified by row.
