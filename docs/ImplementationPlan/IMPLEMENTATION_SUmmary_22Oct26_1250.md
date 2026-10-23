@@ -139,3 +139,16 @@ After the initial crosswalk pass, I also reconciled the 18-Oct persistent HU ans
 - **218** rows where no HU decision was found in the sources checked so far. This is not proof that Hu never answered and does not mean all 218 require a question.
 
 These counts supersede the earlier initial-pass counts recorded above. The 18-Oct source was not a verbatim transcript of every earlier conversation; this is still not an exhaustive audit of every historical chat. The zero-byte 597-row disposition working CSV remains a separate unresolved record-reconstruction defect.
+
+
+## Final response-triage update — 23 October 2026 (supersedes earlier counts)
+
+The 597-row crosswalk now incorporates the grouped original HU decisions from the canonical 12-Oct master and the applicable 18-Oct QA answer record, in addition to the 22-Oct decision log and 23-Oct refinements. The CSV was re-fetched and checked: **597 rows, 597 unique IDs**.
+
+Current row-level classification:
+- **530 rows** have a recorded HU decision/response source linked to the requirement ID. Original grouped YES/NO decisions are preserved as historical decisions; later specific refinements remain controlling. Decision-log summaries are not mislabeled as verbatim quotations.
+- **11 rows** are reconciled from existing ledgers without treating that reconciliation as a new HU response.
+- **44 rows** have an implemented/closed/no-action source status and need no HU question now; revisit only if concrete evidence reveals a material gap.
+- **12 rows** were individually triaged as existing scope boundaries, frozen-spec/technical gates, or unapproved proposals. No broad HU question is warranted now; verify reference-site/SPEC evidence first, and STOP → REPORT → HU+DI DECIDE only if a real conflict remains.
+
+The prior 18-Oct/12-Oct cross-source pass has reduced the set with no recorded answer source to zero *untriaged* questions in this pass. This does **not** prove that every historical chat has been audited, nor that the remaining items are all implemented. The 597-row primary-disposition CSV is still zero bytes on GitHub, and only 245 rows currently have row-level disposition evidence in the active BUILD ledger/crosswalk. Do not claim that the complete 597 primary-disposition register is repaired; that separate reconstruction remains outstanding and must use source evidence rather than guessed classifications.
