@@ -69,6 +69,8 @@ These are execution or evidence gates, not new business decisions: targeted read
 
 12. **Product URL identity — MA-PRD-063 (HU approved 23-Oct-2026).** Keep product IDs as the fixed URL identity (`/products/<id>/`). Editable slugs, slug-editing UI, and slug-change redirect behaviour are out of scope. Preserve the existing product-ID URL pattern; no further HU decision is pending for this item.
 
+13. **Scheduled publication — MA-PRD-057 (HU clarified 23-Oct-2026).** Scheduled time never publishes automatically. A product may be published only after required approval is complete and an authorised Admin or Director manually publishes it. If approval is incomplete or they forget, it remains unpublished after the scheduled time. No schedule-based bypass of approval, authorisation, or the verified-commercial-data gate.
+
 ## Explicitly not reopened
 
 - MA-ORD-103 and MA-ORD-105: prior NO; current disposition corrected to EXCLUDE, implementation status remains DEFERRED.
