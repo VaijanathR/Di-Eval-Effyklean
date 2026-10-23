@@ -480,3 +480,8 @@ Latest disposition reconciliation: MF-089 is BUILD after HU approved the propose
 ## Row-level DoD quality verification — 22 October 2026
 
 Post-update verification of the companion working register confirms 597 rows and 597 unique IDs, with no blank DoD or evidence-method cells. After this decision reconciliation, dispositions are 256 Implemented, 245 BUILD, 10 LATER, 10 INVESTIGATE and 76 EXCLUDE. Of the original 243 BUILD rows, 183 previously used one of three generic templates; each was rewritten with row-specific acceptance outcomes and evidence checks, and the remaining 60 already had bespoke DoDs. MF-089, MF-093 and MF-105 now have decision-aligned row-specific DoDs/evidence methods. The 18-Oct historical source CSV remains unchanged. These are planning/acceptance criteria only—not proof of implementation or test completion, nor authorization to implement or deploy.
+
+
+## BUILD-245 ledger correction — 23 October 2026
+
+The per-item source [BUILD245_LEDGER_2026-10-22.csv](./BUILD245_LEDGER_2026-10-22.csv) has been verified: 245 unique IDs, comprising 83 `DONE (verified)`, 62 `PARTIAL`, 100 `DEFERRED`, and 0 `NOT DONE`. Total: 245. This supersedes any note claiming the ledger was absent or reporting 64 PARTIAL / 247 total. Use the row-level status, evidence, limitations and next-action fields for each BUILD item. The separate disposition total remains 257 Implemented + 245 BUILD + 10 LATER + 9 INVESTIGATE + 76 EXCLUDE = 597; do not conflate disposition with implementation status.
