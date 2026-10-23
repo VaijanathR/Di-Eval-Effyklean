@@ -1,3 +1,18 @@
+## Authoritative row-level status correction — 23 October 2026
+
+This note supersedes any conflicting aggregate totals or “unreconciled” claims elsewhere in this file. The current fetched source files have been compared by unique ID.
+
+- **597-ID register:** 597 rows / 597 unique IDs. Current dispositions: **340 Implemented, 152 BUILD, 74 EXCLUDE, 17 LATER, 14 INVESTIGATE** (597 total).
+- **245-ID implementation ledger:** 245 rows / 245 unique IDs. Implementation outcomes: **83 DONE (verified), 62 PARTIAL, 100 DEFERRED** (245 total). Current dispositions within those 245 IDs: **83 Implemented, 141 BUILD, 13 LATER, 8 EXCLUDE** (245 total).
+- All 83 verified DONE rows remain promoted to Implemented. Exact-ID comparison: every one of the 245 ledger IDs exists in the 597 register; **zero disposition mismatches**. The 597 response crosswalk also matches the 597 register by ID and current disposition.
+- The earlier “163 pending” figure is not current: 62 PARTIAL + 100 DEFERRED = **162**. Of these, **141 are current BUILD** (61 PARTIAL + 80 DEFERRED); **21 are not BUILD** (1 PARTIAL and 12 DEFERRED are LATER; 8 DEFERRED are EXCLUDE).
+- **Coverage gap before implementation handoff:** 11 additional IDs are marked BUILD in the 597 register but are not in the 245-row implementation ledger: MF-070, MF-071, MF-074, MF-078, MF-092, MF-107, MF-109, MF-114, MA-ORD-068, MA-DSC-023 and MA-SET-061. They need explicit ledger coverage; do not assume implementation status or evidence.
+- MF-055 policy is approved and recorded; it remains PARTIAL / BUILD pending implementation and scoped sandbox validation. MF-084 legal wording still needs Hu/legal confirmation; MF-094 needs source/spec parity investigation before any narrow question; MF-115 is a release evidence gate, not a new policy question. These are distinct from the 83 already implemented.
+
+Historical totals below are retained only as historical record and must not be used as current status.
+
+---
+
 # HU+DI genuine decision shortlist — 23 October 2026
 
 Purpose: replace repeated questions from the generated 22-Oct prompt with a small, evidence-led decision queue. This is a recommendation list, not authority to implement deferred work. Prior YES/NO answers remain binding; implementation status and current scope disposition are separate.
