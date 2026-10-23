@@ -34,7 +34,7 @@ The old report combines five different things: (1) settled HU scope answers, (2)
 
 ### Existing product, customer and commercial rules
 - Products are physical shipped products: **MA-PRD-040** does not justify adding non-shipping products without a real use case.
-- Preserve the fixed product-ID/URL identity rule; slug changes require controlled handling, not casual URL mutation (**MA-PRD-063**).
+- **MA-PRD-063 — HU approval (23-Oct-2026):** keep product IDs as the fixed URL identity (`/products/<id>/`). Editable slugs, slug-editing UI, and slug-change redirect behaviour are out of scope; preserve the existing product-ID URL pattern.
 - No bulk product deletion; archive/unpublish is safer (**MA-PRD-092**). This does not by itself settle the exact product lifecycle state model.
 - Platform-to-platform imports stay out; do not silently expand the existing CSV import (**MA-PRD-098**).
 - Preserve the approved combo rule: first qualifying item has no discount; subsequent qualifying items are discounted; if the first item is removed, the next becomes first. **MA-DSC-026** is not a reason to ask Hu to restate that rule; only genuinely unspecified precedence/edge cases may need a recommendation.
