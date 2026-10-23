@@ -69,3 +69,12 @@ re-run for these two narrow changes.
 The address book (MA-CUS-006) was NOT built: the single saved address, its three-month retention
 and active-order protection are an explicit HU+DI decision (2026-10-16); several addresses need a
 new retention/limit rule, so it is parked for HU+DI.
+
+
+## Follow-up 2026-10-23 — local migration and status reconciliation
+
+- CI fix commit `02ec994` is pushed; CI run `39885661301` succeeded.
+- The local Docker PostgreSQL database `effyklean` was backed up with `pg_dump -Fc`; a restore was verified by comparing row counts across 62 tables (34 non-empty). The 15 pending migrations were then applied successfully. Post-migration `showmigrations` reports no unapplied migrations; `manage.py check` and `makemigrations --check` are clean. Existing data was preserved; the database was not reset or recreated.
+- HU tested the local storefront and admin pages and reported that they work as expected.
+- The latest agent report gives implementation-status totals of 83 DONE, 64 PARTIAL, 100 DEFERRED and 0 NOT DONE. These total 247, not the 245 BUILD records. The referenced per-item file `BUILD245_LEDGER_2026-10-22.csv` is absent from the public repository tree. These aggregate counts are recorded as reported, not reconciled or applied to individual rows. Do not infer item-level statuses until the agent supplies the missing per-item mapping and reconciles the discrepancy.
+- Earlier verification on commit `02ec994`: 2,765 tests passed; Ruff format/check and Django checks were clean. The local migrations and HU's manual storefront/admin testing are separate follow-up evidence.
