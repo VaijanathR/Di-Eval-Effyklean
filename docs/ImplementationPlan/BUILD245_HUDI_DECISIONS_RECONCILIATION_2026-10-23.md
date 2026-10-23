@@ -2,7 +2,9 @@
 
 **Purpose:** Reconcile `BUILD245_HUDI_DECISIONS_NEEDED_2026-10-22.md` against prior HU answers, the canonical 122-capability master, the 22-Oct disposition decision log, the updated 245-row BUILD ledger, and known frozen EffyKlean rules.
 
-**Authority:** This is a reconciliation overlay, not new HU approval and not execution authorization. Preserve the original 430-line prompt report as historical evidence. Do not treat its 151 distinct IDs as 151 unanswered questions. Do not change implementation status merely because a disposition question is resolved.
+**Authority:** This is a reconciliation overlay, not new HU approval and not execution authorization.
+
+**HU response evidence index:** See [HU response recovery register](./HU_RESPONSES_RECOVERED_REGISTER_2026-10-23.md), including the verbatim inventory of explicit HU messages from `HUDI Discussion/HuDI Conversation 17-part2.md` and their source line references. Treat exact quotations, normalized decisions, scope disposition and implementation evidence as separate things. Preserve the original 430-line prompt report as historical evidence. Do not treat its 151 distinct IDs as 151 unanswered questions. Do not change implementation status merely because a disposition question is resolved.
 
 ## Governing outcome
 
