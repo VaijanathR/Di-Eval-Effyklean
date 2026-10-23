@@ -295,3 +295,8 @@ Hu directed Di to reconcile the 160+ items for which Hu had already supplied inp
 Additional implementation-ledger follow-up wording was clarified for MF-063 (Zoho Flow/Shiprocket check remains parked for later testing), MF-079 (existing GoDaddy/Zoho messaging direction; wording, credentials and delivery tests remain), and MF-088 (Spaces is the approved direction, but provisioning remains a separate HU-authorised action). No new scope decision was inferred.
 
 Two further stale next actions were corrected: MA-PRD-067's G-23 scope question is superseded by the original YES and verified implementation; MA-DSC-020 must follow the existing no-stacking precedence and is not a fresh question. Both remain in their existing implementation status; no new HU decision was invented.
+
+
+## Next decision prepared after prior-input reconciliation — MF-055
+
+The first remaining genuine policy candidate is MF-055 (S-5), customer-to-Zoho contact match/create. The decision shortlist now records the evidence, risk of a shared contact (especially for GST-registered buyers), recommended match/create rule, sandbox-only validation boundary and the exact HU+DI decision requested. This is not recorded as answered until Hu responds.
