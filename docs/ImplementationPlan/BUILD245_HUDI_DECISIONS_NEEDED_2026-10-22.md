@@ -1,5 +1,9 @@
 # BUILD-245: decisions and actions needed from HU / HU+DI (2026-10-22)
 
+
+> **HISTORICAL / SUPERSEDED — DO NOT USE AS A QUESTION QUEUE.** This generated list predates the 23-Oct response reconciliation and contains broad prompts that are already answered or can be resolved as technical/provider/legal work. Before asking Hu anything, use `HU_RESPONSES_RECOVERED_REGISTER_2026-10-23.md`, `BUILD245_HUDI_DECISIONS_RECONCILIATION_2026-10-23.md`, the current `BUILD245_LEDGER_2026-10-22.csv`, and `HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md`. Reopen only a genuinely unresolved HU+DI decision after checking the exact ID and source evidence; do not treat a missing response as a guessed answer.
+
+
 Generated from `BUILD245_LEDGER_2026-10-22.csv`. Each line is a record that is DEFERRED or PARTIAL because of a decision, a blocker or a dependency that only HU / HU+DI can resolve. Nothing here was decided by the implementer.
 
 
