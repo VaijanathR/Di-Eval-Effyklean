@@ -53,8 +53,10 @@ Purpose: replace repeated questions from the generated 22-Oct prompt with a smal
    - This section records scope and remaining specification gates only; it does not authorise implementation, live third-party connections, provider credentials or launch.
 
 10. **Safe Admin-editable settings — MA-SET-001/003/011/013 and related settings rows.**
-    - Di recommendation: allow only clearly safe business content (e.g. contact details and brand assets) through audited Admin controls. Keep payment, checkout/GST rules, taxes, locations, shipping authority, domains/DNS and Zoho-owned data outside ordinary editable settings; domains/DNS are restricted operations.
-    - HU+DI decision needed only for the precise field list after the safe/frozen/externally-owned split is prepared.
+    - **HU approval (23-Oct-2026): APPROVED as the baseline split.** Allow safe business content such as store contact details and brand assets through audited Admin controls, while protecting canonical business identity and support details from unauthorised changes.
+    - Keep payment, checkout/GST and tax rules, checkout requirements, shipping rates/authority, Zoho-owned locations/data and domains/DNS out of ordinary editable settings. Domains/DNS remain restricted operations. Do not create a competing local authority for Zoho-owned data.
+    - Customer-account settings must preserve approved account/access rules. Do not enable self-service returns or store credit under this approval; those conflict with the existing business decisions. Any additional editable field must be proposed individually for HU+DI approval before implementation.
+    - This is a scope/ownership decision only; it does not authorise coding-agent delegation, implementation, deployment or live changes.
 
 ## Not HU decision questions
 
