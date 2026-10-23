@@ -2,6 +2,8 @@
 
 Purpose: replace repeated questions from the generated 22-Oct prompt with a small, evidence-led decision queue. This is a recommendation list, not authority to implement deferred work. Prior YES/NO answers remain binding; implementation status and current scope disposition are separate.
 
+**HU response evidence:** The recovered response register and source-line inventory is maintained in [HU_RESPONSES_RECOVERED_REGISTER_2026-10-23.md](./HU_RESPONSES_RECOVERED_REGISTER_2026-10-23.md). Use it to trace explicit HU messages; do not treat this shortlist as a verbatim transcript or implementation evidence.
+
 ## Decision queue
 
 1. **Product lifecycle — MA-PRD-052/053/083/091 (DC-10).**
