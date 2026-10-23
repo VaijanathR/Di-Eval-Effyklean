@@ -100,3 +100,7 @@ These are candidate decision clusters, not 1:1 questions. Di must first reconcil
 ## Limits of this pass
 
 This document reconciles established rules and known prior answers and consolidates the genuine decision clusters. The two known prior-NO disposition conflicts have been corrected in the 245-row ledger, and the current 597-item totals are updated; the full 22-Oct working 597 CSV is zero-byte, so the two-row current-disposition correction overlay is preserved separately while the 18-Oct full snapshot remains unchanged. This pass does not claim that the private/local app repository was available, that every technical dependency was freshly verified, or that any external provider action was performed. No coding agent was delegated; no production/provider writes or deployment were performed.
+
+## Consolidated next-step decision queue
+
+The concise, recommended HU+DI decision queue is now recorded in [HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md](./HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md). Use that shortlist instead of generating new questions from the historical 22-Oct prompt. It separates genuine policy decisions from technical/provider/legal follow-ups and explicitly preserves previously answered rules. The 22-Oct prompt remains historical evidence and is not a current question list.
