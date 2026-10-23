@@ -111,3 +111,10 @@ This document now incorporates the end-to-end reconciliation of `HUDI Discussion
 ## Consolidated next-step decision queue
 
 The concise, recommended HU+DI decision queue is now recorded in [HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md](./HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md). Use that shortlist instead of generating new questions from the historical 22-Oct prompt. It separates genuine policy decisions from technical/provider/legal follow-ups and explicitly preserves previously answered rules. The 22-Oct prompt remains historical evidence and is not a current question list.
+
+
+## 597-ID HU response reconciliation — 23 October 2026
+
+The row-level response index is [HU_RESPONSE_RECONCILIATION_597_2026-10-23.csv](./HU_RESPONSE_RECONCILIATION_597_2026-10-23.csv). It covers all 597 IDs from the immutable 18-Oct source snapshot and distinguishes (1) recorded HU decisions/responses, (2) ledger-only reconciliation that is not a new HU response, and (3) no decision found in sources checked (not proof no answer exists). Verified counts: 215 rows with existing HU decision/response evidence, 144 reconciled from existing ledgers without inventing a new response, and 238 requiring historical-source review before any question could be considered. This is an evidence index, not a fresh approval or execution authorization.
+
+**Known data defect:** RECONCILED_597_DISPOSITION_WORKING_2026-10-22.csv currently returns zero bytes from GitHub. The immutable 18-Oct snapshot remains intact; the new response crosswalk does not fabricate current dispositions for the 352 rows lacking row-level current-disposition evidence in the 245-row ledger/crosswalk. Reconstruct that disposition view separately from source evidence before claiming the 597-row current disposition register is fully repaired.
