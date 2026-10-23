@@ -118,3 +118,13 @@ The concise, recommended HU+DI decision queue is now recorded in [HU_DI_GENUINE_
 The row-level response index is [HU_RESPONSE_RECONCILIATION_597_2026-10-23.csv](./HU_RESPONSE_RECONCILIATION_597_2026-10-23.csv). It covers all 597 IDs from the immutable 18-Oct source snapshot and distinguishes (1) recorded HU decisions/responses, (2) ledger-only reconciliation that is not a new HU response, and (3) no decision found in sources checked (not proof no answer exists). Verified counts: 215 rows with existing HU decision/response evidence, 144 reconciled from existing ledgers without inventing a new response, and 238 requiring historical-source review before any question could be considered. This is an evidence index, not a fresh approval or execution authorization.
 
 **Known data defect:** RECONCILED_597_DISPOSITION_WORKING_2026-10-22.csv currently returns zero bytes from GitHub. The immutable 18-Oct snapshot remains intact; the new response crosswalk does not fabricate current dispositions for the 352 rows lacking row-level current-disposition evidence in the 245-row ledger/crosswalk. Reconstruct that disposition view separately from source evidence before claiming the 597-row current disposition register is fully repaired.
+
+
+## Superseding update — 23 October 2026, earlier HU answers incorporated
+
+After the initial crosswalk pass, I also reconciled the 18-Oct persistent HU answers file [RESP_18OCT_QA_HU ANSWERS.md](../../HUDI%20Discussion/RESP_18OCT_QA_HU%20ANSWERS.md) against the 597 IDs and attached the applicable directions to 56 distinct rows. This preserves earlier instructions while leaving later, more-specific decisions authoritative. The row-level crosswalk has been re-fetched and now contains **597 unique IDs** with these current counts:
+- **252** rows with an existing HU decision/response source recorded;
+- **127** rows reconciled from existing ledgers without treating that reconciliation as a new HU response;
+- **218** rows where no HU decision was found in the sources checked so far. This is not proof that Hu never answered and does not mean all 218 require a question.
+
+These counts supersede the earlier initial-pass counts recorded above. The 18-Oct source was not a verbatim transcript of every earlier conversation; this is still not an exhaustive audit of every historical chat. The zero-byte 597-row disposition working CSV remains a separate unresolved record-reconstruction defect.
