@@ -67,6 +67,8 @@ Purpose: replace repeated questions from the generated 22-Oct prompt with a smal
 
 These are execution or evidence gates, not new business decisions: targeted read-only Zoho Flow/app inspection; inventory-by-location and purchase/received-quantity reads; Zoho invoice automation/contact mapping verification; dev-catalogue recheck; SMTP/provider setup and notification wording; Merchant Center feed validation; Spaces provisioning; secrets-manager choice at the hosting/security gate; responsive/accessibility browser recheck; and release acceptance after dependencies. Perform them only at their recorded gate and with the existing authorisation limits.
 
+12. **Product URL identity — MA-PRD-063 (HU approved 23-Oct-2026).** Keep product IDs as the fixed URL identity (`/products/<id>/`). Editable slugs, slug-editing UI, and slug-change redirect behaviour are out of scope. Preserve the existing product-ID URL pattern; no further HU decision is pending for this item.
+
 ## Explicitly not reopened
 
 - MA-ORD-103 and MA-ORD-105: prior NO; current disposition corrected to EXCLUDE, implementation status remains DEFERRED.
