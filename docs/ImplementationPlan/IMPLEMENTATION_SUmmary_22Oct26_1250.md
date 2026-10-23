@@ -129,3 +129,13 @@ The linked [BUILD-245 implementation ledger](./BUILD245_LEDGER_2026-10-22.csv) i
 Use [HU_RESPONSE_RECONCILIATION_597_2026-10-23.csv](./HU_RESPONSE_RECONCILIATION_597_2026-10-23.csv) as the row-level index for prior HU answers/decisions across all 597 source IDs. It currently records 215 rows with existing HU decision/response evidence, 144 ledger-only reconciliations (not new HU responses), and 238 rows where no decision was found in the sources checked (not proof that Hu never answered or that a question is required). Do not ask from those 238 rows without checking the relevant historical sources and confirming the item genuinely requires HU input.
 
 Important: the current GitHub object RECONCILED_597_DISPOSITION_WORKING_2026-10-22.csv fetches as a zero-byte file. The response crosswalk is not a replacement for the missing row-level current-disposition data; reconstruct that separately and do not claim all 597 current dispositions are repaired yet.
+
+
+## Superseding update — 23 October 2026, earlier HU answers incorporated
+
+After the initial crosswalk pass, I also reconciled the 18-Oct persistent HU answers file [RESP_18OCT_QA_HU ANSWERS.md](../../HUDI%20Discussion/RESP_18OCT_QA_HU%20ANSWERS.md) against the 597 IDs and attached the applicable directions to 56 distinct rows. This preserves earlier instructions while leaving later, more-specific decisions authoritative. The row-level crosswalk has been re-fetched and now contains **597 unique IDs** with these current counts:
+- **252** rows with an existing HU decision/response source recorded;
+- **127** rows reconciled from existing ledgers without treating that reconciliation as a new HU response;
+- **218** rows where no HU decision was found in the sources checked so far. This is not proof that Hu never answered and does not mean all 218 require a question.
+
+These counts supersede the earlier initial-pass counts recorded above. The 18-Oct source was not a verbatim transcript of every earlier conversation; this is still not an exhaustive audit of every historical chat. The zero-byte 597-row disposition working CSV remains a separate unresolved record-reconstruction defect.
