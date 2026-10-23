@@ -74,19 +74,19 @@ These are execution or evidence gates, not new business decisions: targeted read
 13. **Scheduled publication — MA-PRD-057 (HU clarified 23-Oct-2026).** Scheduled time never publishes automatically. A product may be published only after required approval is complete and an authorised Admin or Director manually publishes it. If approval is incomplete or they forget, it remains unpublished after the scheduled time. No schedule-based bypass of approval, authorisation, or the verified-commercial-data gate.
 
 
-## First remaining genuine decision candidate — MF-055 customer-to-Zoho contact mapping
+## MF-055 customer-to-Zoho contact mapping — HU APPROVED (23-Oct-2026)
 
-**Status:** The broad capability scope is already YES; do not ask whether customer mapping is wanted. The specific match/create policy (S-5) remains unresolved and must be decided before treating this integration requirement as complete.
+**Status:** The business policy is explicitly approved. The remaining work is implementation and targeted validation; do not ask Hu to decide match/create policy again.
 
-**Evidence checked:**
-- The canonical functionality master records MF-055 under AC-24.1 / SPEC §24 and notes that the current adapter finds a Zoho contact by e-mail and never creates one; the blocker is explicitly S-5.
-- The 22-Oct prompt lists MF-055 as “shared contact vs approved creation”; the implementation ledger records an existing e-mail-or-phone duplicate lookup but no approved creation policy.
-- The gap assessment identifies the failure mode: a first-time customer's order cannot reach Zoho unless a contact already exists, while mapping every web order to one shared consumer contact would put distinct customers—including GST-registered buyers—under the same Zoho customer.
-- Frozen GST rule: a GST invoice requires a valid GST Number and Name pair; customer/contact association must not merge unrelated buyers or distort invoice/customer history.
+**HU decision (23-Oct-2026): APPROVED.** The website is the source of truth for customer identity and details; Zoho is the synchronized downstream contact record in this workflow.
 
-**Di recommendation:** Match and reuse a single existing Zoho contact by exact normalized e-mail; use phone only as a secondary match when it uniquely identifies one contact. If no unique match exists, create a separate minimal Zoho contact for that customer after duplicate checks. If matches are ambiguous, fail closed and require authorised staff resolution. Never map a GST-registered buyer to a shared generic contact. Validate this policy in the already-authorised sandbox scope only; production writes remain separately unauthorised.
+- When the first order is created, send the website customer's details to the corresponding Zoho contact, creating or updating the contact as required.
+- When an authorised/manual customer-detail change is made on the website, synchronize the changed details to that customer's mapped Zoho contact.
+- Maintain a reliable website-customer-to-Zoho-contact identity mapping. Prevent duplicate creation and never associate unrelated customers with one another or a shared generic contact.
+- If synchronization fails or the mapping is missing/ambiguous, record the failure and resolve it safely; never guess or silently link the wrong contact.
+- The approval settles the business policy only. MF-055 remains PARTIAL / BUILD until the implementation and appropriately scoped sandbox validation prove the required behaviour. No production writes, deployment, or coding-agent delegation is authorised by this decision.
 
-**HU+DI decision requested:** Approve this match/reuse + create-if-no-unique-match policy, with ambiguous matches failing closed and no shared generic contact for GST-registered buyers? This is a policy decision only; it does not authorise production writes, deployment, or coding-agent delegation.
+**Decision meaning:** The website owns customer identity and details. Zoho is not an independently maintained competing source for these customer details. This is not proof that the required synchronization is already implemented or validated.
 
 ## Explicitly not reopened
 
