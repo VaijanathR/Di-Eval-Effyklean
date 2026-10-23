@@ -8,14 +8,14 @@ This file is a recovery/index record for Hu's prior answers and decisions so the
 
 ## Primary source records recovered and checked
 
-0. `HUDI Discussion/HuDI Conversation 17-part2.md` — read from beginning to end and reconciled response-by-response in the source-specific audit below. This source is now covered; that does not imply all earlier chat threads have been audited.
-1. `HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md` — consolidated decisions 1–13 and prior answers.
-2. `BUILD245_HUDI_DECISIONS_RECONCILIATION_2026-10-23.md` — reconciled settled rules, dependencies, exclusions and safeguards.
-3. `BUILD245_DECISIONS_RECONCILED_LEDGER_2026-10-23.csv` — row-level BUILD245 reconciliation.
-4. `HUDI_DISPOSITION_DECISIONS_2026-10-22.md` — 22-Oct decision-batch annotations and recovered prior answers; the 76 annotated rows are not 76 new decisions.
-5. `BUILD245_HUDI_DECISIONS_NEEDED_2026-10-22.md` — historical generated question list only; superseded for generating new questions by the reconciliation overlay.
-6. `BUILD245_IMPLEMENTATION_RECORD_2026-10-22.md` and `BUILD245_LEDGER_2026-10-22.csv` — implementation evidence/status, separate from Hu's decisions.
-7. `AgntGapAnalysis/GAP_ASSESSMENT_211020261727.md` and the original gap-analysis/implementation-plan records — scope/gap/task background, not substitutes for direct Hu answers.
+1. `HUDI Discussion/HuDI Conversation 17-part2.md` — read from beginning to end and reconciled response-by-response in the source-specific audit below. This source is now covered; that does not imply all earlier chat threads have been audited.
+2. `HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md` — consolidated decisions 1–13 and prior answers.
+3. `BUILD245_HUDI_DECISIONS_RECONCILIATION_2026-10-23.md` — reconciled settled rules, dependencies, exclusions and safeguards.
+4. `BUILD245_DECISIONS_RECONCILED_LEDGER_2026-10-23.csv` — row-level BUILD245 reconciliation.
+5. `HUDI_DISPOSITION_DECISIONS_2026-10-22.md` — 22-Oct decision-batch annotations and recovered prior answers; the 76 annotated rows are not 76 new decisions.
+6. `BUILD245_HUDI_DECISIONS_NEEDED_2026-10-22.md` — historical generated question list only; superseded for generating new questions by the reconciliation overlay.
+7. `BUILD245_IMPLEMENTATION_RECORD_2026-10-22.md` and `BUILD245_LEDGER_2026-10-22.csv` — implementation evidence/status, separate from Hu's decisions.
+8. `AgntGapAnalysis/GAP_ASSESSMENT_211020261727.md` and the original gap-analysis/implementation-plan records — scope/gap/task background, not substitutes for direct Hu answers.
 
 ## Recovered, binding decisions and clarifications
 
@@ -118,7 +118,7 @@ This file is a recovery/index record for Hu's prior answers and decisions so the
 | Channel semantics / active products | Rejected the invented separate Staff-availability setting and challenged the assumption that Active must mean hidden from the website. Do not over-engineer or add unsupported channel switches/POS behaviour. Preserve the approved lifecycle and staff-order safeguards. | Shortlist Decision 11; no separate staff-availability setting; no new decision/task from Di's withdrawn proposal. |
 | Scheduled publication | Corrected Di's misreading: if the required approval is incomplete or Admin/Director forgets to publish, the product remains unpublished even after the scheduled time. Scheduled time never publishes by itself; authorised Admin/Director must manually publish after required approval. | Shortlist Decision 1 and Decision 13; MA-PRD-057 resolved. No automatic publication or schedule-based bypass. |
 | Product URL identity | Approved fixed product-ID URLs `/products/<id>/`; no editable slugs or slug-change redirects. | Shortlist Decision 12; MA-PRD-063 resolved. |
-| Work/process instructions | Asked whether every response was being saved; explicitly required the answers to be recovered and recorded before agent instructions. Rejected repeated assurances and asked for the task to be completed. | This register is the response index; the source-specific audit and row-level crosswalk are being updated. Do not prepare the next coding-agent instruction set until the wider response reconciliation is complete. No coding-agent delegation was authorised. |
+| Work/process instructions | Asked whether every response was being saved; explicitly required the answers to be recovered and recorded before agent instructions. Rejected repeated assurances and asked for the task to be completed. | This register is the response index; the source-specific audit, reconciliation overlay and row-level crosswalk have now been updated and re-fetched for verification. Do not prepare the next coding-agent instruction set until the wider response reconciliation is complete. No coding-agent delegation was authorised. |
 
 ### Important interpretation corrections preserved
 
