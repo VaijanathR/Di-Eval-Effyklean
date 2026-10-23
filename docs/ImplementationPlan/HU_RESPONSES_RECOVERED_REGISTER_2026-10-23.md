@@ -19,6 +19,17 @@ This file is a recovery/index record for Hu's prior answers and decisions so the
 
 ## Recovered, binding decisions and clarifications
 
+### MF-055 — website-to-Zoho customer synchronization (HU approval, 23-Oct-2026)
+
+**HU decision (23-Oct-2026): APPROVED.** The website is the source of truth for customer identity and details; Zoho is the synchronized downstream contact record in this workflow.
+
+- When the first order is created, send the website customer's details to the corresponding Zoho contact, creating or updating the contact as required.
+- When an authorised/manual customer-detail change is made on the website, synchronize the changed details to that customer's mapped Zoho contact.
+- Maintain a reliable website-customer-to-Zoho-contact identity mapping. Prevent duplicate creation and never associate unrelated customers with one another or a shared generic contact.
+- If synchronization fails or the mapping is missing/ambiguous, record the failure and resolve it safely; never guess or silently link the wrong contact.
+- The approval settles the business policy only. MF-055 remains PARTIAL / BUILD until the implementation and appropriately scoped sandbox validation prove the required behaviour. No production writes, deployment, or coding-agent delegation is authorised by this decision.
+
+
 ### Product lifecycle, publishing and URLs
 - Product lifecycle approved: Draft, Active, Unlisted (direct-link only), Archived. Do not add Suspended absent a concrete evidenced need. Preserve order/history; authorised staff action required.
 - Scheduled time never publishes automatically. A product may be published only after required approval is complete and an authorised Admin or Director manually publishes. If approval is incomplete or staff forget, it stays unpublished after the scheduled time. Do not bypass authorisation, approval or verified-commercial-data gates.
@@ -297,6 +308,6 @@ Additional implementation-ledger follow-up wording was clarified for MF-063 (Zoh
 Two further stale next actions were corrected: MA-PRD-067's G-23 scope question is superseded by the original YES and verified implementation; MA-DSC-020 must follow the existing no-stacking precedence and is not a fresh question. Both remain in their existing implementation status; no new HU decision was invented.
 
 
-## Next decision prepared after prior-input reconciliation — MF-055
+## MF-055 decision status after Hu's response (23-Oct-2026)
 
-The first remaining genuine policy candidate is MF-055 (S-5), customer-to-Zoho contact match/create. The decision shortlist now records the evidence, risk of a shared contact (especially for GST-registered buyers), recommended match/create rule, sandbox-only validation boundary and the exact HU+DI decision requested. This is not recorded as answered until Hu responds.
+MF-055 is no longer an open policy question. Hu explicitly approved the website-as-source-of-truth rule and website-to-Zoho synchronization described above. The prior “next decision prepared” text is historical and superseded. Keep implementation status separate: MF-055 remains PARTIAL / BUILD until implementation and targeted sandbox validation are evidenced.
