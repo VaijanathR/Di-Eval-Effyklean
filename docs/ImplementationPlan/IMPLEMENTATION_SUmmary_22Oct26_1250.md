@@ -123,3 +123,9 @@ Key corrections: MF-006 must not trigger automatic Shopify re-observation; exist
 ## BUILD-245 item-level status reconciliation — 23 October 2026
 
 The linked [BUILD-245 implementation ledger](./BUILD245_LEDGER_2026-10-22.csv) is present and has been checked row by row. It contains 245 unique BUILD IDs: **83 DONE (verified), 62 PARTIAL, 100 DEFERRED, and 0 NOT DONE**. These status counts sum to 245. The separate 597-row current disposition totals are **340 Implemented, 162 BUILD, 10 LATER, 9 INVESTIGATE, 76 EXCLUDE** (597 total); the BUILD ledger retains implementation-outcome statuses and the current primary disposition is mapped in the reconciliation overlay. Any earlier statement that the BUILD ledger was missing, or that the ledger contained 64 PARTIAL rows, is superseded by this verified count. Use the per-item ledger's status and evidence fields for subsequent implementation work; do not ask HU to repeat decisions already recorded.
+
+## HU response evidence crosswalk — 23 October 2026
+
+Use [HU_RESPONSE_RECONCILIATION_597_2026-10-23.csv](./HU_RESPONSE_RECONCILIATION_597_2026-10-23.csv) as the row-level index for prior HU answers/decisions across all 597 source IDs. It currently records 215 rows with existing HU decision/response evidence, 144 ledger-only reconciliations (not new HU responses), and 238 rows where no decision was found in the sources checked (not proof that Hu never answered or that a question is required). Do not ask from those 238 rows without checking the relevant historical sources and confirming the item genuinely requires HU input.
+
+Important: the current GitHub object RECONCILED_597_DISPOSITION_WORKING_2026-10-22.csv fetches as a zero-byte file. The response crosswalk is not a replacement for the missing row-level current-disposition data; reconstruct that separately and do not claim all 597 current dispositions are repaired yet.
