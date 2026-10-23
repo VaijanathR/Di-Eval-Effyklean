@@ -20,8 +20,8 @@ Purpose: replace repeated questions from the generated 22-Oct prompt with a smal
    - This is scope approval only; it does not authorise coding-agent delegation, implementation, or live deletion without the applicable explicit authorisation.
 
 4. **Tax-exemption controls — MA-CUS-014/045.**
-   - Di recommendation: no customer-facing exemption toggle until the accountant supplies objective eligibility, evidence and approval rules.
-   - Next action: accountant clarification; not a question that Di can safely decide.
+   - **HU decision (23-Oct-2026): APPROVED for implementation.** Only authenticated Admin or Director users may manage tax-exemption controls; the business rule is that these roles are responsible for applying the applicable tax rules.
+   - Implementation must still enforce role-based access, record who changed exemption status and when, and retain the evidence/reason captured for the decision where applicable. This approval does not authorise non-compliant exemptions or remove applicable legal/tax obligations.
 
 5. **Marketing, channels, pixels and social/AI commerce — MA-MKT-001/002/003/004/007/013; MA-CHN-002/003/005/006/007/008; MA-SET-072; MA-PRD-096.**
    - Di recommendation: no new provider, pixel, campaign, social login, marketplace or AI-commerce integration until purpose, data flow, consent, provider, wording, ownership and ongoing cost are documented. Existing WhatsApp notifications do not authorise WhatsApp marketing/commerce.
