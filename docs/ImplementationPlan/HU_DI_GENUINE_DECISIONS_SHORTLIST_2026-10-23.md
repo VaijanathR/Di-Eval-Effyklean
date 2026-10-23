@@ -58,6 +58,11 @@ Purpose: replace repeated questions from the generated 22-Oct prompt with a smal
     - Customer-account settings must preserve approved account/access rules. Do not enable self-service returns or store credit under this approval; those conflict with the existing business decisions. Any additional editable field must be proposed individually for HU+DI approval before implementation.
     - This is a scope/ownership decision only; it does not authorise coding-agent delegation, implementation, deployment or live changes.
 
+
+11. **Product/collection channel semantics — MA-PRD-012/093, MA-COL-008, MA-PRD-100.**
+    - Reconciled without a new HU decision: do not introduce a separate Staff-availability setting. Preserve the approved Draft / Active / Unlisted / Archived lifecycle and existing publication, catalogue and Zoho-mapping safeguards. Active does not mean a product must be hidden from the public website; Unlisted is the existing state for a product intentionally not publicly listed.
+    - Staff-entered orders continue to use the approved assisted-order workflow, including catalogue/pricing safeguards and verified full payment before order creation/dispatch. Do not invent additional channel switches or POS-terminal behaviour. Any concrete conflict with frozen requirements must be reported for HU+DI decision rather than solved by adding functionality.
+
 ## Not HU decision questions
 
 These are execution or evidence gates, not new business decisions: targeted read-only Zoho Flow/app inspection; inventory-by-location and purchase/received-quantity reads; Zoho invoice automation/contact mapping verification; dev-catalogue recheck; SMTP/provider setup and notification wording; Merchant Center feed validation; Spaces provisioning; secrets-manager choice at the hosting/security gate; responsive/accessibility browser recheck; and release acceptance after dependencies. Perform them only at their recorded gate and with the existing authorisation limits.
