@@ -280,13 +280,13 @@ This update supersedes the earlier BUILD-disposition counts below where they con
 
 ### Remaining coverage boundary
 
-The current 597-row working-disposition CSV still fetches as a zero-byte file. The verified row-level slice now covers 511 of 597 IDs: 340 Implemented, 157 BUILD, 5 EXCLUDE and 9 INVESTIGATE; **86 IDs remain UNRECONCILED — DO NOT GUESS**. Historical aggregate arithmetic implies 10 LATER and 76 EXCLUDE among those 86, but their individual IDs are not yet mapped to authoritative row-level evidence. Do not call the entire 597-row disposition register repaired. Continue source-by-source reconciliation before presenting any remaining genuine HU+DI decisions. No coding agent was delegated.
+Superseded interim statement: the working CSV is populated and has 597 rows / 597 unique IDs. Current dispositions are 340 Implemented, 152 BUILD, 74 EXCLUDE, 17 LATER and 14 INVESTIGATE. Exact-ID comparisons found zero disposition mismatches against the 597 response crosswalk and against the 245-row ledger for shared IDs; do not use the old 511-classified / 86-unreconciled aggregate.
 
 ## Latest superseding update — 160-row prior-input reconciliation (23-Oct-2026)
 
 The reconciliation has progressed beyond the earlier three-gift-card correction. The original 160 BUILD-disposition rows were checked against prior HU answer/decision sources and then reclassified where later, more-specific decisions already controlled the current scope. The original source evidence remains preserved; original YES answers are not erased, but they do not override later explicit refinements.
 
-**Current 245-row disposition counts:** 83 Implemented, 143 BUILD, 13 LATER, 6 EXCLUDE (245 total). Separate implementation statuses remain 83 DONE (verified), 62 PARTIAL, 100 DEFERRED. Ninety-five unique rows in the 245-row ledger now have a corrected disposition, reason category or next action compared with the pre-reconciliation ledger.
+Current 245-row dispositions: 83 Implemented, 141 BUILD, 13 LATER and 8 EXCLUDE. Implementation outcomes remain 83 DONE (verified), 62 PARTIAL and 100 DEFERRED.
 
 Additional row-level corrections applied to both the 245-row ledger and 597-ID response crosswalk:
 - **LATER:** MA-CUS-006 (multiple saved addresses; one address remains the current rule), MA-PRD-075, MA-SET-029, MA-SET-075 and MA-MKT-012 (verified translations required), plus MA-ANA-012/013/021/024/026, MA-SET-027, MA-CNT-042 and MA-MKT-002 (optional tracking/attribution remains LATER under MF-093 until consent, privacy notice, retention and access controls are approved and implemented).
@@ -295,7 +295,7 @@ Additional row-level corrections applied to both the 245-row ledger and 597-ID r
 
 The correction overlay now has **19 rows**. The 597-ID crosswalk was updated to retain the original answer and record the later refinement as controlling. Ninety-five row-level edits do not mean 95 implementation tasks are complete.
 
-**Full-register limitation remains:** the current 597-row working-disposition CSV still fetches as zero bytes. Row-level classification now verifies 511 IDs: 340 Implemented, 143 BUILD, 13 LATER, 6 EXCLUDE and 9 INVESTIGATE. **86 IDs remain UNRECONCILED — DO NOT GUESS.** Aggregate arithmetic implies 10 additional LATER and 76 additional EXCLUDE among those 86, but those individual IDs are not mapped to authoritative evidence. Continue reconciling historical sources before presenting the remaining genuine HU+DI decisions. No coding agent was delegated.
+Superseded interim statement: the working CSV is populated and has 597 rows / 597 unique IDs. Current dispositions are 340 Implemented, 152 BUILD, 74 EXCLUDE, 17 LATER and 14 INVESTIGATE. Exact-ID comparisons found zero disposition mismatches against the 597 response crosswalk and against the 245-row ledger for shared IDs; do not use the old 511-classified / 86-unreconciled aggregate.
 
 ## Latest correction — 23-Oct-2026: 597-row working register re-fetched and synchronized
 
@@ -309,7 +309,7 @@ Current 245-row ledger dispositions: **83 Implemented, 141 BUILD, 13 LATER and 8
 
 The earlier count of 95 changed rows was an interim checkpoint. After the final pass replacing stale repeated questions with specific evidence/provider/legal/implementation actions, comparison with the pre-reconciliation 245-row ledger now confirms **114 unique rows** have at least one corrected disposition, reason category or next action. This does not mean those 114 capabilities are implemented.
 
-The current 597-row working register is populated (597 rows / 597 unique IDs) and has been synchronized with the corrected 245-row ledger and HU-response crosswalk. Re-fetch verification confirms zero disposition mismatches across the 245 exact-ID join. Current overall counts remain 340 Implemented, 143 BUILD, 13 LATER, 6 EXCLUDE, 9 INVESTIGATE and 86 UNRECONCILED — DO NOT GUESS. The 86 unresolved IDs still need authoritative source-by-source reconciliation; do not assign them from aggregate arithmetic.
+Current row-level totals: 340 Implemented, 152 BUILD, 74 EXCLUDE, 17 LATER and 14 INVESTIGATE (597 unique IDs). The earlier interim aggregate is superseded; the current register is populated and fully classified by row.
 
 
 ## Superseding 245-row prior-input reconciliation — 23 October 2026
