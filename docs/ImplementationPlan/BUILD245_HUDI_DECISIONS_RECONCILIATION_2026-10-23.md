@@ -4,6 +4,12 @@
 
 **Authority:** This is a reconciliation overlay, not new HU approval and not execution authorization.
 
+## Superseding HU decision — MF-055 (23-Oct-2026)
+
+Hu explicitly approved the MF-055 customer-to-Zoho synchronization policy after this reconciliation pass was prepared. The website is the source of truth for customer identity/details; initial order creation sends the details to Zoho, and manual customer-detail changes on the website must synchronize to the mapped Zoho contact. The integration must preserve reliable identity mapping, avoid duplicate or incorrect associations, and record/fail safely on sync errors or ambiguous mappings. See the current approved wording in [HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md](./HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md) and [HU response recovery register](./HU_RESPONSES_RECOVERED_REGISTER_2026-10-23.md).
+
+This approval resolves the MF-055 policy question only. The implementation ledger remains PARTIAL / BUILD pending implementation and targeted validation; production writes, deployment, and coding-agent delegation are not authorised.
+
 **HU response evidence index:** See [HU response recovery register](./HU_RESPONSES_RECOVERED_REGISTER_2026-10-23.md), including the verbatim inventory of explicit HU messages from `HUDI Discussion/HuDI Conversation 17-part2.md` and their source line references. Treat exact quotations, normalized decisions, scope disposition and implementation evidence as separate things. Preserve the original 430-line prompt report as historical evidence. Do not treat its 151 distinct IDs as 151 unanswered questions. Do not change implementation status merely because a disposition question is resolved.
 
 ## Governing outcome
@@ -206,9 +212,9 @@ This pass reconciled the 245 unique implementation-ledger IDs against the 597-ID
 - Two additional repeat questions were removed: **MA-PRD-067** is already DONE (verified) under the recorded YES (G-23 no longer asks whether related links are wanted), and **MA-DSC-020** is already DONE (verified) under the frozen no-stacking/discount-precedence rules. Neither is a new HU decision.
 
 
-## Next genuine decision candidate prepared — MF-055
+## MF-055 follow-through after explicit approval
 
-The first remaining policy decision is customer-to-Zoho contact match/create (S-5), not broad feature scope. Evidence and Di's recommendation are recorded in [HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md](./HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md). Do not ask until the recommendation is shown to Hu; no production writes or agent delegation are authorised.
+The earlier “next genuine decision candidate” wording above is superseded by Hu's explicit approval dated 23-Oct-2026. Do not ask MF-055 as an open policy question again. The remaining task is to implement and validate website-owned customer-detail synchronization to the mapped Zoho contact. No production writes, deployment, or coding-agent delegation are authorised by the policy approval.
 
 ## Resumed verification — 160 original BUILD rows and current row-level totals (23-Oct-2026)
 
@@ -221,4 +227,4 @@ The later, row-specific refinements have been applied to the actual records:
 - The current response crosswalk preserves original YES/NO answers as historical evidence and records later specific refinements separately. In particular: **MA-GFT-001, MA-GFT-002, MA-SET-032 and MA-CUS-020 are EXCLUDE**; **MA-CUS-006 and translation/optional-tracking rows are LATER**; **MA-ORD-103/105 remain EXCLUDE**. Implementation status remains unchanged unless supported by its own implementation evidence.
 - The current correction overlay contains 107 row-level records for scope/disposition reconciliation; this is an evidence/coverage overlay, not 107 newly changed decisions. The reconciliation document records 21 specific correction actions. Do not confuse overlay row count with number of changed rows.
 
-The next phase is not to ask all 160 original BUILD questions again. Continue source-by-source review of the recorded answers, remove repeat prompts, and isolate only genuinely unresolved policy/design choices after Di has supplied the evidence and recommendation. **MF-055 remains the first genuine decision candidate**; its missing explicit answer must not be fabricated. No coding-agent delegation, production/provider writes, or deployment was authorised by this reconciliation.
+The next phase is not to ask all 160 original BUILD questions again. Continue source-by-source review of recorded answers and isolate only genuinely unresolved policy/design choices. MF-055 was an unresolved candidate at the time this reconciliation was prepared; Hu subsequently approved the policy explicitly on 23-Oct-2026, as recorded in the superseding decision note above. No coding-agent delegation, production/provider writes, or deployment was authorised by this reconciliation.
