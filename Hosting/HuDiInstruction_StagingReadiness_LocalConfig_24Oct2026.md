@@ -27,11 +27,11 @@ Continue from the agent's local application commit `2a35f4e` and complete the re
 3. Verify the startup/build route and exact build/run commands from the repository's actual dependency and deployment configuration; configure `DJANGO_SETTINGS_MODULE=config.settings.staging` for the correct scopes. Do not invent a Dockerfile or change build strategy without evidence.
 4. Check the proxy/HTTPS configuration, `ALLOWED_HOSTS`, CSRF origins, staff-only gate, `/healthz`, static collection/serving, database TLS and least-privilege checks. Clearly distinguish settings that can be safely completed in code from values that must come from the DigitalOcean UI.
 5. Run focused tests and relevant Django/deployment checks. Avoid an expensive full suite unless a concrete finding makes it necessary.
-6. Commit only the explicit intended file paths and intended hunks. Preserve unrelated work. Do not push.
+6. Commit regularly at each coherent, verified checkpoint (for example, staging email/media settings; then build/startup configuration; then any distinct security/readiness fix). Run the focused checks for that checkpoint before committing. Use a clear, scoped commit message and explicitly stage only intended paths/hunks. Preserve unrelated work. Do not push. Avoid both premature commits of failing/incomplete changes and one oversized end-of-task commit.
 
 ## Completion report — mandatory
 For each requirement above, mark **DONE (verified) / PARTIAL / NOT DONE / DEFERRED** and provide command output or file/line evidence. Include:
-- exact starting and ending commit hashes; exact commit hash created (if any);
+- exact starting and ending commit hashes; each checkpoint commit hash and message, with the paths included in each commit;
 - exact changed paths and focused test/check commands with results;
 - the exact build and run commands, supported by repository evidence;
 - every value still requiring DigitalOcean UI input (including actual health-check Host and trusted-source/network choices);
