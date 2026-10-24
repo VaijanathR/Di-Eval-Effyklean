@@ -121,3 +121,37 @@ Before staff testing, confirm genuine access control for authorized staff. Do no
 - Distinguish decisions, proposed configuration, verified state, and completed actions. Never describe an uncreated app as deployed.
 - Do not incur charges or perform cloud/database/DNS/provider changes without the relevant explicit authorization.
 - When blocked, investigate practical alternatives and report the smallest decision needed; do not simply defer without analysis.
+
+
+## 9. HU+DI decision — dedicated Django staging settings profile (24 October 2026)
+
+**Decision: use `config.settings.staging` for hosted, staff-only final testing. Do not use `local.py` or weaken/change `production.py` to fit this testing phase.**
+
+### Why this is the selected option
+
+- The DigitalOcean resource belongs in the existing **EffyKlean / Production project**, but that project label does not require the Django `production` settings module or mean the site is publicly launched.
+- `local.py` is for local development: it enables `DEBUG`, local provider stubs and local-host assumptions, so it is not suitable for the hosted DigitalOcean staff-testing environment.
+- `production.py` is intentionally fail-closed for the live environment. As currently written, it requires production configuration such as S3-compatible media and non-console email, requires the Zoho credentials/tax configuration, and rejects Inventory sandbox mode and payment stubs. Those checks must not be weakened just to support staff testing.
+- A dedicated `staging.py` expresses the approved intermediate phase explicitly and keeps the live-production safeguards separate.
+
+### Required staging-profile boundaries
+
+The new profile does **not yet exist** and this decision records policy, not completed implementation. When implemented and verified, it must:
+
+- Keep `DEBUG=False`, require a strong secret key, use the hosted domain/CSRF configuration, HTTPS-aware proxy handling and secure cookies.
+- Work only with the approved application-level staff-only access gate: authenticated, authorized staff may test; ordinary visitors must not browse or place orders. Keep this restriction enabled until explicit HU+DI approval for public launch. Health checks must remain usable without exposing business/customer data.
+- Allow only the intended sandbox/test integrations. Do not permit real payments, live provider writes, live orders or real dispatch during staff testing. Preserve the Zoho-owned shipment workflow; do not add direct website-to-Shiprocket shipment creation.
+- Fail closed against accidental local provider stubs, payment stubs or live-provider mode being enabled by mistake.
+- Use the approved hosted PostgreSQL configuration and least-privilege application credentials; do not embed secrets in source or public records. Database identity/isolation and network/TLS prerequisites remain governed by the existing decisions and must be verified rather than assumed.
+- Use an explicitly chosen safe email behaviour and persistent media-storage approach suitable for hosted testing; neither is settled merely by selecting this settings module.
+- Preserve and verify the `/healthz` behaviour and deployment startup/build configuration.
+
+### Immediate configuration consequence
+
+The current DigitalOcean build failed at `collectstatic` because `DJANGO_SETTINGS_MODULE` was unset. Do **not** set it to `config.settings.production` or `config.settings.local` as a workaround. After `config/settings/staging.py` has been implemented and tested, configure `DJANGO_SETTINGS_MODULE=config.settings.staging` for the required build/run scope and retry deployment.
+
+### Current status and authorization boundary
+
+- The DigitalOcean app `effyklean-web` has since been created in the existing EffyKlean / Production project; the initial deployments failed with the Django settings-module/build error described above. This supersedes the earlier statements in sections 2 and 4 that no app had been created or finalized.
+- No claim is made here that `staging.py`, the staff-only gate, or the remaining staging safeguards have been implemented or verified.
+- This decision authorizes recording the settings-profile choice only. It does not by itself authorize editing application code, changing cloud configuration, deploying, changing DNS, enabling live integrations or launching publicly. Those actions remain subject to the applicable HU+DI authorization and safety gates.
