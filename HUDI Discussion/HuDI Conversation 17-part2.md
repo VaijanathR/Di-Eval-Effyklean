@@ -8,7 +8,7 @@ Hu, the decisive reconciliation pass is recorded in the public repository.
 
 I created and verified this new HU+DI reconciliation overlay:
 
-[BUILD245_HUDI_DECISIONS_RECONCILIATION_2026-10-23.md](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/BUILD245_HUDI_DECISIONS_RECONCILIATION_2026-10-23.md?utm_source=chatgpt.com)
+[BUILD245_HUDI_DECISIONS_RECONCILIATION_2026-10-23.md](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/BUILD245_HUDI_DECISIONS_RECONCILIATION_2026-10-23.md)
 
 It consolidates the rules and existing answers, separates technical and external follow-ups from genuine decisions, and groups the remaining design questions so you are not asked the same questions again.
 
@@ -21,7 +21,7 @@ Next: reconcile the actual item-ledger rows against this overlay. I have not yet
 
 Hu, the row-level reconciliation is now created and verified in GitHub.
 
-New file: [BUILD245_DECISIONS_RECONCILED_LEDGER_2026-10-23.csv](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/BUILD245_DECISIONS_RECONCILED_LEDGER_2026-10-23.csv?utm_source=chatgpt.com)
+New file: [BUILD245_DECISIONS_RECONCILED_LEDGER_2026-10-23.csv](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/BUILD245_DECISIONS_RECONCILED_LEDGER_2026-10-23.csv)
 
 It contains 151 decision-report items, matched against the 245-row BUILD ledger, with each item's recorded status, existing next action, reconciliation category, and whether a new HU decision is genuinely needed.
 
@@ -38,9 +38,9 @@ Next, I’ll reconcile those authoritative records and then produce a concise li
 
 Hu, the reconciliation corrections are now committed and verified.
 
-- [245-row BUILD ledger](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/BUILD245_LEDGER_2026-10-22.csv?utm_source=chatgpt.com) — corrected MA-ORD-103 and MA-ORD-105 to `EXCLUDE` from scope while retaining `DEFERRED` as their implementation status.
-- [Current 597-item disposition corrections](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/CURRENT_597_DISPOSITION_CORRECTIONS_2026-10-23.csv?utm_source=chatgpt.com) — records both corrections and their evidence.
-- [151-item decision crosswalk](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/BUILD245_DECISIONS_RECONCILED_LEDGER_2026-10-23.csv?utm_source=chatgpt.com) — updated to reflect the completed corrections.
+- [245-row BUILD ledger](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/BUILD245_LEDGER_2026-10-22.csv) — corrected MA-ORD-103 and MA-ORD-105 to `EXCLUDE` from scope while retaining `DEFERRED` as their implementation status.
+- [Current 597-item disposition corrections](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/CURRENT_597_DISPOSITION_CORRECTIONS_2026-10-23.csv) — records both corrections and their evidence.
+- [151-item decision crosswalk](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/BUILD245_DECISIONS_RECONCILED_LEDGER_2026-10-23.csv) — updated to reflect the completed corrections.
 - The implementation plan, summary, disposition log, implementation record and investigation report now show the adjusted current totals.
 
 The corrected current disposition totals are 340 Implemented + 160 BUILD + 10 LATER + 9 INVESTIGATE + 78 EXCLUDE = 597.
@@ -51,7 +51,7 @@ Next: consolidate the genuinely unresolved decisions into a short HU+DI decision
 
 Recorded and verified, Hu.
 
-[Updated HU+DI decision shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md?utm_source=chatgpt.com)
+[Updated HU+DI decision shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md)
 
 Commit: `33a67fb` — policy decision recorded; implementation not authorised.
 
@@ -61,7 +61,7 @@ My recommendation is NO for now. Gift cards introduce redemption, expiry, fraud,
 
 Should we exclude gift cards from the current scope and leave them deferred for possible future reconsideration?
 
-Agreed, Hu. Recorded and verified in the [decision shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md?utm_source=chatgpt.com).
+Agreed, Hu. Recorded and verified in the [decision shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md).
 
 Gift cards are excluded from current scope and deferred for possible future reconsideration. No implementation unless HU+DI reopens the decision and accountant-approved terms are available.
 
@@ -81,7 +81,7 @@ I agree that this is a legitimate feature. I would separate your approval of the
 
 My recommendation is to approve the feature in scope, with implementation gated on defining what can be deleted versus anonymised, which records must be retained, and how privileged actions are audited. That preserves your decision without silently authorising irreversible deletion of every linked record.
 
-I’ve recorded your GO for privileged customer and order-history deletion in the [decision shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md?utm_source=chatgpt.com) and verified the update. Commit: `796bfa6`.
+I’ve recorded your GO for privileged customer and order-history deletion in the [decision shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md) and verified the update. Commit: `796bfa6`.
 
 One distinction so I don’t overstate your approval: do you also want anonymisation and merging of customer records included in the GO, or is your approval specifically for deletion?
 what is anonymised? i think only people who can do it are the ones who log in using proper credentials and the role is admin or director
@@ -114,7 +114,7 @@ Clear, Hu. Recorded and verified.
 - Access: authenticated Admin or Director only.
 - Safeguards: preserve required invoice/accounting records, order integrity and audit evidence.
 
-Updated [HU+DI decision shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md?utm_source=chatgpt.com), commit `747136b`.
+Updated [HU+DI decision shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md), commit `747136b`.
 
 No implementation has started.
 
@@ -131,7 +131,7 @@ Approved, Hu. I’ve recorded your decision and verified the update.
 - Only authenticated Admin or Director users may manage them.
 - The system should record who changed the exemption status and when, with supporting reason/evidence where applicable.
 
-Updated [HU+DI decision shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md?utm_source=chatgpt.com), commit `34d4ca9`.
+Updated [HU+DI decision shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md), commit `34d4ca9`.
 
 ### Decision 5 — Marketing, channels and integrations
 
@@ -154,7 +154,7 @@ Got it, Hu. I’ll record this as the HU+DI decision for Decision 5:
 
 I’ve updated the public shortlist and fetched it again to verify the saved decision.
 
-Verified file: [HU+DI Genuine Decisions Shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md?utm_source=chatgpt.com)
+Verified file: [HU+DI Genuine Decisions Shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md)
 
 Commit: `e5fe7413e1ba01d767b3b3f4bc323b632ae67e17`
 
@@ -175,7 +175,7 @@ The decision now records that:
 
 Verified commit: `a230805e6e752b92965e8508fc97679178cbadb4`
 
-[View the updated shortlist on GitHub](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md?utm_source=chatgpt.com)
+[View the updated shortlist on GitHub](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md)
 
 We’ll treat this as an implementation-scope correction, not a future-feature decision.
 
@@ -238,7 +238,7 @@ The updates subscription still needs the appropriate consent, communication pref
 
 I've corrected the public shortlist and verified the update.
 
-[View the corrected decision shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md?utm_source=chatgpt.com)
+[View the corrected decision shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md)
 
 Commit: `26b6bdee00d8f4a353a8db4877acac3b259b00d9`
 
@@ -273,7 +273,7 @@ This does not block essential operational reports or cancel the approved segment
 
 ### I've updated the public record
 
-I revised Decision 6 in the [HU+DI Genuine Decisions Shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md?utm_source=chatgpt.com) and fetched it again to verify the saved text.
+I revised Decision 6 in the [HU+DI Genuine Decisions Shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md) and fetched it again to verify the saved text.
 
 Commit: `848f253679bfe9cf0ff51a5b889d746c74b7c236`
 
@@ -313,7 +313,7 @@ I’ll record this as an approved scope decision in the public shortlist, while 
 The shortlist is now updated and verified on GitHub.
 
 - Commit: `d051fe1f7742e1f04a4545cc015d61856ce6afd7`
-- [View the updated Decision 7](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md?utm_source=chatgpt.com)
+- [View the updated Decision 7](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md)
 
 Decision 7 is settled. The remaining queue moves to Decision 8, where public product quantity price breaks remain a separate, unapproved question.
 
@@ -321,7 +321,7 @@ Hu, I checked the earlier project decisions before asking anything. There’s an
 
 On 12 October, you already answered YES to MA-PRD-071 — product quantity rules and price breaks. The implementation ledger also records that minimum, maximum and step-based quantity rules are partly implemented, while public volume pricing is not built yet. So we must not ask you again whether you want price breaks.
 
-Source: [MA-PRD-071 in the implementation ledger](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/BUILD245_LEDGER_2026-10-22.csv?utm_source=chatgpt.com).
+Source: [MA-PRD-071 in the implementation ledger](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/BUILD245_LEDGER_2026-10-22.csv).
 
 ### Decision 8 — the genuine remaining question
 
@@ -347,7 +347,7 @@ Approved and recorded, Hu. I’ve updated the public shortlist and fetched it ag
 
 Commit: `76adb425c6679251f9cb292c391c663cba9aa78e`
 
-[View the updated shortlist on GitHub](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md?utm_source=chatgpt.com)
+[View the updated shortlist on GitHub](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md)
 
 Next is Decision 9 — EffyKlean-specific content, forms, search, chat and package features. I’ll check the recorded requirements first and ask only about a genuinely unresolved business need.
 
@@ -355,7 +355,7 @@ Hu, I checked the recorded decisions before moving on. There’s an important co
 
 The current decision ledger also records the blog-comments item as YES, although the older master record labels it excluded. I’ll preserve the newer recorded decision rather than silently overriding it. Scope approval does not, by itself, select a chat provider or authorise live third-party connections.
 
-I updated and re-fetched the shortlist to verify the correction. [Decision 9 — updated shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md?utm_source=chatgpt.com).
+I updated and re-fetched the shortlist to verify the correction. [Decision 9 — updated shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md).
 
 Now, Decision 10 — Safe Admin-editable settings.
 
@@ -373,7 +373,7 @@ Approved, Hu. I’ve recorded your decision in the public HU+DI shortlist and fe
 
 Commit: `5b99121d89ba2171cb79facdcee1a332b29d72fb`
 
-[View the updated shortlist on GitHub](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md?utm_source=chatgpt.com)
+[View the updated shortlist on GitHub](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md)
 
 The baseline is now settled: safe contact and brand settings can be editable through audited Admin controls; protected, frozen and Zoho-owned settings stay restricted; any additional editable field needs individual HU+DI approval. This records the decision, not implementation authorisation.
 
@@ -477,9 +477,9 @@ The shortlist already records your major scope decisions, including lifecycle, c
 So yes, we are close on the decision pass. The next step is to correct the publication record, then finish checking the remaining shortlist against the source records. The application implementation and release are separate work; I have not verified them as complete.
 I’ve now corrected and verified the publication decision in the public GitHub records:
 
-- [HU+DI decision shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md?utm_source=chatgpt.com)
-- [Decision reconciliation](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/BUILD245_HUDI_DECISIONS_RECONCILIATION_2026-10-23.md?utm_source=chatgpt.com)
-- [Reconciled decision ledger](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/BUILD245_DECISIONS_RECONCILED_LEDGER_2026-10-23.csv?utm_source=chatgpt.com)
+- [HU+DI decision shortlist](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_DI_GENUINE_DECISIONS_SHORTLIST_2026-10-23.md)
+- [Decision reconciliation](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/BUILD245_HUDI_DECISIONS_RECONCILIATION_2026-10-23.md)
+- [Reconciled decision ledger](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/BUILD245_DECISIONS_RECONCILED_LEDGER_2026-10-23.csv)
 
 MA-PRD-057 is now marked DECISION RESOLVED while its implementation status remains deferred. The rule is explicit: scheduled time alone never publishes; required approval and an authorised Admin/Director’s manual publication are mandatory.
 
@@ -562,7 +562,7 @@ Hu, I have started by recovering and recording the decisions already available i
 
 New public GitHub record:
 
-[HU_RESPONSES_RECOVERED_REGISTER_2026-10-23.md](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_RESPONSES_RECOVERED_REGISTER_2026-10-23.md?utm_source=chatgpt.com)
+[HU_RESPONSES_RECOVERED_REGISTER_2026-10-23.md](https://github.com/VaijanathR/Di-Eval-Effyklean/blob/main/docs/ImplementationPlan/HU_RESPONSES_RECOVERED_REGISTER_2026-10-23.md)
 
 Commit: `54026c7b7f43ec9d43973c40d402f342309d32ca`
 
