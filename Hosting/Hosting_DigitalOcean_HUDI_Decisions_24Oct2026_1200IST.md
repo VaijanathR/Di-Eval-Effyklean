@@ -155,3 +155,23 @@ The current DigitalOcean build failed at `collectstatic` because `DJANGO_SETTING
 - The DigitalOcean app `effyklean-web` has since been created in the existing EffyKlean / Production project; the initial deployments failed with the Django settings-module/build error described above. This supersedes the earlier statements in sections 2 and 4 that no app had been created or finalized.
 - No claim is made here that `staging.py`, the staff-only gate, or the remaining staging safeguards have been implemented or verified.
 - This decision authorizes recording the settings-profile choice only. It does not by itself authorize editing application code, changing cloud configuration, deploying, changing DNS, enabling live integrations or launching publicly. Those actions remain subject to the applicable HU+DI authorization and safety gates.
+
+## 10. HU+DI decisions — staging readiness and temporary email/media policy (24 October 2026, 22:55 IST)
+
+Hu confirmed that the priority is to get the hosted, staff-restricted staging environment running as soon as practical and use it as the basis for subsequent production readiness. This does **not** authorize public launch or bypass existing cloud/deployment authorization gates.
+
+### Confirmed choices
+
+- **Email:** During initial staging, temporarily use Django's in-memory email backend. Do not deliver outbound email to real recipients. Revisit email delivery as a separate later decision after the staging environment is running.
+- **Media:** For the initial staging phase, temporary local/ephemeral media storage is acceptable with the existing explicit `STAGING_EPHEMERAL_MEDIA_ACK=1` safeguard. Treat uploaded media as disposable and do not use this as evidence of durable upload/storage readiness. Defer DigitalOcean Spaces until needed.
+- **Staff access:** Only existing active Admin and Director accounts that have authenticated and completed MFA may access the staff-only site. Do not create new staff accounts. The restriction remains enabled until explicit HU+DI approval for public launch.
+- **Static assets:** The agent reports that the local static-assets fix was committed as `2a35f4e` on the application's local `main`, with `collectstatic` and focused checks passing locally. Hosted build and HTTPS behavior remain unverified. The commit has not been pushed or deployed.
+- **Database:** Reuse `effyklean-db` / `defaultdb`; use the dedicated least-privilege `effyklean_app` account rather than `doadmin`. Before app connectivity, configure a supported trusted-source/network restriction and certificate verification (prefer `verify-full` with the correct CA where supported). Preserve legitimate existing access and do not guess source IPs. Resolve the previously observed App Platform database-attachment form issue rather than assuming its blank fields have a valid selection.
+- **Proxy and HTTPS:** Configure `TRUST_FORWARDED_PROTO=1` only for the intended DigitalOcean proxy setup, then verify HTTPS redirect/cookie behavior. Include the actual DigitalOcean health-probe Host in `ALLOWED_HOSTS`; do not use wildcard hosts.
+- **Zoho Payments webhook:** Retain only the exact webhook exemption already implemented, with signature verification required. Payments and fulfilment remain in sandbox/test mode; no real payment, live provider write, order or dispatch is authorized.
+
+### Execution direction and boundary
+
+Proceed with the shortest safe path to staff-only staging: resolve remaining build/startup configuration, environment variables, database access/TLS/trusted sources, health-check host and temporary email/media settings; run the focused checks needed to validate the hosted configuration; then report the exact remaining action(s) and required authorization. Avoid another broad assessment-only cycle and do not ask Hu to repeat these decisions.
+
+This section records decisions and priorities; it does not claim that the DigitalOcean configuration has been changed or that the hosted app is running. It does not by itself authorize creating chargeable resources, changing database/cloud settings, pushing code, deploying, changing DNS, enabling live integrations or launching publicly. Obtain the applicable explicit authorization before each such action.
