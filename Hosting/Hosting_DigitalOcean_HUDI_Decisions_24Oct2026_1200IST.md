@@ -53,10 +53,10 @@ Hu selected the following in the App Platform flow:
 - Public HTTP port: 8080
 - Environment variables: none added
 - Region: BLR1
-- Proposed instance: `apps-s-1vcpu-1gb-fixed`, displayed at **$10.00/month**
+- Current screen selection: `apps-s-1vcpu-0.5gb`, displayed at **$5.00/month** (512 MB RAM, 1 shared vCPU, 50 GB bandwidth); this is only the current selection, not a finalized resource or incurred charge.
 - Autoscaling: Off; one container
 - Project: EffyKlean / Production
-- App name was shown as `effklean-web`; use a clear name such as `effyklean-web` if the name is still editable and available.
+- **Chosen app name: `effyklean-web`** (Hu confirmed this choice on 24 October 2026).
 
 **Important:** Hu has not finalized/created this app as of this record. Do not assume a deployment exists or that the displayed price has been incurred.
 
@@ -72,6 +72,18 @@ Hu selected the following in the App Platform flow:
 
 ## 6. Staff-only testing and safe integration boundary
 
+### Confirmed HU+DI decision: staff-only application mode
+
+Hu approved an **application-level staff-only mode**, controlled by a deployment setting, as the access rule for initial final testing:
+
+- Only authenticated and authorized staff may access the storefront during final testing.
+- Ordinary visitors must not be able to browse the storefront or place orders during this phase.
+- The restriction stays enabled until HU+DI explicitly approves public launch.
+- Payment and fulfilment remain in sandbox/test mode during staff testing.
+- Health checks must continue to work without exposing customer or business data.
+- Prefer this approach over creating another service or changing DNS solely to restrict access.
+- This is a confirmed policy decision, **not a claim that the feature is already implemented**. Before deployment, verify the existing Django architecture and implement/test the control in a compatible way. Do not interfere with the coding agent's active work; coordinate after its work reaches a safe point.
+
 Before staff testing, confirm genuine access control for authorized staff. Do not rely solely on `ALLOWED_HOSTS`, obscurity, or search-engine no-indexing. Configure environment secrets safely, HTTPS and secure cookies, appropriate allowed hosts/CSRF origins, DEBUG disabled, safe email behavior, health checks, and a reviewed media-storage approach.
 
 - Keep payment and fulfilment integrations on sandbox/test configuration during final staff testing.
@@ -85,7 +97,7 @@ Before staff testing, confirm genuine access control for authorized staff. Do no
 1. Keep the current App Platform flow unfinalized until deployment configuration is ready.
 2. Safely verify repository build files and current Django settings after the coding agent's active work is finished; do not repeat checks Hu has already confirmed.
 3. Decide the supported build route and define the correct build/run commands.
-4. Choose and implement the staff-only access-control approach before any staff-facing deployment.
+4. Implement and test the approved application-level staff-only mode before any staff-facing deployment; keep it enabled until explicit HU+DI public-launch approval.
 5. Settle database connectivity, TLS verification, trusted sources, and least-privilege database access before connecting the app.
 6. Decide safe email and media behavior for the hosted test environment.
 7. Review expected total monthly cost and account credits before creating chargeable resources.
