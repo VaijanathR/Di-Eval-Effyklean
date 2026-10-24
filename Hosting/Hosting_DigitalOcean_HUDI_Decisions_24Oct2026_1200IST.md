@@ -36,7 +36,16 @@ Hu inspected the database's Network Access and connection parameters:
 
 **Required before app connectivity is enabled:** establish and apply a safe trusted-source/network plan, preserve any legitimate existing access, prefer supported private connectivity when correctly configured, and configure proper server-certificate verification where supported. Do not guess IPs or prematurely add broad access rules. Do not share passwords or secret-bearing connection strings in public records.
 
-A dedicated least-privilege application database user should be considered instead of using the administrative `doadmin` account for routine application traffic. Do not change database users or network rules until the plan is clear and the action is authorized.
+### HU+DI decision — dedicated application database user (24 October 2026)
+
+- Hu approved creating a dedicated application database user rather than using the administrative `doadmin` account for routine app traffic.
+- Proposed username: `effyklean_app`. This is a proposed name only; **the user has not yet been created**.
+- Reuse the existing `effyklean-db` cluster and `defaultdb`; do not create a duplicate database.
+- Before creating the user, inspect the DigitalOcean creation form and establish what privilege/access options it exposes. Grant only the access needed by the Django application; do not assume that creating a username alone establishes suitable permissions.
+- Keep `doadmin` and `defaultdb` unchanged. Do not record the new user's password or any secret-bearing connection string in this public file.
+- Hu accepts that the dedicated user can be changed or removed later if required, but only after updating the app's connection configuration and verifying that no dependency still uses that account.
+- In the App Platform database-attachment form, the only listed choices observed were `defaultdb` and `doadmin`; clicking either option closed the dropdown without visibly populating the field. The cause is unknown. Do not assume the blank fields automatically select those defaults; resolve the UI/attachment behaviour before finalizing the app.
+- This records a decision and plan, not a completed database change. No database user has been created and no database/app configuration has been changed as part of recording this decision.
 
 ## 4. App Platform screen reached — not finalized
 
@@ -98,7 +107,7 @@ Before staff testing, confirm genuine access control for authorized staff. Do no
 2. Safely verify repository build files and current Django settings after the coding agent's active work is finished; do not repeat checks Hu has already confirmed.
 3. Decide the supported build route and define the correct build/run commands.
 4. Implement and test the approved application-level staff-only mode before any staff-facing deployment; keep it enabled until explicit HU+DI public-launch approval.
-5. Settle database connectivity, TLS verification, trusted sources, and least-privilege database access before connecting the app.
+5. Settle database connectivity, TLS verification, trusted sources, and least-privilege database access before connecting the app; create the HU+DI-approved dedicated user `effyklean_app` only after reviewing the creation form and required privileges, then resolve the App Platform dropdown behavior.
 6. Decide safe email and media behavior for the hosted test environment.
 7. Review expected total monthly cost and account credits before creating chargeable resources.
 8. Create/configure the App Platform app only when prerequisites are ready and the action is explicitly authorized.
